@@ -1,11 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONTACT US - Siam Spa Sleep Salon </title>
+  <link rel="stylesheet" href="./styles/pages/contact._page.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/pages/navbar_new.css">
+    <link rel="stylesheet" href="./styles/fontstyle.css">
+  <link rel="icon" type="image/png" href="./asstes/images/AW Logo Siam spa-01.png" />
+
 </head>
+
 <body>
-    
+
+
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img src="asstes/icon/facebook-icon.svg" class="icon-white"></a>
+        <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img src="asstes/icon/instagram-icon.svg" class="icon-white"></a>
+        <a href="#" target="_blank"><img src="asstes/icon/line-brands-solid-full.svg" class="icon-white"></a>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <a href="Home.html" class="logo"><img src="../../asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo"></a>
+      <nav class="nav-links">
+        <div class="close-menu">✕</div>
+
+        <a href="Home.html">HOME</a>
+        <a href="about.html">ABOUT US</a>
+
+        <!-- Service Dropdown -->
+        <div class="dropdown-menu">
+          <a href="#" class="drop-link">SERVICE ▾</a>
+          <div class="dropdown-content">
+            <a href="./pages/services/realaxspa.html">RELAXED HEAD</a>
+            <a href="./pages/services/shirodhara.html">SHIRODHARA</a>
+            <a href="./pages/services/headspa.html">THAI HEAD SPA</a>
+            <a href="./pages/services/treatment.html">TREATMENT</a>
+            <a href="./pages/services/waxing.html">WAXING</a>
+          </div>
+        </div>
+
+        <a href="product.html">PRODUCT</a>
+        <a href="contact.html">CONTACT</a>
+
+        <!-- TH/EN สำหรับ Hamburger -->
+        <div class="mobile-lang">
+          <a href="#">TH</a>/<a href="#">EN</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <!-- TH/EN Visible บน Desktop -->
+      <div class="lang-desktop">
+        <a href="#">TH</a>/<a href="#">EN</a>
+      </div>
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  
+    <section class="about-section">
+    <div class="about-content">
+      <h5 class="about-subtitle">WE’RE HERE FOR YOU</h5>
+      <h2 class="about-title">CONTACT SIAM SPA</h2>
+      <p class="about-text">
+      Need help booking your spa experience or have questions about our treatments?  
+      Our friendly staff are just a message away.  
+      Feel free to reach out — we’re delighted to help you unwind and feel your best.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="contact-container">
+
+    <!-- Left: Form -->
+    <div class="contact-form-container">
+      <h2>Send Us a Message</h2>
+      <form action="mailto:siamspasleepsalon@gmail.com" method="POST" enctype="text/plain">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="Name" placeholder="Full Name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="Email" placeholder="Email Address" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="Subject" placeholder="Subject">
+
+        <label for="message">Your Message</label>
+        <textarea id="message" name="Message" rows="6" placeholder="Message"></textarea>
+
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </div>
+
+    <!-- Right: Info -->
+    <div class="contact-info">
+      <h5 class="contact-subtitle">Contact Us</h5>
+      <h2 class="contact-title">Get In Touch</h2>
+      <p class="contact-description">
+        ติดต่อเราเพื่อสอบถามข้อมูลเพิ่มเติม หรือนัดหมายล่วงหน้าได้ตามช่องทางต่อไปนี้
+      </p>
+
+      <div class="info-item">
+        <img src="./asstes/icon/phone-solid-full.svg" alt="Phone" class="info-icon">
+        <div>
+          <strong>Call Us</strong><br>
+          <span>+66 88 649 1919</span>
+        </div>
+      </div>
+
+      <div class="info-item">
+        <img src="./asstes/icon/envelope-solid-full.svg" alt="Email" class="info-icon">
+        <div>
+          <strong>Email Us</strong><br>
+          <span>siamspa@siamspa.com</span>
+        </div>
+      </div>
+
+
+      <div class="info-item">
+        <img src="./asstes/icon/location-dot-solid-full.svg" alt="Address" class="info-icon">
+        <div>
+          <strong>Address</strong><br>
+          <span>ดิโอลด์สยามพลาซ่า ชั้น 3 ถ. ตรีเพชร เขตพระนคร กรุงเทพฯ 10200</span>
+        </div>
+      </div>
+
+      <div class="contact-socials">
+        <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img src="./asstes/icon/facebook.png" alt="Facebook" class="social-icon"></a>
+        <a href="#"><img src="./asstes/icon/line.png" alt="Line" class="social-icon"></a>
+        <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img src="./asstes/icon/instagram.png" alt="Instagram" class="social-icon"></a>
+        <a href="#"><img src="./asstes/icon/wechat.png" alt="WeChat" class="social-icon"></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==== Google Map Section ==== -->
+<section class="contact-map-section">
+  <div class="map-wrapper">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.549093714751!2d100.50009539999999!3d13.745727299999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e299ae321f0009%3A0x8cb48139a97a9896!2sSiam%20Spa%20Sleep%20%26%20Salon!5e0!3m2!1sth!2sth!4v1758353891501!5m2!1sth!2sth"
+      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+      <!-- Column 1: Logo + Address + Opening Hours -->
+      <div class="footer-column">
+        <img src="./asstes/image/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
+        <p><strong>Address:</strong> ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200</p>
+        <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
+      </div>
+
+      <!-- Column 2: Menu -->
+      <div class="footer-column">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Partner / Service -->
+      <div class="footer-column">
+        <h3>Partner</h3>
+        <ul>
+          <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS" target="_blank">Dermalogica</a></li>
+          <li><a href="https://en.ellabache.com/" target="_blank">Ella Baché</a></li>
+          <li><a href="https://world.davines.com/" target="_blank">Davines</a></li>
+          <li><a href="https://www.ledifferthailand.com/th" target="_blank">Lediffer</a></li>
+          <li><a href="https://www.perron-rigot.org/" target="_blank">Perron Rigot</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-column">
+        <h3>Service</h3>
+        <ul>
+          <li><a href="./pages/services/realaxspa.html">Relaxed Head</a></li>
+          <li><a href="./pages/services/shirodhara.html">Shirodhara</a></li>
+          <li><a href="./pages/services/headspa.html">Thai Head Spa</a></li>
+          <li><a href="./pages/services/treatment.html">TreatMent</a></li>
+          <li><a href="./pages/services/waxing.html">Waxing</a></li>
+
+        </ul>
+
+      </div>
+
+      <!-- Column 4: Contact Us -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p><strong>Phone:</strong> 088 649 1919</p>
+        <p><strong>Email:</strong> siamspasleepsalon@gmail.com</p>
+        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a></p>
+        <p><a src="https://www.instagram.com/siam_spasleepsalon/" alt="intrgran-footer">Instragram</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 SiamSpa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="./scripts/navbar_new.js"></script>
+
+
 </body>
+
 </html>
