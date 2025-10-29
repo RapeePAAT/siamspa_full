@@ -1,0 +1,80 @@
+.footer-section {
+  background-color: #222;
+  color: #fff;
+  padding: 50px 20px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 180px; /* ขยายได้และมี min-width */
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f2f2f2;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-logo {
+  width: 120px;
+  margin-bottom: 15px;
+}
+
+.footer-column p {
+  margin-bottom: 10px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Footer bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #888;
+  border-top: 1px solid #444;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-column {
+    min-width: 100%;
+  }
+  .footer-logo {
+    margin-bottom: 10px;
+  }
+}

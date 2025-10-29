@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'ath-bold';
+  src: url("../asstes/Fonts/Athiti-Bold.ttf") format("truetype");
+
+}
+
+
+@font-face{
+  font-family: 'ath-extralight' ;
+  src:url("../asstes/Fonts/Athiti-ExtraLight.ttf") format("truetype");
+}
+@font-face{
+  font-family: 'ath-mediam' ;
+  src:url("../asstes/Fonts/Athiti-Medium.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'ath-regular' ;
+  src:url("../asstes/Fonts/Athiti-Regular.ttf") format("truetype");
+}
+
+@font-face{
+  font-family: 'ath-semibold' ;
+  src:url("../asstes/Fonts/Athiti-SemiBold.ttf") format("truetype");
+}
+
+
+@font-face{
+  font-family: 'got-bold' ;
+  src:url("../asstes/Fonts/Gotham-Bold.otf") format("truetype");
+}
+
+
+@font-face{
+  font-family: 'got-book' ;
+  src:url("../asstes/Fonts/Gotham-Book.otf") format("truetype");
+}
+
+@font-face{
+
+  font-family: 'got-light' ;
+  src:url("../asstes/Fonts/Gotham-Light.otf") format("truetype");
+}
+
+@font-face{
+
+  font-family: 'got-thin' ;
+  src:url("../asstes/Fonts/Gotham-Thin.otf") format("truetype");
+}
+
+p{
+    font-family: "got-light";
+}
+
+.dropdown-content a{
+  font-family: 'ath-bold';
+
+}
+
+.nav-links a{ 
+  font-family: 'ath-bold';
+}
+
+.mobile-lang a{
+      font-family: 'ath-bold';
+
+}
+
+.banner-content {
+              font-family: 'ath-bold';
+
+}
+
+.banner-links a {
+          font-family: 'ath-bold';
+
+}
