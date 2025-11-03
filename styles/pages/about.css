@@ -259,40 +259,34 @@ body {
   }
 }
 
-
-
 .why-choose-us {
   position: relative;
   background: #580100;
   color: #fff;
   text-align: center;
-  
-  /* ปรับให้เต็มหน้าจอ */
-  width: 100vw;      /* กว้างเต็ม viewport */
-  height: 60vh;     /* สูงเต็ม viewport */
+  width: 100%;
+  min-height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 25px ;        /* ลบ padding เดิม */
+  padding: 60px 20px;
   box-sizing: border-box;
 }
 
-/* Layer มืดโปร่งให้อ่านง่าย */
 .why-choose-us .overlay {
-  padding: 40px 20px; /* อาจลด padding เพื่อความสวยงามบนมือถือ */
-  border-radius: 12px;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  padding: 40px 20px;
 }
 
-
-/* โลโก้ด้านบน */
 .why-logo {
-  width: 120px;
+  width: 200px;
+  max-width: 60%;
+  height: auto;
   margin-bottom: 20px;
 }
 
-/* หัวข้อหลัก */
 .why-choose-us h2 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -300,32 +294,23 @@ body {
   margin-bottom: 15px;
 }
 
-/* Tagline */
 .why-choose-us .tagline {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 500;
   margin-bottom: 25px;
   color: #f8d98c;
 }
 
-/* เนื้อหา */
 .why-choose-us .details {
   font-size: 1.1rem;
   line-height: 1.8;
   max-width: 700px;
   margin: 0 auto;
+  padding: 0 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .why-choose-us h2 { font-size: 2rem; }
-  .why-choose-us .details { font-size: 1rem; }
-}
-
-
-/* === ปุ่มสี่เหลี่ยม === */
 .btn-wrapper {
-  margin-top: 20px;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
 }
@@ -339,6 +324,7 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
+  border-radius: 8px;
 }
 
 .btn-contact:hover {
@@ -346,17 +332,52 @@ body {
   color: #000;
 }
 
-/* 🔴 ถ้าต้องการปุ่มสีแดงเข้ม */
+/* 🔴 ปุ่มแดง (สำรอง) */
 .btn-contact.red {
   background-color: #6b0000;
-  border: 2px solid #6b0000;
+  border-color: #6b0000;
+}
+.btn-contact.red:hover {
+  background-color: transparent;
+  border-color: #fff;
   color: #fff;
 }
 
-.btn-contact.red:hover {
-  background-color: transparent;
-  color: #fff;
-  border-color: #fff;
+/* 🔹 Tablet (จอกลาง) */
+@media (max-width: 992px) {
+  .why-choose-us {
+    padding: 50px 15px;
+  }
+  .why-choose-us h2 {
+    font-size: 2rem;
+  }
+  .why-choose-us .tagline {
+    font-size: 1.1rem;
+  }
+  .why-choose-us .details {
+    font-size: 1rem;
+  }
+}
+
+/* 🔹 Mobile (จอเล็ก) */
+@media (max-width: 600px) {
+  .why-logo {
+    width: 140px;
+  }
+  .why-choose-us h2 {
+    font-size: 1.7rem;
+  }
+  .why-choose-us .tagline {
+    font-size: 1rem;
+  }
+  .why-choose-us .details {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  .btn-contact {
+    padding: 10px 28px;
+    font-size: 0.9rem;
+  }
 }
 
 

@@ -1,0 +1,95 @@
+{
+    "navbar": {
+        "home": "HOME",
+        "about": "ABOUT US",
+        "service": "SERVICE",
+        "product": "PRODUCT",
+        "contact": "CONTACT"
+    },
+    "banner": {
+        "description": "Experience true relaxation with our professional spa.",
+        "contactButton": "CONTACT US"
+    },
+    "about": {
+        "headerTitle": "WELCOME TO SIAM SPA",
+        "subtitle": "Providing you with the ultimate relaxation and care",
+        "text1": "At Siam Spa, we believe that true relaxation is not something done superficially. We focus on precision, personalized understanding, and balance for your body and mind.",
+        "text2": "Because your head deserves targeted care, ensuring every moment is a time of calm and true rejuvenation.",
+        "btnLine": "Add Line for Booking",
+        "btnCall": "Call Us"
+    },
+    "services": {
+        "headerTitle": "OUR SERVICES",
+        "subtitle": "Experience personalized relaxation",
+        "card1": {
+            "title": "RELAXED HEAD",
+            "desc": "Head relaxation massage to reduce stress and promote deep sleep",
+            "btn": "More Detail"
+        },
+        "card2": {
+            "title": "SHIRODHARA",
+            "desc": "Warm oil pouring therapy to calm the mind and balance energy",
+            "btn": "More Detail"
+        },
+        "card3": {
+            "title": "THAI HEAD SPA",
+            "desc": "Experience traditional Thai techniques for body rejuvenation",
+            "btn": "More Detail"
+        },
+        "card4": {
+            "title": "TREATMENT",
+            "desc": "Hair and scalp care with natural nourishing products",
+            "btn": "More Detail"
+        },
+        "card5": {
+            "title": "WAXING",
+            "desc": "Premium waxing service using gentle materials for your skin",
+            "btn": "More Detail"
+        }
+    },
+    "product": {
+        "viewmore": "VIEW MORE PRODUCT"
+    },
+    "partners": {
+        "headerTitle": "OUR PARTNERS",
+        "partner1": "Dermalogica",
+        "partner2": "Ella Baché",
+        "partner3": "Davines",
+        "partner4": "Lediffer",
+        "partner5": "Perron Rigot",
+        "quote": "Because your beauty is our attention at every step",
+        "description": "At Siam Spa Sleep & Salon, we prioritize quality in every touch, from selecting skincare and haircare products from world-renowned brands recognized for effectiveness, safety, and international standards.",
+        "note": "We only use products certified and trusted by professionals worldwide."
+    },
+    "contact": {
+        "address": "The Old Siam Plaza, 3rd Floor, 12 Tri Phet Road, Buraphaphirom, Phra Nakhon, Bangkok 10200"
+    },
+    "AboutPage": {
+        "hero": {
+            "title": "Welcome to SiamSpa",
+            "subtitle": "Relax • Treatment • Spa"
+        },
+        "about": {
+            "subtitle": "ABOUT",
+            "title": "SIAM SPA",
+            "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+        },
+        "service": {
+            "title": "PRECISION HEAD SPA SOLUTIONS",
+            "subtitle": "Because beauty deserves the best",
+            "text": "Our specialized head spa treatments are designed to stimulate blood circulation, relieve stress, and restore your hair health to its full vitality."
+        },
+        "quotes": {
+            "quote1": "Think, Explore, Select with Purpose",
+            "text1": "Every pressure point, every touch, every preference of yours is analyzed to create a personalized treatment that not only relaxes your muscles but also restores balance to your body and inner calm effectively.",
+            "quote2": "“The Best for You”",
+            "text2": "Behind every touch lies a meticulous process. We experiment and select the best products in each category, and we continuously research new knowledge to provide services that create sustainable results. We strive to find options that are not just “good enough” but truly exceptional."
+        },
+        "whyChooseUs": {
+            "title": "Why Choose Us",
+            "subtitle": "Because your peace deserves precision",
+            "text": "We believe relaxation is an art that requires meticulous care. Every touch is an experience designed for you, with professional staff and premium products to deliver the best results for your body and mind.",
+            "button": "Contact Us"
+        }
+    }
+}
