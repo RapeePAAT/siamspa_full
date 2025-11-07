@@ -4,7 +4,11 @@
         "about": "ABOUT US",
         "service": "SERVICE",
         "product": "PRODUCT",
-        "contact": "CONTACT"
+        "contact": "CONTACT" , 
+        "partner":"PARTNER" ,
+        "booking" : "BOOKING" ,
+        "register" :"REGISTER" 
+
     },
     "banner": {
         "description": "Experience true relaxation with our professional spa.",

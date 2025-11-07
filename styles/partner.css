@@ -1,0 +1,95 @@
+.partner-page {
+  background-color: #f8f6f3;
+  color: #3a2e25;
+  font-family: "Poppins", sans-serif;
+  padding: 60px 0;
+}
+
+/* Dermalogica */
+.partner-hero-box {
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+}
+.partner-hero-box img {
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 20px;
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+.partner-hero-box:hover img {
+  filter: grayscale(0%);
+}
+
+/* Grid สำหรับแบรนด์อื่น ๆ */
+.partner-item-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 10%;
+}
+
+/* กล่องแบรนด์อื่น ๆ */
+.partner-item {
+  display: flex;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.partner-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+.partner-item img {
+  width: 40%;
+  object-fit: contain;
+  filter: grayscale(40%);
+  transition: filter 0.3s ease;
+}
+.partner-item:hover img {
+  filter: grayscale(0%);
+}
+.partner-text {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.partner-item.left {
+  flex-direction: row;
+}
+.partner-item.right {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partner-hero-box {
+    width: 90%;
+    height: auto;
+  }
+  .partner-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  .partner-item.right {
+    flex-direction: column;
+  }
+  .partner-item img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .partner-text {
+    padding: 20px 10px;
+  }
+}

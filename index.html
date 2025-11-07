@@ -11,113 +11,128 @@
   <link rel="stylesheet" href="./styles/navbar.css">
   <link rel="stylesheet" href="./styles/fontstyle.css">
   <link rel="icon" type="image/png" href="./asstes/images/AW Logo Siam spa-01.png" />
-
 </head>
 
 <body>
   <!-- Navbar -->
-<header class="navbar">
-  <div class="nav-left">
-    <div class="social-icons">
-      <a href="#"><img src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
-      <a href="#"><img src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
-      <a href="#"><img src="./asstes/icon/line-brands-solid-full.svg" class="icon-white"></a>
-    </div>
-  </div>
-
-  <div class="nav-center">
-    <a href="#" class="logo">
-      <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
-    </a>
-    <nav class="nav-links">
-      <div class="close-menu">✕</div>
-
-      <a href="index.html" data-key="navbar.home">HOME</a>
-      <a href="about.html" data-key="navbar.about">ABOUT US</a>
-
-      <!-- Service Dropdown -->
-      <div class="dropdown-menu">
-        <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
-        <div class="dropdown-content">
-          <a href="./pages/services/realaxspa.html">RELAXED HEAD</a>
-          <a href="./pages/services/shirodhara.html">SHIRODHARA</a>
-          <a href="./pages/services/headspa.html">THAI HEAD SPA</a>
-          <a href="./pages/services/treatment.html">TREATMENT</a>
-          <a href="./pages/services/waxing.html">WAXING</a>
+  <header class="navbar">
+        <div class="nav-left">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
+                        src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+                <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
+                        src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+                <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
+                        class="icon-white"></a>
+            </div>
         </div>
-      </div>
 
-      <a href="product.html" data-key="navbar.product">PRODUCT</a>
-      <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+        <div class="nav-center">
+            <a href="#" class="logo">
+                <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+            </a>
+            <nav class="nav-links">
+                <div class="close-menu">✕</div>
 
-      <!-- TH/EN สำหรับมือถือ -->
-      <div class="mobile-lang">
-        <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
-      </div>
-    </nav>
-  </div>
+                <a href="index.html" data-key="navbar.home">HOME</a>
+                <a href="about.html" data-key="navbar.about">ABOUT US</a>
 
-  <div class="nav-right">
-    <div class="lang-desktop">
-      <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
-    </div>
+                <!-- Service Dropdown -->
+                <div class="dropdown-menu">
+                    <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="realaxspa.html">RELAXED HEAD</a>
+                        <a href="shirodhara.html">SHIRODHARA</a>
+                        <a href="headspa.html">THAI HEAD SPA</a>
+                        <a href="treatment.html">TREATMENT</a>
+                        <a href="waxing.html">WAXING</a>
+                    </div>
+                </div>
 
-    <!-- Hamburger -->
-    <div class="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</header>
+                <a href="product.html" data-key="navbar.product">PRODUCT</a>
+                <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+                <a href="partner.html" data-key="navbar.partner">PARTNER</a>
+                <a href="booking.html" data-key="navbar.booking">ฺBOOKING</a>
+                <a href="register.html" data-key="navbar.register">REGISTER</a>
 
 
+                <!-- TH/EN สำหรับมือถือ -->
+                <div class="mobile-lang">
+                    <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn"
+                        data-lang="en">EN</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="nav-right">
+            <div class="lang-desktop">
+                <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+            </div>
+
+            <!-- Hamburger -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 <section class="banner">
-  <video id="bannerVideo" autoplay muted playsinline loop>
-    <source src="./asstes/video/SiamSpaEdit.mp4" type="video/mp4">
+  <video id="bannerVideo" autoplay muted playsinline>
+    <!-- สำหรับมือถือ -->
+    <source src="./asstes/video/SiamSpaEdit-Mobile.mp4" type="video/mp4" media="(max-width: 768px)">
+    <!-- สำหรับจอใหญ่ -->
+    <source src="./asstes/video/SiamSpaEdit.mp4" type="video/mp4" media="(min-width: 769px)">
+    <!-- fallback -->
   </video>
 
-  <div class="banner-content">
-    <!-- ใส่ id เพื่อดึง description จาก JSON -->
-    <p id="bannerDescription">Experience true relaxation with our professional spa.</p>
+  <div id="imageSlider" class="image-slider">
+    <img src="./asstes/images/Capture-009.png" alt="Banner 1">
+    <img src="./asstes/images/Capture-031.png" alt="Banner 2">
+    <img src="./asstes/images/Capture-1021_new.png" alt="Banner 3">
+  </div>
 
+  <div class="banner-content">
+    <p id="bannerDescription">Experience true relaxation with our professional spa.</p>
     <div class="banner-links">
-      <!-- ใส่ id เพื่อดึงข้อความปุ่มจาก JSON -->
       <a id="bannerContactButton" href="contact.html">CONTACT US</a>
+      <a id="bannerBookingButton" href="booking.html">BOOKING NOW</a>
     </div>
   </div>
 </section>
 
-<section id="about" class="about">
-  <div class="about-header">
-    <h2 class="header-title" data-key="about.headerTitle">WELCOME TO SIAM SPA</h2>
-    <p data-key="about.subtitle">มอบความผ่อนคลายและการดูแลที่ดีที่สุดให้กับคุณ</p>
-  </div>
 
-  <div class="about-container">
-    <div class="about-images">
-      <img src="asstes/images/Capture-1021_new.png" alt="Spa Product" class="img-back" width="400px" height="400px"
-        style="object-fit: cover;" loading="lazy" id="img-spaproduct">
-      <img src="asstes/images/Capture-1098_new.png" alt="Spa Massage" class="img-front" width="400px" height="400px"
-        style="object-fit: cover;" loading="lazy">
+
+  <section id="about" class="about">
+    <div class="about-header">
+      <h2 class="header-title" data-key="about.headerTitle">WELCOME TO SIAM SPA</h2>
+      <p data-key="about.subtitle">มอบความผ่อนคลายและการดูแลที่ดีที่สุดให้กับคุณ</p>
     </div>
 
-    <div class="about-content">
-      <p data-key="about.text1">
-        ที่ สยาม สปา เราเชื่อว่าการผ่อนคลายที่แท้จริง ไม่ใช่สิ่งที่ทำแบบทั่วไป
-        เราให้ความสำคัญกับความแน่นยำ ความเข้าใจเฉพาะบุคคล และสมดุลของร่างกายและจิตใจ
-      </p>
-      <p data-key="about.text2">
-        เพราะศีรษะของคุณ... ควรได้รับการดูแลอย่างตรงจุดที่สุด
-        เพื่อให้ทุกช่วงเวลาเป็นช่วงเวลาของความสงบและการฟื้นฟูอย่างแท้จริง
-      </p>
-      <div class="about-buttons">
-        <a href="#" class="btn primary" data-key="about.btnLine">แอดไลน์จองคิว</a>
-        <a href="#" class="btn secondary" data-key="about.btnCall">โทรสอบถาม</a>
+    <div class="about-container">
+      <div class="about-images">
+        <img src="asstes/images/Capture-1021_new.png" alt="Spa Product" class="img-back" width="400px" height="400px"
+          style="object-fit: cover;" loading="lazy" id="img-spaproduct">
+        <img src="asstes/images/Capture-1098_new.png" alt="Spa Massage" class="img-front" width="400px" height="400px"
+          style="object-fit: cover;" loading="lazy">
+      </div>
+
+      <div class="about-content">
+        <p data-key="about.text1">
+          ที่ สยาม สปา เราเชื่อว่าการผ่อนคลายที่แท้จริง ไม่ใช่สิ่งที่ทำแบบทั่วไป
+          เราให้ความสำคัญกับความแน่นยำ ความเข้าใจเฉพาะบุคคล และสมดุลของร่างกายและจิตใจ
+        </p>
+        <p data-key="about.text2">
+          เพราะศีรษะของคุณ... ควรได้รับการดูแลอย่างตรงจุดที่สุด
+          เพื่อให้ทุกช่วงเวลาเป็นช่วงเวลาของความสงบและการฟื้นฟูอย่างแท้จริง
+        </p>
+        <div class="about-buttons">
+          <a href="#" class="btn primary" data-key="about.btnLine">แอดไลน์จองคิว</a>
+          <a href="#" class="btn secondary" data-key="about.btnCall">โทรสอบถาม</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -131,89 +146,89 @@
     </div>
   </section>
 
-<section id="services" class="services">
-  <div class="services-header">
-    <h2 data-key="services.headerTitle">OUR SERVICES</h2>
-    <p data-key="services.subtitle">สัมผัสความผ่อนคลายในแบบเฉพาะตัวของคุณ</p>
-  </div>
+  <section id="services" class="services">
+    <div class="services-header">
+      <h2 data-key="services.headerTitle">OUR SERVICES</h2>
+      <p data-key="services.subtitle">สัมผัสความผ่อนคลายในแบบเฉพาะตัวของคุณ</p>
+    </div>
 
-  <div class="service-grid">
-    <!-- Card 1 -->
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('asstes/images/relax_service.png');">
-        <div class="service-overlay">
-          <p data-key="services.card1.desc">การนวดผ่อนคลายศีรษะ ลดความเครียด และช่วยให้หลับสบาย</p>
+    <div class="service-grid">
+      <!-- Card 1 -->
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('asstes/images/relax_service.png');">
+          <div class="service-overlay">
+            <p data-key="services.card1.desc">การนวดผ่อนคลายศีรษะ ลดความเครียด และช่วยให้หลับสบาย</p>
+          </div>
+        </div>
+        <div class="service-info" style="background-color: #F8F1E0;">
+          <h3 data-key="services.card1.title">RELAXED HEAD</h3>
+          <div class="btn-group">
+            <a href="./realaxspa.html" class="btn-service" data-key="services.card1.btn">More Detail</a>
+          </div>
         </div>
       </div>
-      <div class="service-info" style="background-color: #F8F1E0;">
-        <h3 data-key="services.card1.title">RELAXED HEAD</h3>
-        <div class="btn-group">
-          <a href="./realaxspa.html" class="btn-service" data-key="services.card1.btn">More Detail</a>
+
+      <!-- Card 2 -->
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('asstes/images/shirodhara_service.png');">
+          <div class="service-overlay">
+            <p data-key="services.card2.desc">ศาสตร์การรดน้ำมันอุ่นเพื่อคลายสมาธิและเปิดสมดุลจิตใจ</p>
+          </div>
+        </div>
+        <div class="service-info" style="background-color:#C0A164;">
+          <h3 data-key="services.card2.title">SHIRODHARA</h3>
+          <div class="btn-group">
+            <a href="./shirodhara.html" class="btn-service" data-key="services.card2.btn">More Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('asstes/images/thaiheadspa_service.png');">
+          <div class="service-overlay">
+            <p data-key="services.card3.desc">สัมผัสความผ่อนคลายด้วยเทคนิคเฉพาะของไทย เพื่อฟื้นฟูร่างกาย</p>
+          </div>
+        </div>
+        <div class="service-info" style="background-color:#CBB197;">
+          <h3 data-key="services.card3.title">THAI HEAD SPA</h3>
+          <div class="btn-group">
+            <a href="./headspa.html" class="btn-service" data-key="services.card3.btn">More Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('asstes/images/treatment_service.png');">
+          <div class="service-overlay">
+            <p data-key="services.card4.desc">ดูแลเส้นผมและหนังศีรษะด้วยผลิตภัณฑ์บำรุงจากธรรมชาติ</p>
+          </div>
+        </div>
+        <div class="service-info" style="background-color: #B9A995;">
+          <h3 data-key="services.card4.title">TREATMENT</h3>
+          <div class="btn-group">
+            <a href="./treatment.html" class="btn-service" data-key="services.card4.btn">More Detail</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="service-card">
+        <div class="service-img" style="background-image: url('asstes/images/waxing_service.png');">
+          <div class="service-overlay">
+            <p data-key="services.card5.desc">บริการแว็กซ์ระดับพรีเมียมด้วยวัสดุอ่อนโยนต่อผิว</p>
+          </div>
+        </div>
+        <div class="service-info" style="background-color: #C69F7E;">
+          <h3 data-key="services.card5.title">WAXING</h3>
+          <div class="btn-group">
+            <a href="./waxing.html" class="btn-service" data-key="services.card5.btn">More Detail</a>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Card 2 -->
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('asstes/images/shirodhara_service.png');">
-        <div class="service-overlay">
-          <p data-key="services.card2.desc">ศาสตร์การรดน้ำมันอุ่นเพื่อคลายสมาธิและเปิดสมดุลจิตใจ</p>
-        </div>
-      </div>
-      <div class="service-info" style="background-color:#C0A164;">
-        <h3 data-key="services.card2.title">SHIRODHARA</h3>
-        <div class="btn-group">
-          <a href="./shirodhara.html" class="btn-service" data-key="services.card2.btn">More Detail</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('asstes/images/thaiheadspa_service.png');">
-        <div class="service-overlay">
-          <p data-key="services.card3.desc">สัมผัสความผ่อนคลายด้วยเทคนิคเฉพาะของไทย เพื่อฟื้นฟูร่างกาย</p>
-        </div>
-      </div>
-      <div class="service-info" style="background-color:#CBB197;">
-        <h3 data-key="services.card3.title">THAI HEAD SPA</h3>
-        <div class="btn-group">
-          <a href="./headspa.html" class="btn-service" data-key="services.card3.btn">More Detail</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('asstes/images/treatment_service.png');">
-        <div class="service-overlay">
-          <p data-key="services.card4.desc">ดูแลเส้นผมและหนังศีรษะด้วยผลิตภัณฑ์บำรุงจากธรรมชาติ</p>
-        </div>
-      </div>
-      <div class="service-info" style="background-color: #B9A995;">
-        <h3 data-key="services.card4.title">TREATMENT</h3>
-        <div class="btn-group">
-          <a href="./treatment.html" class="btn-service" data-key="services.card4.btn">More Detail</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('asstes/images/waxing_service.png');">
-        <div class="service-overlay">
-          <p data-key="services.card5.desc">บริการแว็กซ์ระดับพรีเมียมด้วยวัสดุอ่อนโยนต่อผิว</p>
-        </div>
-      </div>
-      <div class="service-info" style="background-color: #C69F7E;">
-        <h3 data-key="services.card5.title">WAXING</h3>
-        <div class="btn-group">
-          <a href="./waxing.html" class="btn-service" data-key="services.card5.btn">More Detail</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -265,41 +280,41 @@
   </div>
 
 
-<section class="our-partners">
-  <h2 class="partners-title header-title" data-key="partners.headerTitle">OUR PARTNER</h2>
+  <section class="our-partners">
+    <h2 class="partners-title header-title" data-key="partners.headerTitle">OUR PARTNER</h2>
 
-  <div class="partners-grid">
-    <div class="partner-top">
-      <img src="./asstes/images/de,ologica_logo.webp" alt="Dermalogica" data-key="partners.partner1">
+    <div class="partners-grid">
+      <div class="partner-top">
+        <img src="./asstes/images/de,ologica_logo.webp" alt="Dermalogica" data-key="partners.partner1">
+      </div>
+      <div>
+        <img src="./asstes/images/ellbache_logo.webp" alt="Ella Baché" data-key="partners.partner2">
+      </div>
+      <div class="partner-top">
+        <img src="./asstes/images/davines-logo.webp" alt="Davines" data-key="partners.partner3">
+      </div>
+      <div class="partner-top">
+        <img src="./asstes/images/Lediffer-logo.webp" alt="Lediffer" data-key="partners.partner4">
+      </div>
+      <div class="partner-top">
+        <img src="./asstes/images/preeon_logo.webp" alt="Perron Rigot" data-key="partners.partner5">
+      </div>
     </div>
-    <div>
-      <img src="./asstes/images/ellbache_logo.webp" alt="Ella Baché" data-key="partners.partner2">
-    </div>
-    <div class="partner-top">
-      <img src="./asstes/images/davines-logo.webp" alt="Davines" data-key="partners.partner3">
-    </div>
-    <div class="partner-top">
-      <img src="./asstes/images/Lediffer-logo.webp" alt="Lediffer" data-key="partners.partner4">
-    </div>
-    <div class="partner-top">
-      <img src="./asstes/images/preeon_logo.webp" alt="Perron Rigot" data-key="partners.partner5">
-    </div>
-  </div>
 
-  <blockquote class="partners-quote" data-key="partners.quote">
-    “ เพราะความงามของคุณ คือความใส่ใจของเราในทุกขั้นตอน ”
-  </blockquote>
+    <blockquote class="partners-quote" data-key="partners.quote">
+      “ เพราะความงามของคุณ คือความใส่ใจของเราในทุกขั้นตอน ”
+    </blockquote>
 
-  <p class="partners-desc" data-key="partners.description">
-    ที่ Siam Spa Sleep & Salon เราให้ความสำคัญกับคุณภาพในทุกสัมผัส
-    เริ่มตั้งแต่การเลือกใช้ผลิตภัณฑ์บำรุงผิวและเส้นผม จากแบรนด์ระดับโลก
-    ที่ได้รับการยอมรับทั้งในด้านประสิทธิภาพ ความปลอดภัย และมาตรฐานระดับสากล
-  </p>
+    <p class="partners-desc" data-key="partners.description">
+      ที่ Siam Spa Sleep & Salon เราให้ความสำคัญกับคุณภาพในทุกสัมผัส
+      เริ่มตั้งแต่การเลือกใช้ผลิตภัณฑ์บำรุงผิวและเส้นผม จากแบรนด์ระดับโลก
+      ที่ได้รับการยอมรับทั้งในด้านประสิทธิภาพ ความปลอดภัย และมาตรฐานระดับสากล
+    </p>
 
-  <div class="partners-note" data-key="partners.note">
-    เราเลือกใช้เฉพาะผลิตภัณฑ์ที่ผ่านการรับรองและไว้วางใจจากมืออาชีพทั่วโลก
-  </div>
-</section>
+    <div class="partners-note" data-key="partners.note">
+      เราเลือกใช้เฉพาะผลิตภัณฑ์ที่ผ่านการรับรองและไว้วางใจจากมืออาชีพทั่วโลก
+    </div>
+  </section>
 
   <section class="review-section">
     <h2 class="section-title header-title">CUSTOMER REVIEW</h2>
@@ -378,7 +393,8 @@
       <div class="contact-info">
         <div class="contact-card">
           <img src="asstes/icon/location-dot-solid-full.svg" alt="Location Icon" class="contact-icon">
-          <p class="ath-bold" data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200</p>
+          <p class="ath-bold" data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์
+            เขตพระนคร กรุงเทพมหานคร 10200</p>
         </div>
         <div class="contact-card">
           <img src="asstes/icon/phone-solid-full.svg" alt="Phone Icon" class="contact-icon">
@@ -397,14 +413,14 @@
   </section>
 
 
-
   <footer class="footer-section">
     <div class="footer-container">
 
       <!-- Column 1: Logo + Address + Opening Hours -->
       <div class="footer-column">
         <img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
-        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200</p>
+        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร
+          กรุงเทพมหานคร 10200</p>
         <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
       </div>
 
@@ -436,14 +452,12 @@
       <div class="footer-column">
         <h3>Service</h3>
         <ul>
-          <li><a href="./pages/services/realaxspa.html">Relaxed Head</a></li>
-          <li><a href="./pages/services/shirodhara.html">Shirodhara</a></li>
-          <li><a href="./pages/services/headspa.html">Thai Head Spa</a></li>
-          <li><a href="./pages/services/treatment.html">TreatMent</a></li>
-          <li><a href="./pages/services/waxing.html">Waxing</a></li>
-
+          <li><a href="realaxspa.html">Relaxed Head</a></li>
+          <li><a href="shirodhara.html">Shirodhara</a></li>
+          <li><a href="headspa.html">Thai Head Spa</a></li>
+          <li><a href="treatment.html">TreatMent</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
         </ul>
-
       </div>
 
       <!-- Column 4: Contact Us -->
@@ -451,8 +465,11 @@
         <h3>Contact Us</h3>
         <p>088 649 1919</p>
         <p>siamspasleepsalon@gmail.com</p>
-        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a></p>
+        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a>
+        </p>
         <p><a src="https://www.instagram.com/siam_spasleepsalon/" alt="">Instragram</a></p>
+        <p><a src="https://lin.ee/s58F0xx" alt="">Line</a></p>
+
       </div>
 
     </div>

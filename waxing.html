@@ -13,61 +13,68 @@
 </head>
 
 <body>
-
-  <header class="navbar">
-    <div class="nav-left">
-      <div class="social-icons">
-        <a href="#"><img src="asstes/icon/facebook-icon.svg" class="icon-white"></a>
-        <a href="#"><img src="asstes/icon/instagram-icon.svg" class="icon-white"></a>
-        <a href="#"><img src="asstes/icon/whatsapp-icon.svg" class="icon-white"></a>
-      </div>
-    </div>
-
-    <div class="nav-center">
-      <a href="index.html" class="logo"><img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo"></a>
-      <nav class="nav-links">
-        <div class="close-menu">✕</div>
-
-        <a href="index.html">HOME</a>
-        <a href="about.html">ABOUT US</a>
-
-        <!-- Service Dropdown -->
-        <div class="dropdown-menu">
-          <a href="#" class="drop-link">SERVICE ▾</a>
-          <div class="dropdown-content">
-            <a href="./realaxspa.html">RELAXED HEAD</a>
-            <a href="./shirodhara.html">SHIRODHARA</a>
-            <a href="./headspa.html">THAI HEAD SPA</a>
-            <a href="./treatment.html">TREATMENT</a>
-            <a href="./waxing.html">WAXING</a>
-          </div>
+ <header class="navbar">
+        <div class="nav-left">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
+                        src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+                <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
+                        src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+                <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
+                        class="icon-white"></a>
+            </div>
         </div>
 
-        <a href="product.html">PRODUCT</a>
-        <a href="contact.html">CONTACT</a>
+        <div class="nav-center">
+            <a href="#" class="logo">
+                <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+            </a>
+            <nav class="nav-links">
+                <div class="close-menu">✕</div>
 
-        <!-- TH/EN สำหรับ Hamburger -->
-        <div class="mobile-lang">
-          <a href="#">TH</a>/<a href="#">EN</a>
+                <a href="index.html" data-key="navbar.home">HOME</a>
+                <a href="about.html" data-key="navbar.about">ABOUT US</a>
+
+                <!-- Service Dropdown -->
+                <div class="dropdown-menu">
+                    <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
+                    <div class="dropdown-content">
+                        <a href="realaxspa.html">RELAXED HEAD</a>
+                        <a href="shirodhara.html">SHIRODHARA</a>
+                        <a href="headspa.html">THAI HEAD SPA</a>
+                        <a href="treatment.html">TREATMENT</a>
+                        <a href="waxing.html">WAXING</a>
+                    </div>
+                </div>
+
+                <a href="product.html" data-key="navbar.product">PRODUCT</a>
+                <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+                <a href="partner.html" data-key="navbar.partner">PARTNER</a>
+                <a href="booking.html" data-key="navbar.booking">ฺBOOKING</a>
+                <a href="register.html" data-key="navbar.register">REGISTER</a>
+
+
+                <!-- TH/EN สำหรับมือถือ -->
+                <div class="mobile-lang">
+                    <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn"
+                        data-lang="en">EN</a>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
 
-    <div class="nav-right">
-      <!-- TH/EN Visible บน Desktop -->
-      <div class="lang-desktop">
-        <a href="#">TH</a>/<a href="#">EN</a>
-      </div>
-      <!-- Hamburger -->
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </header>
+        <div class="nav-right">
+            <div class="lang-desktop">
+                <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+            </div>
 
-
+            <!-- Hamburger -->
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
   <section class="about-section">
     <div class="about-content">
@@ -167,44 +174,76 @@
 
 
   <section class="waxing-section">
-  <div class="waxing-container">
-    <!-- LEFT CONTENT -->
-    <div class="waxing-content">
-      <h2 class="waxing-title">WAXING - BODY</h2>
-      <h3 class="waxing-subtitle">ทรีตเมนท์</h3>
+    <div class="waxing-container">
+      <!-- LEFT CONTENT -->
+      <div class="waxing-content">
+        <h2 class="waxing-title">WAXING - BODY</h2>
+        <h3 class="waxing-subtitle">ทรีตเมนท์</h3>
 
-      <p class="waxing-description">
-        ผลิตภัณฑ์แว็กซ์กำจัดขนจากฝรั่งเศสที่สร้างสรรค์สิ่งใหม่ๆ อย่างสง่างามในทุกมิติ 
-        ไม่ว่าจะเป็นความสวยงามจากภายนอกหรือภายใน เพื่อให้ลูกค้าสามารถเป็นตัวของตัวเองได้อย่างเต็มที่
-      </p>
+        <p class="waxing-description">
+          ผลิตภัณฑ์แว็กซ์กำจัดขนจากฝรั่งเศสที่สร้างสรรค์สิ่งใหม่ๆ อย่างสง่างามในทุกมิติ
+          ไม่ว่าจะเป็นความสวยงามจากภายนอกหรือภายใน เพื่อให้ลูกค้าสามารถเป็นตัวของตัวเองได้อย่างเต็มที่
+        </p>
 
-      <table class="waxing-table">
-        <thead>
-          <tr>
-            <th>รายการ</th>
-            <th>ผู้หญิง<br>W</th>
-            <th>ผู้ชาย<br>M</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>คอ <span>Neck</span></td><td>200</td><td>250</td></tr>
-          <tr><td>ต้นคอ <span>Nape</span></td><td>300</td><td>350</td></tr>
-          <tr><td>ไหล่ <span>Shoulders</span></td><td>400</td><td>700</td></tr>
-          <tr><td>รักแร้ <span>Underarms</span></td><td>550</td><td>650</td></tr>
-          <tr><td>เต็มแขน (2 ข้าง) <span>Full-Arms</span></td><td>700</td><td>800</td></tr>
-          <tr><td>ครึ่งแขน (2 ข้าง) <span>Half-Arms</span></td><td>400</td><td>500</td></tr>
-          <tr><td>หน้าอก <span>Chest</span></td><td>300</td><td>800</td></tr>
-          <tr><td>มือและนิ้วมือ (2 ข้าง) <span>Hands & Fingers</span></td><td>300</td><td>400</td></tr>
-        </tbody>
-      </table>
+        <table class="waxing-table">
+          <thead>
+            <tr>
+              <th>รายการ</th>
+              <th>ผู้หญิง<br>W</th>
+              <th>ผู้ชาย<br>M</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>คอ <span>Neck</span></td>
+              <td>200</td>
+              <td>250</td>
+            </tr>
+            <tr>
+              <td>ต้นคอ <span>Nape</span></td>
+              <td>300</td>
+              <td>350</td>
+            </tr>
+            <tr>
+              <td>ไหล่ <span>Shoulders</span></td>
+              <td>400</td>
+              <td>700</td>
+            </tr>
+            <tr>
+              <td>รักแร้ <span>Underarms</span></td>
+              <td>550</td>
+              <td>650</td>
+            </tr>
+            <tr>
+              <td>เต็มแขน (2 ข้าง) <span>Full-Arms</span></td>
+              <td>700</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>ครึ่งแขน (2 ข้าง) <span>Half-Arms</span></td>
+              <td>400</td>
+              <td>500</td>
+            </tr>
+            <tr>
+              <td>หน้าอก <span>Chest</span></td>
+              <td>300</td>
+              <td>800</td>
+            </tr>
+            <tr>
+              <td>มือและนิ้วมือ (2 ข้าง) <span>Hands & Fingers</span></td>
+              <td>300</td>
+              <td>400</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="waxing-image">
+        <img src="asstes/images/waxing_service.png" alt="Waxing Body">
+      </div>
     </div>
-
-    <!-- RIGHT IMAGE -->
-    <div class="waxing-image">
-      <img src="asstes/images/waxing_service.png" alt="Waxing Body">
-    </div>
-  </div>
-</section>
+  </section>
 
 
 
@@ -214,7 +253,7 @@
     <div class="experience-content">
       <!-- 🔹 รูปหลายรูป (Gallery) -->
       <div class="experience-gallery">
-       <img src="asstes/images/Capture-795_new.png" alt="Spa Experience 1" class="experience-image">
+        <img src="asstes/images/Capture-795_new.png" alt="Spa Experience 1" class="experience-image">
         <img src="asstes/images/Capture-138_new.png" alt="Spa Experience 2" class="experience-image">
         <img src="asstes/images/Capture-254_new.png" alt="Spa Experience 3" class="experience-image">
       </div>
@@ -241,14 +280,14 @@
     </div>
   </section>
 
-
-<footer class="footer-section">
+  <footer class="footer-section">
     <div class="footer-container">
 
       <!-- Column 1: Logo + Address + Opening Hours -->
       <div class="footer-column">
         <img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
-        <p>ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร 10200</p>
+        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร
+          กรุงเทพมหานคร 10200</p>
         <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
       </div>
 
@@ -267,7 +306,8 @@
       <div class="footer-column">
         <h3>Partner</h3>
         <ul>
-          <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS" target="_blank">Dermalogica</a></li>
+          <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS"
+              target="_blank">Dermalogica</a></li>
           <li><a href="https://en.ellabache.com/" target="_blank">Ella Baché</a></li>
           <li><a href="https://world.davines.com/" target="_blank">Davines</a></li>
           <li><a href="https://www.ledifferthailand.com/th" target="_blank">Lediffer</a></li>
@@ -279,14 +319,12 @@
       <div class="footer-column">
         <h3>Service</h3>
         <ul>
-          <li><a href="./pages/services/realaxspa.html">Relaxed Head</a></li>
-          <li><a href="./pages/services/shirodhara.html">Shirodhara</a></li>
-          <li><a href="./pages/services/headspa.html">Thai Head Spa</a></li>
-          <li><a href="./pages/services/treatment.html">TreatMent</a></li>
-          <li><a href="./pages/services/waxing.html">Waxing</a></li>
-
+          <li><a href="realaxspa.html">Relaxed Head</a></li>
+          <li><a href="shirodhara.html">Shirodhara</a></li>
+          <li><a href="headspa.html">Thai Head Spa</a></li>
+          <li><a href="treatment.html">TreatMent</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
         </ul>
-
       </div>
 
       <!-- Column 4: Contact Us -->
@@ -294,8 +332,11 @@
         <h3>Contact Us</h3>
         <p>088 649 1919</p>
         <p>siamspasleepsalon@gmail.com</p>
-        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a></p>
+        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a>
+        </p>
         <p><a src="https://www.instagram.com/siam_spasleepsalon/" alt="">Instragram</a></p>
+        <p><a src="https://lin.ee/s58F0xx" alt="">Line</a></p>
+
       </div>
 
     </div>

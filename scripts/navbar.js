@@ -33,7 +33,6 @@ navLinks.addEventListener('click', (e) => e.stopPropagation());
 
 
 window.addEventListener('scroll', () => {
-  console.log("test")
   if (window.scrollY > 50) {
     navbar.classList.add('scrolled');
   } else {

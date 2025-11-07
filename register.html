@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ฺBOOKING - Siam Spa Sleep Salon </title>
-    <link rel="stylesheet" href="./styles/footer.css">
+    <title>REGISTER - Siam Spa Sleep Salon </title>
     <link rel="stylesheet" href="./styles/pages/navbar_new.css">
     <link rel="stylesheet" href="./styles/fontstyle.css">
-    <link rel="stylesheet" href="./styles/booking.css">
+    <link rel="stylesheet" href="./styles/register.css">
+      <link rel="stylesheet" href="./styles/footer.css">
+        <link rel="stylesheet" href="./styles/services/realaxspa.css">
 
-    <link rel="icon" type="image/png" href="./asstes/images/AW Logo Siam spa-01.png" />
+
 </head>
 
 <body>
-    <!-- Navbar -->
     <header class="navbar">
         <div class="nav-left">
             <div class="social-icons">
@@ -52,7 +52,7 @@
                 <a href="product.html" data-key="navbar.product">PRODUCT</a>
                 <a href="contact.html" data-key="navbar.contact">CONTACT</a>
                 <a href="partner.html" data-key="navbar.partner">PARTNER</a>
-                <a href="booking.html" data-key="navbar.booking">ฺBOOKING</a>
+                <a href="booking.html" data-key="navbar.booking">BOOKING</a>
                 <a href="register.html" data-key="navbar.register">REGISTER</a>
 
 
@@ -79,124 +79,80 @@
     </header>
 
 
-    <section class="about-section">
-        <div class="about-content">
-            <h5 class="about-subtitle">YOUR RELAXATION STARTS HERE</h5>
-            <h2 class="about-title">BOOK YOUR SPA EXPERIENCE</h2>
-            <p class="about-text">
-                Ready to unwind?
-                Choose your preferred treatment and schedule your session with ease.
-                Our team will prepare everything to ensure your experience is calm, seamless, and truly personalized.
-            </p>
+ <!-- Register Section -->
+  <section class="register-section">
+    <div class="register-container">
+      <h2>ลงทะเบียน</h2>
+      <form id="registerForm">
+        <div>
+          <label>ชื่อ</label>
+          <input type="text" name="firstname" required>
         </div>
-    </section>
-
-
-    <!-- ===== BOOKING SECTION ===== -->
-    <section class="booking-section" aria-labelledby="booking-title">
-        <div class="booking-inner">
-            <!-- LEFT -->
-            <div class="booking-left">
-                <h3 id="booking-title">Select a Slot</h3>
-
-                <!-- Date -->
-                <div class="form-group">
-                    <label class="label" for="dateInput">Select Date</label>
-                    <input type="date" id="dateInput" class="input-field" required min="<?= date('Y-m-d'); ?>">
-                </div>
-
-                <!-- Time -->
-                <div class="form-group">
-                    <label class="label">Select Time</label>
-                    <div class="time-pair">
-                        <select id="timeFrom" class="input-field" required>
-                            <option value="">-- Choose start time --</option>
-                        </select>
-                        <input type="text" id="timeTo" class="input-field" readonly placeholder="End time auto-filled">
-                    </div>
-                </div>
-
-                <!-- Guests -->
-                <div class="form-group">
-                    <label class="label" for="guests">Number of Guests</label>
-                    <select id="guests" class="input-field" required>
-                        <option value="1">1 Guest</option>
-                        <option value="2">2 Guests</option>
-                        <option value="3">3 Guests</option>
-                        <option value="4">4 Guests</option>
-                    </select>
-                </div>
-
-                <!-- Services -->
-                <div id="serviceContainer"></div>
-
-                <!-- Contact form -->
-                <form id="bookingForm" class="booking-form" novalidate>
-                    <div class="form-row">
-                        <label for="name">Full name</label>
-                        <input id="name" name="name" type="text" placeholder="Your full name" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="phone">Phone</label>
-                        <input id="phone" name="phone" type="tel" placeholder="08x-xxx-xxxx" required>
-                    </div>
-
-                    <div class="form-row">
-                        <label for="email">Email (optional)</label>
-                        <input id="email" name="email" type="email" placeholder="you@example.com">
-                    </div>
-
-                    <div class="form-row">
-                        <label for="voucher">Voucher (optional)</label>
-                        <input id="voucher" name="voucher" type="text" placeholder="Enter voucher code">
-                    </div>
-
-                    <div class="form-row">
-                        <label for="note">Notes / Requests</label>
-                        <textarea id="note" name="note" rows="3" placeholder="Any special requests..."></textarea>
-                    </div>
-                </form>
-            </div>
-
-            <!-- RIGHT: Summary -->
-            <aside class="booking-right" aria-labelledby="summary-title">
-                <h4 id="summary-title">Booking Details</h4>
-
-                <div class="summary-row">
-                    <span class="label-strong">Service</span>
-                    <ul id="s-service-list" class="service-list">
-                        <li>—</li>
-                    </ul>
-                </div>
-
-                <div class="summary-row"><span class="label-strong">Date</span><span id="s-date">—</span></div>
-                <div class="summary-row"><span class="label-strong">Time</span><span id="s-time">—</span></div>
-                <div class="summary-row"><span class="label-strong">Name</span><span id="s-name">—</span></div>
-                <div class="summary-row"><span class="label-strong">Phone</span><span id="s-phone">—</span></div>
-                <div class="summary-row"><span class="label-strong">Voucher</span><span id="s-voucher">—</span></div>
-                <div class="summary-row"><span class="label-strong">Note</span><span id="s-note">—</span></div>
-
-                <div class="summary-total">
-                    <div>Total</div>
-                    <div id="s-total">—</div>
-                </div>
-
-
-                <!-- ✅ ปุ่มย้ายมาข้างล่าง -->
-                <div class="form-actions responsive-btn">
-                    <button type="submit" form="bookingForm" class="btn-confirm">Book Now</button>
-                </div>
-
-                <div class="help-box">
-                    <strong>Need help?</strong>
-                    <p>Call: 088 649 1919 or message via Line</p>
-                </div>
-            </aside>
+        <div>
+          <label>นามสกุล</label>
+          <input type="text" name="lastname" required>
         </div>
-    </section>
 
+        <div>
+          <label>เพศ</label>
+          <select name="gender" required>
+            <option value="">-- เลือกเพศ --</option>
+            <option value="หญิง">หญิง</option>
+            <option value="ชาย">ชาย</option>
+            <option value="อื่นๆ">อื่นๆ</option>
+          </select>
+        </div>
 
+        <div>
+  <label>สัญชาติ</label>
+  <select name="nationality" required>
+    <option value="">-- เลือกสัญชาติ --</option>
+    <option value="ไทย">ไทย (Thai)</option>
+    <option value="ญี่ปุ่น">ญี่ปุ่น (Japanese)</option>
+    <option value="จีน">จีน (Chinese)</option>
+    <option value="เกาหลี">เกาหลี (Korean)</option>
+    <option value="อเมริกัน">อเมริกัน (American)</option>
+    <option value="อังกฤษ">อังกฤษ (British)</option>
+    <option value="ฝรั่งเศส">ฝรั่งเศส (French)</option>
+    <option value="เยอรมัน">เยอรมัน (German)</option>
+    <option value="อิตาเลียน">อิตาเลียน (Italian)</option>
+    <option value="สเปน">สเปน (Spanish)</option>
+    <option value="มาเลเซีย">มาเลเซีย (Malaysian)</option>
+    <option value="สิงคโปร์">สิงคโปร์ (Singaporean)</option>
+    <option value="เวียดนาม">เวียดนาม (Vietnamese)</option>
+    <option value="อินโดนีเซีย">อินโดนีเซีย (Indonesian)</option>
+    <option value="อินเดีย">อินเดีย (Indian)</option>
+    <option value="ฟิลิปปินส์">ฟิลิปปินส์ (Filipino)</option>
+    <option value="อื่นๆ">อื่นๆ (Other)</option>
+  </select>
+</div>
+
+        <div>
+          <label>วันเดือนปีเกิด</label>
+          <input type="date" name="birthdate" required>
+        </div>
+
+        <div>
+          <label>อายุ</label>
+          <input type="number" name="age" min="1" required>
+        </div>
+
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div>
+          <label>Line (ถ้ามี)</label>
+          <input type="text" name="line">
+        </div>
+
+        <div class="full-width">
+          <button type="submit" class="submit-btn">ส่งข้อมูล</button>
+        </div>
+      </form>
+    </div>
+  </section>
 
 
     <footer class="footer-section">
@@ -265,14 +221,6 @@
     </footer>
 
 
-
-    <script src="./scripts/navbar.js"></script>
-    <script src="./scripts/changelanguage.js"></script>
-    <script src="./scripts/booking.js"></script>
-
-
 </body>
-
-
 
 </html>

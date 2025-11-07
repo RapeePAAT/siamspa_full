@@ -38,7 +38,37 @@
   src:url("../asstes/Fonts/Gotham-Bold.otf") format("truetype");
 }
 
+.hidden {
+  display: none;
+}
 
+/* เอฟเฟกต์เลื่อนภาพแบบ fade */
+.image-slider {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* ปรับได้ตามต้องการ เช่น 600px */
+  overflow: hidden;
+}
+.image-slider img {
+  object-fit: cover;
+}
 
 .banner {
   position: relative;
