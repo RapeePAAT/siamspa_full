@@ -1,95 +1,191 @@
-.partner-page {
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
   background-color: #f8f6f3;
   color: #3a2e25;
-  font-family: "Poppins", sans-serif;
-  padding: 60px 0;
+  padding-top: 120px;
 }
 
-/* Dermalogica */
-.partner-hero-box {
-  width: 80%;
-  height: 80%;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+/* === Banner Section === */
+.partner-banner {
+  background-image: url('./assets/images/Capture-009.png'); /* ✅ ตรวจ path ให้ถูกต้อง: assets ไม่ใช่ asstes */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 40px;
-}
-.partner-hero-box img {
-  max-width: 40%;
-  height: auto;
-  margin-bottom: 20px;
-  filter: grayscale(20%);
-  transition: filter 0.3s ease;
-}
-.partner-hero-box:hover img {
-  filter: grayscale(0%);
+  position: relative;
+  color: #fff;
 }
 
-/* Grid สำหรับแบรนด์อื่น ๆ */
-.partner-item-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 40px 10%;
+.partner-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
 }
 
-/* กล่องแบรนด์อื่น ๆ */
-.partner-item {
-  display: flex;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.partner-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-.partner-item img {
-  width: 40%;
-  object-fit: contain;
-  filter: grayscale(40%);
-  transition: filter 0.3s ease;
-}
-.partner-item:hover img {
-  filter: grayscale(0%);
-}
-.partner-text {
+.partner-banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
   padding: 20px;
+}
+
+.partner-banner-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.partner-banner-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+/* === Partner Section === */
+.partner-section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.partner-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #3a2e25;
+}
+
+/* === Partner Grid (5 images in a row) === */
+.partner-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+}
+
+.partner-card {
+  background: #fff;
+  flex: 1 1 180px;
+  max-width: 200px;
+  min-width: 140px;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.partner-card img {
+  width: 80%;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: filter 0.3s ease;
+}
+
+.partner-card:hover img {
+  filter: grayscale(0%);
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .partner-banner {
+    height: 60vh;
+  }
+
+  .partner-banner-content h1 {
+    font-size: 2rem;
+  }
+
+  .partner-banner-content p {
+    font-size: 1rem;
+  }
+
+  .partner-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .partner-card {
+    width: 70%;
+    max-width: none;
+  }
+}
+
+
+/* === Details Section === */
+.details-section {
+  padding: 100px 10%;
+  background-color: #f8f6f3;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  gap: 100px;
 }
-.partner-item.left {
-  flex-direction: row;
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
 }
-.partner-item.right {
+
+.detail-row.reverse {
   flex-direction: row-reverse;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .partner-hero-box {
-    width: 90%;
-    height: auto;
-  }
-  .partner-item {
+.detail-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.detail-image img {
+  width: 100%;
+  max-width: 550px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.detail-content {
+  flex: 1 1 45%;
+}
+
+.detail-content h2 {
+  font-size: 2rem;
+  color: #3a2e25;
+  margin-bottom: 20px;
+}
+
+.detail-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #5a4638;
+}
+
+/* === Responsive === */
+@media (max-width: 992px) {
+  .detail-row,
+  .detail-row.reverse {
     flex-direction: column;
     text-align: center;
   }
-  .partner-item.right {
-    flex-direction: column;
+
+  .detail-image,
+  .detail-content {
+    flex: 1 1 100%;
   }
-  .partner-item img {
-    width: 60%;
-    margin: 0 auto;
-  }
-  .partner-text {
-    padding: 20px 10px;
+
+  .detail-image img {
+    max-width: 400px;
   }
 }
