@@ -34,3 +34,29 @@ function startImageSlide() {
     images[index].style.opacity = "1";
   }, 4000); // เปลี่ยนทุก 4 วินาที
 }
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.review-track');
+  const cards = Array.from(track.children);
+  const speed = 0.3; // ⬅️ ปรับได้: ยิ่งเลขน้อยยิ่งช้า
+
+  // 🔁 clone เพื่อทำลูปต่อเนื่อง
+  cards.forEach(card => {
+    const clone = card.cloneNode(true);
+    track.appendChild(clone);
+  });
+
+  let pos = 0;
+  function animate() {
+    pos -= speed;
+    // รีเซ็ตเมื่อเลื่อนไปเกินครึ่งของเนื้อหา
+    if (Math.abs(pos) >= track.scrollWidth / 2) {
+      pos = 0;
+    }
+    track.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(animate);
+  }
+  animate();
+});

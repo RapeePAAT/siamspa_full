@@ -6,47 +6,66 @@ body {
   padding-top: 120px;
 }
 
-/* === Banner Section === */
-.partner-banner {
-  background-image: url('./assets/images/Capture-009.png'); /* ✅ ตรวจ path ให้ถูกต้อง: assets ไม่ใช่ asstes */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.about-section {
+  width: 100%;
+  background-color: #fff; /* พื้นหลังสีขาว */
+  padding: 100px 20px; /* เว้นระยะรอบๆ */
   text-align: center;
-  position: relative;
-  color: #fff;
+  color: #4b1f0d; /* น้ำตาลเข้มแบบโลโก้ */
+  background-color: rgb(238, 228, 216);
 }
 
-.partner-banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.partner-banner-content {
-  position: relative;
-  z-index: 2;
-  max-width: 800px;
-  padding: 20px;
-}
-
-.partner-banner-content h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+.about-subtitle {
+  font-size: 0.9rem;
   letter-spacing: 1px;
+  color: #3c1d0a;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
-.partner-banner-content p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #f1f1f1;
+.about-subtitle::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background-color: #3c1d0a;
+  margin: 5px auto 0;
 }
 
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0;
+  color: #4b1f0d;
+}
+
+.about-text {
+  font-size: 0.9rem;
+  color: #3c1d0a;
+  letter-spacing: 0.5px;
+  line-height: 1.8;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 15px;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 0.85rem;
+  }
+}
 /* === Partner Section === */
 .partner-section {
   padding: 80px 10%;
@@ -123,7 +142,7 @@ body {
 
 /* === Details Section === */
 .details-section {
-  padding: 100px 10%;
+  padding: 10px 10% 100px 10% ;
   background-color: #f8f6f3;
   display: flex;
   flex-direction: column;
@@ -140,6 +159,7 @@ body {
 
 .detail-row.reverse {
   flex-direction: row-reverse;
+  padding: 0 20px;
 }
 
 .detail-image {
@@ -151,6 +171,7 @@ body {
 .detail-image img {
   width: 100%;
   max-width: 550px;
+  height: 450px;
   border-radius: 20px;
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -187,5 +208,93 @@ body {
 
   .detail-image img {
     max-width: 400px;
+  }
+}
+
+/* === Final CTA Section === */
+.partner-cta {
+  background-color: #590000; /* 🔧 ใส่ภาพพื้นหลังจริง */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 120px 10%;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.partner-cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #f2f2f2;
+}
+
+/* === CTA Buttons === */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 28px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.btn.primary {
+  background-color: #fff;
+  color: #3a2e25;
+}
+
+.btn.primary:hover {
+  background-color: #e7e3de;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn.secondary:hover {
+  background-color: #fff;
+  color: #3a2e25;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-content p {
+    font-size: 1rem;
   }
 }
