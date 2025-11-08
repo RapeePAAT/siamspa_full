@@ -49,6 +49,37 @@ body {
   font-weight: 300;
 }
 
+/* === Responsive Font Sizes === */
+@media (max-width: 992px) {
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-overlay p {
+    font-size: 0.9rem;
+  }
+}
+
 .about-section {
   width: 100%;
   background-color: #fff; /* พื้นหลังสีขาว */
