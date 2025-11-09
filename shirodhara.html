@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/services/realaxspa.css">
   <link rel="stylesheet" href="styles/pages/navbar_new.css">
-      <link rel="stylesheet" href="styles/fontstyle.css">
+  <link rel="stylesheet" href="styles/fontstyle.css">
 
   <link rel="icon" type="image/png" href="asstes/images/AW Logo Siam spa-01.png" />
 
@@ -17,76 +17,74 @@
 
 <body>
 
- <header class="navbar">
-        <div class="nav-left">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
-                        src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
-                <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
-                        src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
-                <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
-                        class="icon-white"></a>
-            </div>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
+            src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+        <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
+            src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+        <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
+            class="icon-white"></a>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <a href="index.html" class="logo">
+        <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+      </a>
+      <nav class="nav-links">
+        <div class="close-menu">✕</div>
+
+        <a href="index.html" data-key="navbar.home">HOME</a>
+        <a href="about.html" data-key="navbar.about">ABOUT US</a>
+
+        <!-- Service Dropdown -->
+        <div class="dropdown-menu">
+          <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
+          <div class="dropdown-content">
+            <a href="realaxspa.html">RELAXED HEAD</a>
+            <a href="shirodhara.html">SHIRODHARA</a>
+            <a href="headspa.html">THAI HEAD SPA</a>
+            <a href="treatment.html">TREATMENT</a>
+            <a href="waxing.html">WAXING</a>
+          </div>
         </div>
 
-        <div class="nav-center">
-            <a href="index.html" class="logo">
-                <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
-            </a>
-            <nav class="nav-links">
-                <div class="close-menu">✕</div>
-
-                <a href="index.html" data-key="navbar.home">HOME</a>
-                <a href="about.html" data-key="navbar.about">ABOUT US</a>
-
-                <!-- Service Dropdown -->
-                <div class="dropdown-menu">
-                    <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
-                    <div class="dropdown-content">
-                        <a href="realaxspa.html">RELAXED HEAD</a>
-                        <a href="shirodhara.html">SHIRODHARA</a>
-                        <a href="headspa.html">THAI HEAD SPA</a>
-                        <a href="treatment.html">TREATMENT</a>
-                        <a href="waxing.html">WAXING</a>
-                    </div>
-                </div>
-
-                <a href="product.html" data-key="navbar.product">PRODUCT</a>
-                <a href="contact.html" data-key="navbar.contact">CONTACT</a>
-                <a href="partner.html" data-key="navbar.partner">PARTNER</a>
-                <a href="booking.html" data-key="navbar.booking">BOOKING</a>
-                <a href="register.html" data-key="navbar.register">REGISTER</a>
+        <a href="product.html" data-key="navbar.product">PRODUCT</a>
+        <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+        <a href="partner.html" data-key="navbar.partner">PARTNER</a>
+        <a href="booking.html" data-key="navbar.booking">BOOKING</a>
+        <a href="register.html" data-key="navbar.register">REGISTER</a>
 
 
-                <!-- TH/EN สำหรับมือถือ -->
-                <div class="mobile-lang">
-                    <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn"
-                        data-lang="en">EN</a>
-                </div>
-            </nav>
+        <!-- TH/EN สำหรับมือถือ -->
+        <div class="mobile-lang">
+          <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
         </div>
+      </nav>
+    </div>
 
-        <div class="nav-right">
-            <div class="lang-desktop">
-                <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
-            </div>
+    <div class="nav-right">
+      <div class="lang-desktop">
+        <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+      </div>
 
-            <!-- Hamburger -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
 
   <section class="about-section">
     <div class="about-content">
-      <h5 class="about-subtitle">SHIRODHARA</h5>
-      <h2 class="about-title">SIAM SPA</h2>
-      <p class="about-text">
+      <h5 class="about-subtitle" data-key="ShirodharaPage.about.subtitle">SHIRODHARA</h5>
+      <h2  class="about-title" data-key="ShirodharaPage.about.title">SIAM SPA</h2>
+      <p class="about-text" data-key="ShirodharaPage.about.text">
         Welcome to SIAM SPA — your home of relaxation and rejuvenation.
         Experience the art of Thai wellness through our professional therapists,
         soothing aromas, and peaceful ambiance created for your ultimate comfort.
@@ -94,78 +92,71 @@
     </div>
   </section>
 
+  <!-- ===== Service Block / Shirodhara ===== -->
   <section class="service-block">
     <div class="service-box">
       <!-- Left Image -->
       <div class="service-image">
-        <img src="asstes/images/shirodhara_service.png" alt="Thai Head Spa">
+        <img src="asstes/images/shirodhara_service.png" alt="Shirodhara Service">
       </div>
 
       <!-- Right Content -->
       <div class="service-content" style="text-align: center;">
         <p>
-          <img src="asstes/images/AW Logo Siam spa-01.png" width="150px" height="150px">
-
+          <img src="asstes/images/AW Logo Siam spa-01.png" width="150" height="150">
         </p>
-        <h2>SHIRODHARA</h2>
-        <p>
-          หยดแห่งความสงบ...คืนความนงิ่ ให้จิตใจ
-          ศาสตร์อายุรเวทอันเก่าแก่จากอินเดียที่ใช้การหยดน้ ามนั อุ่นบริสุทธิ์อย่าง
-          ต่อเนื่องลงบน “จุดศูนย์กลางของจิต” บริเวณกลางหน้าผาก ทรีตเมนต์นี้
-          ช่วยปลดล็อกความเครียดเรื้อรัง ฟื้นฟูการนอนหลับ และปลุกความสงบ
-          ลึกในจิตใจให้กลับมาอีกครั้ง เหมาะอย่างยิ่งส าหรับผู้ที่ตอ้ งการความนิ่ง
-          ภายในอย่างแท้จริง
-
+        <h2 data-key="ShirodharaPage.service.title">SHIRODHARA</h2>
+        <p data-key="ShirodharaPage.service.text">
+          Drops of calmness… restoring peace to the mind.
+          Ancient Ayurvedic practice from India using warm purified oil
+          continuously poured onto the "center of the mind" at the forehead.
+          This treatment helps release chronic stress, improve sleep, and
+          awaken deep inner tranquility — ideal for those seeking true inner stillness.
         </p>
+
+        <!-- Service Table -->
         <table class="service-table">
           <thead>
             <tr>
-              <th>โปรแกรม</th>
-              <th style="text-align: right;">ราคา</th>
+              <th data-key="ShirodharaPage.service.table.header.0">Program</th>
+              <th data-key="ShirodharaPage.service.table.header.1" style="text-align: right;">Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>60 นาที</td>
-              <td style="text-align: right;">2,200</td>
+              <td data-key="ShirodharaPage.service.table.rows.0.0">60 minutes</td>
+              <td data-key="ShirodharaPage.service.table.rows.0.1" style="text-align: right;">2,200</td>
             </tr>
             <tr>
-              <td>90 นาที</td>
-              <td style="text-align: right;">3,200</td>
+              <td data-key="ShirodharaPage.service.table.rows.1.0">90 minutes</td>
+              <td data-key="ShirodharaPage.service.table.rows.1.1" style="text-align: right;">3,200</td>
             </tr>
             <tr>
-              <td>120 นาที</td>
-              <td style="text-align: right;">4,200</td>
+              <td data-key="ShirodharaPage.service.table.rows.2.0">120 minutes</td>
+              <td data-key="ShirodharaPage.service.table.rows.2.1" style="text-align: right;">4,200</td>
             </tr>
-
           </tbody>
         </table>
+
+        <!-- Booking Button -->
         <div class="service-btn-container">
-          <a href="booking.html" class="btn-booking">จองตอนนี้</a>
+          <a href="booking.html" class="btn-booking" data-key="ShirodharaPage.service.button">Book Now</a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
-
-
-
-
-
+  <!-- ===== CTA Section ===== -->
   <section class="booking-cta-section">
     <div class="booking-cta-content">
-      <h2>Ready to Relax?</h2>
-      <p>
+      <h2 data-key="ShirodharaPage.cta.title">Ready to Relax?</h2>
+      <p data-key="ShirodharaPage.cta.text">
         Treat yourself to the peaceful experience you deserve.
-        Book your Thai Head Spa session today and let your stress melt away.
+        Book your Shirodhara session today and let your stress melt away.
       </p>
-      <a href="contact.html" class="booking-btn">ติดต่อเรา</a>
+      <a href="contact.html" class="booking-btn" data-key="ShirodharaPage.cta.button">Contact Us</a>
     </div>
   </section>
-
 
 
   <footer class="footer-section">

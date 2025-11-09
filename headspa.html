@@ -80,78 +80,69 @@
 
   <section class="about-section">
     <div class="about-content">
-      <h5 class="about-subtitle">THAI HEAD SPA</h5>
-      <h2 class="about-title">SIAM SPA</h2>
-      <p class="about-text">
-        Welcome to SIAM SPA — your home of relaxation and rejuvenation.
-        Experience the art of Thai wellness through our professional therapists,
-        soothing aromas, and peaceful ambiance created for your ultimate comfort.
-      </p>
+      <h5 class="about-subtitle" data-key="HeadSpaPage.about.subtitle"></h5>
+      <h2 class="about-title" data-key="HeadSpaPage.about.title"></h2>
+      <p class="about-text" data-key="HeadSpaPage.about.text"></p>
     </div>
   </section>
 
+  <!-- ===== Service Block ===== -->
   <section class="service-block">
     <div class="service-box">
       <!-- Left Image -->
       <div class="service-image">
-        <img src="../../asstes/images/thaiheadspa_service.png" alt="Thai Head Spa">
+        <img src="asstes/images/thaiheadspa_service.png" alt="Thai Head Spa">
       </div>
 
       <!-- Right Content -->
       <div class="service-content" style="text-align: center;">
         <p>
-          <img src="../../asstes/images/AW Logo Siam spa-01.png" width="150px" height="150px">
-
+          <img src="asstes/images/AW Logo Siam spa-01.png" width="150px" height="150px">
         </p>
-        <h2>THAI HEAD SPA</h2>
-        <p>
-          <strong>ผสานภูมิปัญญาไทย...สู่การดูแลศีรษะแบบแม่นยำ</strong>
-          ทรีตเมนท์เฉพาะที่ Siam Spa ที่พัฒนาจากศาสตร์การนวดไทยแบบดั้งเดิมมา
-          ประยุกต์ให้เหมาะกับไลฟ์สไตล์คนยุคใหม่ เน้นการคลายจุดตึงเฉพาะส่วนรอบศีรษะ
-          บ่า ไหล่ และท้ายทอย ด้วยเทคนิคการกดและรีดเส้นที่นุ่มลกึ เพิ่มการไหลเวียนโลหิต
-          ให้คุณรู้สึกเบาสบายและปลอดโปร่งในทันที
+        <h2 data-key="HeadSpaPage.service.title"></h2>
+        <p data-key="HeadSpaPage.service.text"></p>
 
-        </p>
+        <!-- Table -->
         <table class="service-table">
           <thead>
             <tr>
-              <th>โปรแกรม</th>
-              <th style="text-align: right;">ราคา</th>
+              <th data-key="HeadSpaPage.service.table.header.0"></th>
+              <th style="text-align: right;" data-key="HeadSpaPage.service.table.header.1"></th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
-              <td>60 นาที</td>
+              <td>60 <span data-key="HeadSpaPage.service.table.min"></span></td>
               <td style="text-align: right;">1,900</td>
             </tr>
             <tr>
-              <td>90 นาที</td>
+              <td>90 <span data-key="HeadSpaPage.service.table.min"></span></td>
               <td style="text-align: right;">2,900</td>
             </tr>
             <tr>
-              <td>120 นาที</td>
+              <td>120 <span data-key="HeadSpaPage.service.table.min"></span></td>
               <td style="text-align: right;">3,900</td>
             </tr>
           </tbody>
         </table>
+
+        </table>
+
+        <!-- Booking Button -->
         <div class="service-btn-container">
-          <a href="booking.html" class="btn-booking">จองตอนนี้</a>
+          <a href="booking.html" class="btn-booking" data-key="HeadSpaPage.service.table.button"></a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
+  <!-- ===== Booking CTA Section ===== -->
   <section class="booking-cta-section">
     <div class="booking-cta-content">
-      <h2>Ready to Relax?</h2>
-      <p>
-        Treat yourself to the peaceful experience you deserve.
-        Book your Thai Head Spa session today and let your stress melt away.
-      </p>
-      <a href="contact.html" class="booking-btn">ติดต่อเรา</a>
+      <h2 data-key="HeadSpaPage.cta.title"></h2>
+      <p data-key="HeadSpaPage.cta.text"></p>
+      <a href="contact.html" class="booking-btn" data-key="HeadSpaPage.cta.button"></a>
     </div>
   </section>
 
@@ -224,7 +215,8 @@
 
 
 
-  <script src="../../scripts/navbar_new.js"></script>
+  <script src="./scripts/navbar_new.js"></script>
+  <script src="./scripts/changelanguage.js"></script>
 
 </body>
 

@@ -2,7 +2,7 @@
     "navbar": {
         "home": "HOME",
         "about": "ABOUT US",
-        "service": "SERVICE",
+        "service": "SERVICE ▾",
         "product": "PRODUCT",
         "contact": "CONTACT",
         "partner": "PARTNER",
@@ -272,76 +272,200 @@
             "placeholder": "Line ID"
         },
         "submit": "Submit"
-    } , 
-     "Register": {
-      "title": "Register",
-      "firstname": { "label": "First Name", "placeholder": "Enter your first name" },
-      "lastname": { "label": "Last Name", "placeholder": "Enter your last name" },
-      "gender": { 
-        "label": "Gender", 
-        "placeholder": "-- Select Gender --",
-        "option": { "default": "-- Select Gender --", "female": "Female", "male": "Male", "other": "Other" }
-      },
-      "nationality": {
-        "label": "Nationality",
-        "placeholder": "-- Select Nationality --",
-        "option": {
-          "default": "-- Select Nationality --",
-          "thai": "Thai",
-          "japan": "Japanese",
-          "china": "Chinese",
-          "korea": "Korean",
-          "american": "American",
-          "british": "British",
-          "french": "French",
-          "german": "German",
-          "italian": "Italian",
-          "spanish": "Spanish",
-          "malaysia": "Malaysian",
-          "singapore": "Singaporean",
-          "vietnam": "Vietnamese",
-          "indonesia": "Indonesian",
-          "india": "Indian",
-          "philippines": "Filipino",
-          "other": "Other"
+    },
+    "Service": {
+        "Relax": {
+            "about": {
+                "subtitle": "RELAX SPA",
+                "title": "SIAM SPA",
+                "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+            },
+            "headSpa": {
+                "title": "RELAX HEAD SPA",
+                "text": "Relax your head and mind through the ancient Thai art of touch, rejuvenate your spirit with soothing aromas and calming music.",
+                "table": {
+                    "header": [
+                        "Program",
+                        "Price",
+                        "Promotion"
+                    ],
+                    "rows": [
+                        [
+                            "60 minutes",
+                            "1,400",
+                            "1,200"
+                        ],
+                        [
+                            "90 minutes",
+                            "2,500",
+                            "2,200"
+                        ],
+                        [
+                            "120 minutes",
+                            "3,500",
+                            "3,000"
+                        ],
+                        [
+                            "SIGNATOR - 150 minutes",
+                            "3,500",
+                            "3,000"
+                        ],
+                        [
+                            "PREMIUM - 180 minutes",
+                            "3,500",
+                            "3,000"
+                        ]
+                    ]
+                },
+                "button": "Book Now"
+            },
+            "courseDetails": {
+                "title": "Course Details"
+            },
+            "cta": {
+                "title": "Ready to Relax?",
+                "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
+                "button": "Contact Us"
+            }
         }
-      },
-      "birthdate": { "label": "Birthdate" },
-      "age": { "label": "Age", "placeholder": "Enter your age" },
-      "email": { "label": "Email", "placeholder": "you@example.com" },
-      "line": { "label": "Line (Optional)", "placeholder": "Line ID" },
-      "submit": "Submit"
-    } , 
-     "Service": {
-      "Relax": {
+    },
+    "ShirodharaPage": {
         "about": {
-          "subtitle": "RELAX SPA",
-          "title": "SIAM SPA",
-          "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+            "subtitle": "SHIRODHARA",
+            "title": "SIAM SPA",
+            "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
         },
-        "headSpa": {
-          "title": "RELAX HEAD SPA",
-          "text": "Relax your head and mind through the ancient Thai art of touch, rejuvenate your spirit with soothing aromas and calming music.",
-          "table": {
-            "header": ["Program", "Price", "Promotion"],
-            "rows": [
-              ["60 minutes", "1,400", "1,200"],
-              ["90 minutes", "2,500", "2,200"],
-              ["120 minutes", "3,500", "3,000"],
-              ["SIGNATOR - 150 minutes", "3,500", "3,000"],
-              ["PREMIUM - 180 minutes", "3,500", "3,000"]
-            ]
-          },
-          "button": "Book Now"
-        },
-        "courseDetails": {
-          "title": "Course Details"
+        "service": {
+            "title": "SHIRODHARA",
+            "text": "Drops of calmness… restoring peace to the mind. Ancient Ayurvedic practice from India using warm purified oil continuously poured onto the center of the mind at the forehead. This treatment helps release chronic stress, improve sleep, and awaken deep inner tranquility — ideal for those seeking true inner stillness.",
+            "table": {
+                "header": [
+                    "Program",
+                    "Price"
+                ],
+                "rows": [
+                    [
+                        "60 minutes",
+                        "2,200"
+                    ],
+                    [
+                        "90 minutes",
+                        "3,200"
+                    ],
+                    [
+                        "120 minutes",
+                        "4,200"
+                    ]
+                ],
+                "button": "Book Now"
+            }
         },
         "cta": {
-          "title": "Ready to Relax?",
-          "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
-          "button": "Contact Us"
+            "title": "Ready to Relax?",
+            "text": "Treat yourself to the peaceful experience you deserve. Book your Shirodhara session today and let your stress melt away.",
+            "button": "Contact Us"
         }
-      }
-    }
+    },
+    "HeadSpaPage": {
+        "about": {
+            "subtitle": "THAI HEAD SPA",
+            "title": "SIAM SPA",
+            "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+        },
+        "service": {
+            "title": "THAI HEAD SPA",
+            "text": "Combining Thai wisdom with precise head care. This exclusive Siam Spa treatment is developed from traditional Thai massage techniques and adapted for modern lifestyles. It focuses on relieving tension around the head, shoulders, neck, and nape using soft pressing and stretching techniques to improve blood circulation, leaving you feeling light and refreshed immediately.",
+            "table": {
+                "header": [
+                    "Program",
+                    "Price"
+                ],
+                "rows": [
+                    [
+                        "60 minutes",
+                        "1,900"
+                    ],
+                    [
+                        "90 minutes",
+                        "2,900"
+                    ],
+                    [
+                        "120 minutes",
+                        "3,900"
+                    ]
+                ],
+                "min": "minutes",
+                "button": "Book Now"
+            }
+        },
+        "cta": {
+            "title": "Ready to Relax?",
+            "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
+            "button": "Contact Us"
+        }
+    },
+    "cta": {
+        "title": "Ready to Relax?",
+        "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
+        "button": "Contact Us"
+    },
+    "TreatmentPage": {
+        "about": {
+            "subtitle": "TREATMENT",
+            "title": "SIAM SPA",
+            "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+        },
+        "service": {
+            "title": "TREATMENT",
+            "text": "The best standard treatment products from the USA allow you to customize treatments according to your lifestyle and different skin concerns.",
+            "table": {
+                "header": [
+                    "Program",
+                    "Price"
+                ],
+                "rows": [
+                    [
+                        "PRO FRESH 60 minutes",
+                        "3,000"
+                    ],
+                    [
+                        "PRO FIRM 90 minutes",
+                        "3,500"
+                    ],
+                    [
+                        "REWAKENING 90 minutes",
+                        "3,500"
+                    ]
+                ],
+                "button": "Book Now"
+            }
+        }
+    },
+    "WaxingPage": {
+        "about": {
+            "subtitle": "WAXING",
+            "title": "SIAM SPA",
+            "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Immerse yourself in Thai-inspired wellness with professional therapists, soothing aromas, and a peaceful ambiance for your ultimate comfort."
+        },
+        "hero": {
+            "title": "WAXING",
+            "text": "French waxing products that elegantly create beauty and confidence, both inside and out, so you can feel your best self."
+        },
+        "body": {
+            "title": "WAXING - BODY",
+            "table": {
+                "header": [
+                    "Service",
+                    "Female (W)",
+                    "Male (M)"
+                ]
+            }
+        },
+        "cta": {
+            "title": "Ready to Take Care of Yourself?",
+            "text": "Book your waxing service today for smooth skin and confidence.",
+            "button": "Book Now"
+        }
+    },
+    "Time": "MIN"
 }
