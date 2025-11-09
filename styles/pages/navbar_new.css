@@ -1,11 +1,17 @@
 /* Reset & Navbar */
 * { box-sizing: border-box; margin:0; padding:0; }
 .navbar {
-  position: absolute;
-  top:0; left:0; width:100%;
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 10px 5%;
+  z-index: 999;
   background-color: #590000;
   display:flex; align-items:center; justify-content:space-between;
-  padding:10px 5%; z-index:999;
 }
 .close-menu{
   display: none;
