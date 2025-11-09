@@ -4,11 +4,10 @@
         "about": "ABOUT US",
         "service": "SERVICE",
         "product": "PRODUCT",
-        "contact": "CONTACT" , 
-        "partner":"PARTNER" ,
-        "booking" : "BOOKING" ,
-        "register" :"REGISTER" 
-
+        "contact": "CONTACT",
+        "partner": "PARTNER",
+        "booking": "BOOKING",
+        "register": "REGISTER"
     },
     "banner": {
         "description": "Experience true relaxation with our professional spa.",
@@ -68,6 +67,13 @@
     "contact": {
         "address": "The Old Siam Plaza, 3rd Floor, 12 Tri Phet Road, Buraphaphirom, Phra Nakhon, Bangkok 10200"
     },
+    "contactInvite": {
+        "subtitle": "We’re Here for You",
+        "title": "Let’s Begin Your Relaxing Journey",
+        "text": "Ready to relax and rejuvenate? Our friendly staff is here to assist you with any questions, appointment bookings, or personalized spa recommendations. Get in touch — we’d love to hear from you.",
+        "contactBtn": "CONTACT US",
+        "bookingBtn": "BOOK NOW"
+    },
     "AboutPage": {
         "hero": {
             "title": "Welcome to SiamSpa",
@@ -95,5 +101,247 @@
             "text": "We believe relaxation is an art that requires meticulous care. Every touch is an experience designed for you, with professional staff and premium products to deliver the best results for your body and mind.",
             "button": "Contact Us"
         }
+    },
+    "contactPage": {
+        "hero": {
+            "title": "CONTACT SIAM SPA",
+            "subtitle": "WE’RE HERE FOR YOU",
+            "text": "Need help booking your spa experience or have questions about our treatments? Our friendly staff are just a message away. Feel free to reach out — we’re delighted to help you unwind and feel your best."
+        },
+        "form": {
+            "title": "Send Us a Message",
+            "nameLabel": "Your Name",
+            "namePlaceholder": "Full Name",
+            "emailLabel": "Your Email",
+            "emailPlaceholder": "Email Address",
+            "subjectLabel": "Subject",
+            "subjectPlaceholder": "Subject",
+            "messageLabel": "Your Message",
+            "messagePlaceholder": "Message",
+            "submitBtn": "SEND MESSAGE"
+        },
+        "info": {
+            "subtitle": "Contact Us",
+            "title": "Get In Touch",
+            "text": "Reach out to us for inquiries, appointments, or personalized recommendations.",
+            "callUs": {
+                "title": "Call Us",
+                "value": "+66 88 649 1919"
+            },
+            "emailUs": {
+                "title": "Email Us",
+                "value": "siamspa@siamspa.com"
+            },
+            "address": {
+                "title": "Address",
+                "value": "Siam Old Plaza, 3rd Floor, Tri Phet Rd, Phra Nakhon, Bangkok 10200"
+            }
+        }
+    },
+    "partnerPage": {
+        "hero": {
+            "subtitle": "A CURATED SELECTION",
+            "title": "Our Curated Products",
+            "text1": "A curated selection reflecting care and global quality.",
+            "text2": "At Siam Spa Sleep & Salon, we believe the best experiences start with selecting the finest ingredients. Choosing our product partners is not just about choosing 'famous brands', but about choosing 'philosophy' and 'commitment' aligned with sustainable beauty standards and true results."
+        },
+        "partnerTitle": "Brands We Curate",
+        "partners": {
+            "dermalogica": {
+                "alt": "Dermalogica Logo"
+            },
+            "ellabache": {
+                "alt": "Ella Baché Logo"
+            },
+            "davines": {
+                "alt": "Davines Logo"
+            },
+            "lediffer": {
+                "alt": "Lediffer Logo"
+            },
+            "perron": {
+                "alt": "Perron Rigot Logo"
+            }
+        },
+        "details": {
+            "dermalogica": {
+                "title": "Dermalogica – Skincare from USA",
+                "text": "Dermalogica focuses on True Skin Health, not just temporary beauty.",
+                "list1": "Customization Power: Personalized products for every skin type",
+                "list2": "Ethical & Clean: Cruelty-free, vegan, no synthetic color or fragrance"
+            },
+            "ellabache": {
+                "title": "Ella Baché – Beauty Legend from France",
+                "text": "With 89 years of expertise, Ella Baché deeply understands the skin, focusing on nourishment, restoration, and genuine hydration."
+            },
+            "davines": {
+                "title": "Davines – Haircare Brand from Italy",
+                "text": "Davines combines beauty and sustainability. NATURALTECH series restores scalp and hair precisely.",
+                "list1": "The Healing Power: Scalp balancing treatment",
+                "list2": "High Natural Extract: Up to 98.9% natural extracts"
+            },
+            "lediffer": {
+                "title": "Lediffer – Innovation from South Korea",
+                "text": "Lediffer combines potent herbs with advanced technology for fast and safe results.",
+                "list1": "The Gold Standard of Safety: Dermatest 5-star certified",
+                "list2": "Patented Potency: 25 herbs fermented over 720 hours"
+            },
+            "perron": {
+                "title": "Perron Rigot – Global Waxing Leader",
+                "text": "For a smooth, safe, and gentle waxing experience, Perron Rigot is trusted by high-end salons worldwide."
+            }
+        },
+        "cta": {
+            "title": "We believe the best results start with choosing the best",
+            "text": "You are our priority. Siam Spa is ready to care for you in every detail.",
+            "contactBtn": "Contact Us",
+            "bookingBtn": "Book Now"
+        },
+        "Booking": {
+            "about": {
+                "subtitle": "YOUR RELAXATION STARTS HERE",
+                "title": "BOOK YOUR SPA EXPERIENCE",
+                "text": "Ready to unwind? Choose your preferred treatment and schedule your session with ease. Our team will prepare everything to ensure your experience is calm, seamless, and truly personalized."
+            }
+        }
+    },
+    "Booking": {
+        "about": {
+            "subtitle": "YOUR RELAXATION STARTS HERE",
+            "title": "BOOK YOUR SPA EXPERIENCE",
+            "text": "Ready to unwind? Choose your preferred treatment and schedule your session with ease. Our team will prepare everything to ensure your experience is calm, seamless, and truly personalized."
+        }
+    },
+    "Register": {
+        "title": "Register",
+        "firstname": {
+            "label": "First Name",
+            "placeholder": "Enter your first name"
+        },
+        "lastname": {
+            "label": "Last Name",
+            "placeholder": "Enter your last name"
+        },
+        "gender": {
+            "label": "Gender",
+            "placeholder": "-- Select Gender --",
+            "option": {
+                "default": "-- Select Gender --",
+                "female": "Female",
+                "male": "Male",
+                "other": "Other"
+            }
+        },
+        "nationality": {
+            "label": "Nationality",
+            "placeholder": "-- Select Nationality --",
+            "option": {
+                "default": "-- Select Nationality --",
+                "thai": "Thai",
+                "japan": "Japanese",
+                "china": "Chinese",
+                "korea": "Korean",
+                "american": "American",
+                "british": "British",
+                "french": "French",
+                "german": "German",
+                "italian": "Italian",
+                "spanish": "Spanish",
+                "malaysia": "Malaysian",
+                "singapore": "Singaporean",
+                "vietnam": "Vietnamese",
+                "indonesia": "Indonesian",
+                "india": "Indian",
+                "philippines": "Filipino",
+                "other": "Other"
+            }
+        },
+        "birthdate": {
+            "label": "Birthdate"
+        },
+        "age": {
+            "label": "Age",
+            "placeholder": "Enter your age"
+        },
+        "email": {
+            "label": "Email",
+            "placeholder": "you@example.com"
+        },
+        "line": {
+            "label": "Line (Optional)",
+            "placeholder": "Line ID"
+        },
+        "submit": "Submit"
+    } , 
+     "Register": {
+      "title": "Register",
+      "firstname": { "label": "First Name", "placeholder": "Enter your first name" },
+      "lastname": { "label": "Last Name", "placeholder": "Enter your last name" },
+      "gender": { 
+        "label": "Gender", 
+        "placeholder": "-- Select Gender --",
+        "option": { "default": "-- Select Gender --", "female": "Female", "male": "Male", "other": "Other" }
+      },
+      "nationality": {
+        "label": "Nationality",
+        "placeholder": "-- Select Nationality --",
+        "option": {
+          "default": "-- Select Nationality --",
+          "thai": "Thai",
+          "japan": "Japanese",
+          "china": "Chinese",
+          "korea": "Korean",
+          "american": "American",
+          "british": "British",
+          "french": "French",
+          "german": "German",
+          "italian": "Italian",
+          "spanish": "Spanish",
+          "malaysia": "Malaysian",
+          "singapore": "Singaporean",
+          "vietnam": "Vietnamese",
+          "indonesia": "Indonesian",
+          "india": "Indian",
+          "philippines": "Filipino",
+          "other": "Other"
+        }
+      },
+      "birthdate": { "label": "Birthdate" },
+      "age": { "label": "Age", "placeholder": "Enter your age" },
+      "email": { "label": "Email", "placeholder": "you@example.com" },
+      "line": { "label": "Line (Optional)", "placeholder": "Line ID" },
+      "submit": "Submit"
+    } , 
+     "Service": {
+      "Relax": {
+        "about": {
+          "subtitle": "RELAX SPA",
+          "title": "SIAM SPA",
+          "text": "Welcome to SIAM SPA — your home of relaxation and rejuvenation. Experience the art of Thai wellness through our professional therapists, soothing aromas, and peaceful ambiance created for your ultimate comfort."
+        },
+        "headSpa": {
+          "title": "RELAX HEAD SPA",
+          "text": "Relax your head and mind through the ancient Thai art of touch, rejuvenate your spirit with soothing aromas and calming music.",
+          "table": {
+            "header": ["Program", "Price", "Promotion"],
+            "rows": [
+              ["60 minutes", "1,400", "1,200"],
+              ["90 minutes", "2,500", "2,200"],
+              ["120 minutes", "3,500", "3,000"],
+              ["SIGNATOR - 150 minutes", "3,500", "3,000"],
+              ["PREMIUM - 180 minutes", "3,500", "3,000"]
+            ]
+          },
+          "button": "Book Now"
+        },
+        "courseDetails": {
+          "title": "Course Details"
+        },
+        "cta": {
+          "title": "Ready to Relax?",
+          "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
+          "button": "Contact Us"
+        }
+      }
     }
 }

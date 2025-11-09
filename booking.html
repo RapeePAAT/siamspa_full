@@ -78,13 +78,14 @@
         </div>
     </header>
 
+    <div id="successPopup" class="popup-success">Booking Successful!</div>
+
 
     <section class="about-section">
         <div class="about-content">
-            <h5 class="about-subtitle">YOUR RELAXATION STARTS HERE</h5>
-            <h2 class="about-title">BOOK YOUR SPA EXPERIENCE</h2>
-            <p class="about-text">
-                Ready to unwind?
+            <h5 class="about-subtitle" data-key="Booking.about.subtitle">YOUR RELAXATION STARTS HERE</h5>
+            <h2 class="about-title" data-key="Booking.about.title">BOOK YOUR SPA EXPERIENCE</h2>
+            <p class="about-text" data-key="Booking.about.text">Ready to unwind?
                 Choose your preferred treatment and schedule your session with ease.
                 Our team will prepare everything to ensure your experience is calm, seamless, and truly personalized.
             </p>
@@ -102,7 +103,7 @@
                 <!-- Date -->
                 <div class="form-group">
                     <label class="label" for="dateInput">Select Date</label>
-                    <input type="date" id="dateInput" class="input-field" required min="<?= date('Y-m-d'); ?>">
+                    <input type="text" id="dateInput" class="input-field" placeholder="DD/MM/YYYY" required>
                 </div>
 
                 <!-- Time -->
@@ -143,7 +144,7 @@
                     </div>
 
                     <div class="form-row">
-                        <label for="email">Email (optional)</label>
+                        <label for="email">Email</label>
                         <input id="email" name="email" type="email" placeholder="you@example.com">
                     </div>
 
@@ -153,7 +154,7 @@
                     </div>
 
                     <div class="form-row">
-                        <label for="note">Notes / Requests</label>
+                        <label for="note">Notes / Requests (optional) </label>
                         <textarea id="note" name="note" rows="3" placeholder="Any special requests..."></textarea>
                     </div>
                 </form>
@@ -185,7 +186,7 @@
 
                 <!-- ✅ ปุ่มย้ายมาข้างล่าง -->
                 <div class="form-actions responsive-btn">
-                    <button type="submit" form="bookingForm" class="btn-confirm">Book Now</button>
+                    <button type="submit" class="btn-confirm">Book Now</button>
                 </div>
 
                 <div class="help-box">
@@ -265,7 +266,8 @@
     </footer>
 
 
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
     <script src="./scripts/navbar.js"></script>
     <script src="./scripts/changelanguage.js"></script>
     <script src="./scripts/booking.js"></script>

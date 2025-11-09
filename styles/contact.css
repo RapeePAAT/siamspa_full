@@ -1,88 +1,86 @@
-/* ====== CONTACT SECTION ====== */
-.contact {
-  margin: 30px 0;
-  padding: 25px;
-  font-size: 0.9rem; /* 🔹 ทำให้ตัวอักษรโดยรวมเล็กลงนิดหน่อย */
-  line-height: 1.6;
+/* ==== Contact Invite Section ==== */
+.contact-invite-section {
+  background-color: #f9f8f6;
+  padding: 80px 5%;
+  text-align: center;
+}
+
+.contact-invite-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-subtitle {
+  color: #590000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.contact-title {
+  font-size: 2rem;
   color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
 }
 
-.contact-container {
+.contact-text {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.contact-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-/* Map */
-.contact-map {
-  flex: 1 1 50%;
-  min-height: 400px;
-}
-
-/* Right Info Cards */
-.contact-info {
-  flex: 1 1 50%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
   gap: 20px;
 }
 
-/* Individual Card */
-.contact-card {
-  background-color: #f7f7f7;
-  padding: 15px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transition: transform 0.3s, background-color 0.3s;
-  font-size: 0.85rem; /* 🔹 ทำให้ข้อความในแต่ละ card เล็กลงอีกนิด */
-}
-
-.contact-card:hover {
-  background-color: #222;
+/* ปุ่มหลัก */
+.btn.primary-1 {
+  background-color: #bfa980;
   color: #fff;
-  transform: translateY(-5px);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* Icon inside Card */
-.contact-icon {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-  transition: filter 0.3s;
+.btn.primary-1:hover {
+  background-color: #a68d69;
 }
 
-/* Hover effect on icon when card hovered */
-.contact-card:hover .contact-icon {
-  filter: brightness(0) invert(1);
+/* ปุ่มรอง */
+.btn.secondary-2 {
+  background-color: transparent;
+  color: #bfa980;
+  border: 2px solid #bfa980;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* ====== RESPONSIVE ====== */
-@media (max-width: 1024px) {
-  .contact {
-    font-size: 1rem; /* 🔹 ขยายขึ้นเล็กน้อยใน tablet */
-  }
-  .contact-card {
-    font-size: 0.95rem;
-  }
+.btn.secondary-2:hover {
+  background-color: #bfa980;
+  color: #fff;
 }
 
-@media (max-width: 768px) {
-  .contact-container {
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-buttons {
     flex-direction: column;
+    gap: 15px;
   }
-  .contact-info {
-    grid-template-columns: 1fr;
-  }
-  .contact-map {
-    min-height: 180px;
-  }
-  .contact {
-    font-size: 1.05rem; /* 🔹 ขยายขึ้นอีกในมือถือ */
-  }
-  .contact-card {
-    font-size: 1rem;
-  }
+}
+
+/* ==== Contact Invite Section ==== */
+.contact-invite-section {
+  background: linear-gradient(135deg, #f8f5f0 0%, #f9f8f6 50%, #f3eee8 100%);
+  padding: 80px 5%;
+  text-align: center;
 }

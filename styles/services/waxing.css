@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: "Athiti", sans-serif;
+  color: #333;
+  background-color: #fff;
+  line-height: 1.6;
+}
+
+/* ===== HERO SECTION ===== */
+.waxing-hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #faf9f7;
+}
+
+.hero-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-images img {
+  width: 30%;
+  min-width: 250px;
+  border-radius: 15px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 30px auto 0;
+}
+
+.hero-content h1 {
+  font-size: 2.4rem;
+  color: #5a3a2e;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* ===== TABLES SIDE BY SIDE ===== */
+.waxing-tables {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px 20px;
+  flex-wrap: wrap;
+}
+
+.waxing-table-section {
+  flex: 1 1 400px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  max-width: 500px;
+}
+
+.waxing-table-section h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #5a3a2e;
+  margin-bottom: 20px;
+}
+
+.waxing-table-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.waxing-table-section th,
+.waxing-table-section td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.waxing-table-section th {
+  background-color: #f5f0ed;
+  color: #444;
+  font-weight: 600;
+}
+
+.waxing-table-section td:first-child {
+  text-align: left;
+}
+
+.waxing-table-section tbody tr:hover {
+  background-color: #f9f6f5;
+}
+
+/* ===== BOOKING SECTION ===== */
+.booking-section {
+  text-align: center;
+  background-color: #f7f4f3;
+  padding: 60px 20px;
+  margin-top: 60px;
+}
+
+.booking-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.booking-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.booking-btn {
+  display: inline-block;
+  background-color: #5a3a2e;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.booking-btn:hover {
+  background-color: #784b39;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .waxing-tables {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-images img {
+    width: 80%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}

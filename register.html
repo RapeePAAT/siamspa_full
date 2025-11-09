@@ -2,224 +2,231 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REGISTER - Siam Spa Sleep Salon </title>
-    <link rel="stylesheet" href="./styles/pages/navbar_new.css">
-    <link rel="stylesheet" href="./styles/fontstyle.css">
-    <link rel="stylesheet" href="./styles/register.css">
-      <link rel="stylesheet" href="./styles/footer.css">
-        <link rel="stylesheet" href="./styles/services/realaxspa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REGISTER - Siam Spa Sleep Salon </title>
+  <link rel="stylesheet" href="./styles/pages/navbar_new.css">
+  <link rel="stylesheet" href="./styles/fontstyle.css">
+  <link rel="stylesheet" href="./styles/register.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link rel="stylesheet" href="./styles/services/realaxspa.css">
 
 
 </head>
 
 <body>
-    <header class="navbar">
-        <div class="nav-left">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
-                        src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
-                <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
-                        src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
-                <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
-                        class="icon-white"></a>
-            </div>
-        </div>
-
-        <div class="nav-center">
-            <a href="#" class="logo">
-                <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
-            </a>
-            <nav class="nav-links">
-                <div class="close-menu">✕</div>
-
-                <a href="index.html" data-key="navbar.home">HOME</a>
-                <a href="about.html" data-key="navbar.about">ABOUT US</a>
-
-                <!-- Service Dropdown -->
-                <div class="dropdown-menu">
-                    <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
-                    <div class="dropdown-content">
-                        <a href="realaxspa.html">RELAXED HEAD</a>
-                        <a href="shirodhara.html">SHIRODHARA</a>
-                        <a href="headspa.html">THAI HEAD SPA</a>
-                        <a href="treatment.html">TREATMENT</a>
-                        <a href="waxing.html">WAXING</a>
-                    </div>
-                </div>
-
-                <a href="product.html" data-key="navbar.product">PRODUCT</a>
-                <a href="contact.html" data-key="navbar.contact">CONTACT</a>
-                <a href="partner.html" data-key="navbar.partner">PARTNER</a>
-                <a href="booking.html" data-key="navbar.booking">BOOKING</a>
-                <a href="register.html" data-key="navbar.register">REGISTER</a>
-
-
-                <!-- TH/EN สำหรับมือถือ -->
-                <div class="mobile-lang">
-                    <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn"
-                        data-lang="en">EN</a>
-                </div>
-            </nav>
-        </div>
-
-        <div class="nav-right">
-            <div class="lang-desktop">
-                <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
-            </div>
-
-            <!-- Hamburger -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
-
- <!-- Register Section -->
-  <section class="register-section">
-    <div class="register-container">
-      <h2>ลงทะเบียน</h2>
-      <form id="registerForm">
-        <div>
-          <label>ชื่อ</label>
-          <input type="text" name="firstname" required>
-        </div>
-        <div>
-          <label>นามสกุล</label>
-          <input type="text" name="lastname" required>
-        </div>
-
-        <div>
-          <label>เพศ</label>
-          <select name="gender" required>
-            <option value="">-- เลือกเพศ --</option>
-            <option value="หญิง">หญิง</option>
-            <option value="ชาย">ชาย</option>
-            <option value="อื่นๆ">อื่นๆ</option>
-          </select>
-        </div>
-
-        <div>
-  <label>สัญชาติ</label>
-  <select name="nationality" required>
-    <option value="">-- เลือกสัญชาติ --</option>
-    <option value="ไทย">ไทย (Thai)</option>
-    <option value="ญี่ปุ่น">ญี่ปุ่น (Japanese)</option>
-    <option value="จีน">จีน (Chinese)</option>
-    <option value="เกาหลี">เกาหลี (Korean)</option>
-    <option value="อเมริกัน">อเมริกัน (American)</option>
-    <option value="อังกฤษ">อังกฤษ (British)</option>
-    <option value="ฝรั่งเศส">ฝรั่งเศส (French)</option>
-    <option value="เยอรมัน">เยอรมัน (German)</option>
-    <option value="อิตาเลียน">อิตาเลียน (Italian)</option>
-    <option value="สเปน">สเปน (Spanish)</option>
-    <option value="มาเลเซีย">มาเลเซีย (Malaysian)</option>
-    <option value="สิงคโปร์">สิงคโปร์ (Singaporean)</option>
-    <option value="เวียดนาม">เวียดนาม (Vietnamese)</option>
-    <option value="อินโดนีเซีย">อินโดนีเซีย (Indonesian)</option>
-    <option value="อินเดีย">อินเดีย (Indian)</option>
-    <option value="ฟิลิปปินส์">ฟิลิปปินส์ (Filipino)</option>
-    <option value="อื่นๆ">อื่นๆ (Other)</option>
-  </select>
-</div>
-
-        <div>
-          <label>วันเดือนปีเกิด</label>
-          <input type="date" name="birthdate" required>
-        </div>
-
-        <div>
-          <label>อายุ</label>
-          <input type="number" name="age" min="1" required>
-        </div>
-
-        <div>
-          <label>Email</label>
-          <input type="email" name="email" required>
-        </div>
-
-        <div>
-          <label>Line (ถ้ามี)</label>
-          <input type="text" name="line">
-        </div>
-
-        <div class="full-width">
-          <button type="submit" class="submit-btn">ส่งข้อมูล</button>
-        </div>
-      </form>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
+            src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+        <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
+            src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+        <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
+            class="icon-white"></a>
+      </div>
     </div>
-  </section>
 
+    <div class="nav-center">
+      <a href="#" class="logo">
+        <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+      </a>
+      <nav class="nav-links">
+        <div class="close-menu">✕</div>
 
-    <footer class="footer-section">
-        <div class="footer-container">
+        <a href="index.html" data-key="navbar.home">HOME</a>
+        <a href="about.html" data-key="navbar.about">ABOUT US</a>
 
-            <!-- Column 1: Logo + Address + Opening Hours -->
-            <div class="footer-column">
-                <img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
-                <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร
-                    กรุงเทพมหานคร 10200</p>
-                <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
-            </div>
-
-            <!-- Column 2: Menu -->
-            <div class="footer-column">
-                <h3>Menu</h3>
-                <ul>
-                    <li><a href="Home.html">Home</a></li>
-                    <li><a href="product.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 3: Partner / Service -->
-            <div class="footer-column">
-                <h3>Partner</h3>
-                <ul>
-                    <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS"
-                            target="_blank">Dermalogica</a></li>
-                    <li><a href="https://en.ellabache.com/" target="_blank">Ella Baché</a></li>
-                    <li><a href="https://world.davines.com/" target="_blank">Davines</a></li>
-                    <li><a href="https://www.ledifferthailand.com/th" target="_blank">Lediffer</a></li>
-                    <li><a href="https://www.perron-rigot.org/" target="_blank">Perron Rigot</a></li>
-                </ul>
-
-            </div>
-
-            <div class="footer-column">
-                <h3>Service</h3>
-                <ul>
-                    <li><a href="realaxspa.html">Relaxed Head</a></li>
-                    <li><a href="shirodhara.html">Shirodhara</a></li>
-                    <li><a href="headspa.html">Thai Head Spa</a></li>
-                    <li><a href="treatment.html">TreatMent</a></li>
-                    <li><a href="waxing.html">Waxing</a></li>
-                </ul>
-            </div>
-
-            <!-- Column 4: Contact Us -->
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <p>088 649 1919</p>
-                <p>siamspasleepsalon@gmail.com</p>
-                <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a>
-                </p>
-                <p><a src="https://www.instagram.com/siam_spasleepsalon/" alt="">Instragram</a></p>
-                <p><a src="https://lin.ee/s58F0xx" alt="">Line</a></p>
-            </div>
-
+        <!-- Service Dropdown -->
+        <div class="dropdown-menu">
+          <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
+          <div class="dropdown-content">
+            <a href="realaxspa.html">RELAXED HEAD</a>
+            <a href="shirodhara.html">SHIRODHARA</a>
+            <a href="headspa.html">THAI HEAD SPA</a>
+            <a href="treatment.html">TREATMENT</a>
+            <a href="waxing.html">WAXING</a>
+          </div>
         </div>
 
-        <div class="footer-bottom">
-            <p>© 2025 SiamSpa. All Rights Reserved.</p>
-        </div>
-    </footer>
+        <a href="product.html" data-key="navbar.product">PRODUCT</a>
+        <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+        <a href="partner.html" data-key="navbar.partner">PARTNER</a>
+        <a href="booking.html" data-key="navbar.booking">BOOKING</a>
+        <a href="register.html" data-key="navbar.register">REGISTER</a>
 
+
+        <!-- TH/EN สำหรับมือถือ -->
+        <div class="mobile-lang">
+          <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="nav-right">
+      <div class="lang-desktop">
+        <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+      </div>
+
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+<div id="successPopup" class="popup-success">Booking Successful!</div>
+
+  <!-- Register Section -->
+<section class="register-section">
+  <div class="register-container">
+    <h2 data-key="Register.title">ลงทะเบียน</h2>
+    <form id="registerForm">
+      <div>
+        <label data-key="Register.firstname.label">ชื่อ</label>
+        <input type="text" name="firstname" placeholder="" data-key-placeholder="Register.firstname.placeholder" required>
+      </div>
+      <div>
+        <label data-key="Register.lastname.label">นามสกุล</label>
+        <input type="text" name="lastname" placeholder="" data-key-placeholder="Register.lastname.placeholder" required>
+      </div>
+
+      <div>
+        <label data-key="Register.gender.label">เพศ</label>
+        <select name="gender" data-key-placeholder="Register.gender.placeholder" required>
+          <option value="" data-key="Register.gender.option.default">-- เลือกเพศ --</option>
+          <option value="หญิง" data-key="Register.gender.option.female">หญิง</option>
+          <option value="ชาย" data-key="Register.gender.option.male">ชาย</option>
+          <option value="อื่นๆ" data-key="Register.gender.option.other">อื่นๆ</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-key="Register.nationality.label">สัญชาติ</label>
+        <select name="nationality" data-key-placeholder="Register.nationality.placeholder" required>
+          <option value="" data-key="Register.nationality.option.default">-- เลือกสัญชาติ --</option>
+          <option value="ไทย" data-key="Register.nationality.option.thai">ไทย (Thai)</option>
+          <option value="ญี่ปุ่น" data-key="Register.nationality.option.japan">ญี่ปุ่น (Japanese)</option>
+          <option value="จีน" data-key="Register.nationality.option.china">จีน (Chinese)</option>
+          <option value="เกาหลี" data-key="Register.nationality.option.korea">เกาหลี (Korean)</option>
+          <option value="อเมริกัน" data-key="Register.nationality.option.american">อเมริกัน (American)</option>
+          <option value="อังกฤษ" data-key="Register.nationality.option.british">อังกฤษ (British)</option>
+          <option value="ฝรั่งเศส" data-key="Register.nationality.option.french">ฝรั่งเศส (French)</option>
+          <option value="เยอรมัน" data-key="Register.nationality.option.german">เยอรมัน (German)</option>
+          <option value="อิตาเลียน" data-key="Register.nationality.option.italian">อิตาเลียน (Italian)</option>
+          <option value="สเปน" data-key="Register.nationality.option.spanish">สเปน (Spanish)</option>
+          <option value="มาเลเซีย" data-key="Register.nationality.option.malaysia">มาเลเซีย (Malaysian)</option>
+          <option value="สิงคโปร์" data-key="Register.nationality.option.singapore">สิงคโปร์ (Singaporean)</option>
+          <option value="เวียดนาม" data-key="Register.nationality.option.vietnam">เวียดนาม (Vietnamese)</option>
+          <option value="อินโดนีเซีย" data-key="Register.nationality.option.indonesia">อินโดนีเซีย (Indonesian)</option>
+          <option value="อินเดีย" data-key="Register.nationality.option.india">อินเดีย (Indian)</option>
+          <option value="ฟิลิปปินส์" data-key="Register.nationality.option.philippines">ฟิลิปปินส์ (Filipino)</option>
+          <option value="อื่นๆ" data-key="Register.nationality.option.other">อื่นๆ (Other)</option>
+        </select>
+      </div>
+
+      <div>
+        <label data-key="Register.birthdate.label">วันเดือนปีเกิด</label>
+        <input type="date" name="birthdate" required>
+      </div>
+
+      <div>
+        <label data-key="Register.age.label">อายุ</label>
+        <input type="number" name="age" min="1" placeholder="" data-key-placeholder="Register.age.placeholder" required>
+      </div>
+
+      <div>
+        <label data-key="Register.email.label">Email</label>
+        <input type="email" name="email" placeholder="" data-key-placeholder="Register.email.placeholder" required>
+      </div>
+
+      <div>
+        <label data-key="Register.line.label">Line (Optional)</label>
+        <input type="text" name="line" placeholder="" data-key-placeholder="Register.line.placeholder">
+      </div>
+
+      <div class="full-width">
+        <button type="submit" class="submit-btn" data-key="Register.submit">ส่งข้อมูล</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+      <!-- Column 1: Logo + Address + Opening Hours -->
+      <div class="footer-column">
+        <img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
+        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร
+          กรุงเทพมหานคร 10200</p>
+        <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
+      </div>
+
+      <!-- Column 2: Menu -->
+      <div class="footer-column">
+        <h3>Menu</h3>
+        <ul>
+          <li><a href="Home.html">Home</a></li>
+          <li><a href="product.html">Products</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Partner / Service -->
+      <div class="footer-column">
+        <h3>Partner</h3>
+        <ul>
+          <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS"
+              target="_blank">Dermalogica</a></li>
+          <li><a href="https://en.ellabache.com/" target="_blank">Ella Baché</a></li>
+          <li><a href="https://world.davines.com/" target="_blank">Davines</a></li>
+          <li><a href="https://www.ledifferthailand.com/th" target="_blank">Lediffer</a></li>
+          <li><a href="https://www.perron-rigot.org/" target="_blank">Perron Rigot</a></li>
+        </ul>
+
+      </div>
+
+      <div class="footer-column">
+        <h3>Service</h3>
+        <ul>
+          <li><a href="realaxspa.html">Relaxed Head</a></li>
+          <li><a href="shirodhara.html">Shirodhara</a></li>
+          <li><a href="headspa.html">Thai Head Spa</a></li>
+          <li><a href="treatment.html">TreatMent</a></li>
+          <li><a href="waxing.html">Waxing</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact Us -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>088 649 1919</p>
+        <p>siamspasleepsalon@gmail.com</p>
+        <p><a src="https://www.facebook.com/profile.php?id=61575704435000" alt="facebook-footer">facebook</a>
+        </p>
+        <p><a src="https://www.instagram.com/siam_spasleepsalon/" alt="">Instragram</a></p>
+        <p><a src="https://lin.ee/s58F0xx" alt="">Line</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 SiamSpa. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+  <script src="./scripts/navbar.js"></script>
+  <script src="./scripts/changelanguage.js"></script>
+  <script src="./scripts/register.js"></script>
 
 </body>
 

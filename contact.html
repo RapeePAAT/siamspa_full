@@ -16,75 +16,73 @@
 <body>
 
 
- <header class="navbar">
-        <div class="nav-left">
-            <div class="social-icons">
-                <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
-                        src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
-                <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
-                        src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
-                <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
-                        class="icon-white"></a>
-            </div>
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
+            src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+        <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
+            src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+        <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
+            class="icon-white"></a>
+      </div>
+    </div>
+
+    <div class="nav-center">
+      <a href="index.html" class="logo">
+        <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+      </a>
+      <nav class="nav-links">
+        <div class="close-menu">✕</div>
+
+        <a href="index.html" data-key="navbar.home">HOME</a>
+        <a href="about.html" data-key="navbar.about">ABOUT US</a>
+
+        <!-- Service Dropdown -->
+        <div class="dropdown-menu">
+          <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
+          <div class="dropdown-content">
+            <a href="realaxspa.html">RELAXED HEAD</a>
+            <a href="shirodhara.html">SHIRODHARA</a>
+            <a href="headspa.html">THAI HEAD SPA</a>
+            <a href="treatment.html">TREATMENT</a>
+            <a href="waxing.html">WAXING</a>
+          </div>
         </div>
 
-        <div class="nav-center">
-            <a href="index.html" class="logo">
-                <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
-            </a>
-            <nav class="nav-links">
-                <div class="close-menu">✕</div>
-
-                <a href="index.html" data-key="navbar.home">HOME</a>
-                <a href="about.html" data-key="navbar.about">ABOUT US</a>
-
-                <!-- Service Dropdown -->
-                <div class="dropdown-menu">
-                    <a href="#" class="drop-link" data-key="navbar.service">SERVICE ▾</a>
-                    <div class="dropdown-content">
-                        <a href="realaxspa.html">RELAXED HEAD</a>
-                        <a href="shirodhara.html">SHIRODHARA</a>
-                        <a href="headspa.html">THAI HEAD SPA</a>
-                        <a href="treatment.html">TREATMENT</a>
-                        <a href="waxing.html">WAXING</a>
-                    </div>
-                </div>
-
-                <a href="product.html" data-key="navbar.product">PRODUCT</a>
-                <a href="contact.html" data-key="navbar.contact">CONTACT</a>
-                <a href="partner.html" data-key="navbar.partner">PARTNER</a>
-                <a href="booking.html" data-key="navbar.booking">BOOKING</a>
-                <a href="register.html" data-key="navbar.register">REGISTER</a>
+        <a href="product.html" data-key="navbar.product">PRODUCT</a>
+        <a href="contact.html" data-key="navbar.contact">CONTACT</a>
+        <a href="partner.html" data-key="navbar.partner">PARTNER</a>
+        <a href="booking.html" data-key="navbar.booking">BOOKING</a>
+        <a href="register.html" data-key="navbar.register">REGISTER</a>
 
 
-                <!-- TH/EN สำหรับมือถือ -->
-                <div class="mobile-lang">
-                    <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn"
-                        data-lang="en">EN</a>
-                </div>
-            </nav>
+        <!-- TH/EN สำหรับมือถือ -->
+        <div class="mobile-lang">
+          <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
         </div>
+      </nav>
+    </div>
 
-        <div class="nav-right">
-            <div class="lang-desktop">
-                <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
-            </div>
+    <div class="nav-right">
+      <div class="lang-desktop">
+        <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
+      </div>
 
-            <!-- Hamburger -->
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
+      <!-- Hamburger -->
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
 
   <section class="about-section">
     <div class="about-content">
-      <h5 class="about-subtitle">WE’RE HERE FOR YOU</h5>
-      <h2 class="about-title">CONTACT SIAM SPA</h2>
-      <p class="about-text">
+      <h5 class="about-subtitle" data-key="contactPage.hero.subtitle">WE’RE HERE FOR YOU</h5>
+      <h2 class="about-title" data-key="contactPage.hero.title">CONTACT SIAM SPA</h2>
+      <p class="about-text" data-key="contactPage.hero.text">
         Need help booking your spa experience or have questions about our treatments?
         Our friendly staff are just a message away.
         Feel free to reach out — we’re delighted to help you unwind and feel your best.
@@ -92,61 +90,65 @@
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <div id="successPopup" class="popup-success"></div>
+
   <section id="contact" class="contact-section">
     <div class="contact-container">
 
       <!-- Left: Form -->
       <div class="contact-form-container">
-        <h2>Send Us a Message</h2>
-        <form action="mailto:siamspasleepsalon@gmail.com" method="POST" enctype="text/plain">
+        <h2 data-key="contactPage.form.title">Send Us a Message</h2>
+        <form id="contactForm">
+          <label for="name" data-key="contactPage.form.nameLabel">Your Name</label>
+          <input type="text" id="name" name="name" placeholder=""
+            data-key-placeholder="contactPage.form.namePlaceholder" required>
 
-          <label for="name">Your Name</label>
-          <input type="text" id="name" name="Name" placeholder="Full Name" required>
+          <label for="email" data-key="contactPage.form.emailLabel">Your Email</label>
+          <input type="email" id="email" name="email" placeholder=""
+            data-key-placeholder="contactPage.form.emailPlaceholder" required>
 
-          <label for="email">Your Email</label>
-          <input type="email" id="email" name="Email" placeholder="Email Address" required>
+          <label for="subject" data-key="contactPage.form.subjectLabel">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder=""
+            data-key-placeholder="contactPage.form.subjectPlaceholder" required>
 
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="Subject" placeholder="Subject">
+          <label for="message" data-key="contactPage.form.messageLabel">Your Message</label>
+          <textarea id="message" name="message" rows="6" placeholder=""
+            data-key-placeholder="contactPage.form.messagePlaceholder" required></textarea>
 
-          <label for="message">Your Message</label>
-          <textarea id="message" name="Message" rows="6" placeholder="Message"></textarea>
-
-          <button type="submit">SEND MESSAGE</button>
+          <button type="submit" data-key="contactPage.form.submitBtn">SEND MESSAGE</button>
         </form>
       </div>
 
       <!-- Right: Info -->
       <div class="contact-info">
-        <h5 class="contact-subtitle">Contact Us</h5>
-        <h2 class="contact-title">Get In Touch</h2>
-        <p class="contact-description">
+        <h5 class="contact-subtitle" data-key="contactPage.info.subtitle">Contact Us</h5>
+        <h2 class="contact-title" data-key="contactPage.info.title">Get In Touch</h2>
+        <p class="contact-description" data-key="contactPage.info.text">
           ติดต่อเราเพื่อสอบถามข้อมูลเพิ่มเติม หรือนัดหมายล่วงหน้าได้ตามช่องทางต่อไปนี้
         </p>
 
         <div class="info-item">
           <img src="./asstes/icon/phone-solid-full.svg" alt="Phone" class="info-icon">
           <div>
-            <strong>Call Us</strong><br>
-            <span>+66 88 649 1919</span>
+            <strong data-key="contactPage.info.callUs.title">Call Us</strong><br>
+            <span data-key="contactPage.info.callUs.value">+66 88 649 1919</span>
           </div>
         </div>
 
         <div class="info-item">
           <img src="./asstes/icon/envelope-solid-full.svg" alt="Email" class="info-icon">
           <div>
-            <strong>Email Us</strong><br>
-            <span>siamspa@siamspa.com</span>
+            <strong data-key="contactPage.info.emailUs.title">Email Us</strong><br>
+            <span data-key="contactPage.info.emailUs.value">siamspa@siamspa.com</span>
           </div>
         </div>
-
 
         <div class="info-item">
           <img src="./asstes/icon/location-dot-solid-full.svg" alt="Address" class="info-icon">
           <div>
-            <strong>Address</strong><br>
-            <span>ดิโอลด์สยามพลาซ่า ชั้น 3 ถ. ตรีเพชร เขตพระนคร กรุงเทพฯ 10200</span>
+            <strong data-key="contactPage.info.address.title">Address</strong><br>
+            <span data-key="contactPage.info.address.value">ดิโอลด์สยามพลาซ่า ชั้น 3 ถ. ตรีเพชร เขตพระนคร กรุงเทพฯ
+              10200</span>
           </div>
         </div>
 
@@ -161,7 +163,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- ==== Google Map Section ==== -->
   <section class="contact-map-section">
@@ -241,9 +242,12 @@
   </footer>
 
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script src="./scripts/changelanguage.js"></script>
 
   <script src="./scripts/navbar_new.js"></script>
-
+  <script src="./scripts/contact.js"></script>
 
 </body>
 

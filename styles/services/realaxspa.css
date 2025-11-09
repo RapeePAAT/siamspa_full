@@ -487,3 +487,65 @@ font-size: 1rem;
   }
 }
 
+.service-btn-container {
+  margin-top: 15px ;
+  
+  display:  flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 0 150px;
+}
+
+.btn-booking {
+  display: inline-block;
+  background-color: #bfa980; /* สีทองสปา */
+  color: #fff;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(191, 169, 128, 0.3);
+}
+
+.btn-booking:hover {
+  background-color: #a68d69;
+  box-shadow: 0 6px 14px rgba(166, 141, 105, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .btn-booking {
+    width: 100%;
+    padding: 14px 0;
+  }
+}
+
+.booking-btn {
+  display: inline-block;
+  background-color: #bfa980; /* สีทองอ่อน */
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(191, 169, 128, 0.3);
+}
+
+.booking-btn:hover {
+  background-color: #a68d69;
+  box-shadow: 0 6px 14px rgba(166, 141, 105, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .booking-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+}
