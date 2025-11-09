@@ -286,3 +286,15 @@ body {
   border-color: red;
   background-color: #ffe5e5;
 }
+
+
+input[type="date"]::before {
+  content: attr(placeholder);
+  color: #aaa; /* Customize color */
+  /* Add other styling as needed */
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+  content: ""; /* Hide the pseudo-element when focused or a date is selected */
+}
