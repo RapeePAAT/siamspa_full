@@ -118,9 +118,27 @@ function generateServiceFields(count) {
 
       // === Dummy durations (replace with serviceMap) ===
       const durations = service === "Head Spa" ? { "60 Min": 1900, "90 Min": 2900 } :
-                        service === "Relax" ? { "60 Min": 1400, "90 Min": 2200 } :
-                        service === "Treatment" ? { "PRO FRESH 60 Min": 3000 } :
-                        service === "Waxing" ? { "Eyebrows": { "Women": 300, "Men": 450 } } : {};
+        service === "Relax" ? { "60 Min": 1400, "90 Min": 2200 } :
+          service === "Treatment" ? { "PRO FRESH 60 Min": 3000 } :
+            service === "Waxing" ? {
+              "Eyebrows": { "Women": 300, "Men": 450 },
+              "Nose": { "Women": 200, "Men": 300 },
+              "Nostrils": { "Women": 200, "Men": 300 },
+              "OuterEars": { "Women": 200, "Men": 300 },
+              "Cheeks": { "Women": 200, "Men": 300 },
+              "Forehead": { "Women": 350, "Men": 450 },
+              "Jawline": { "Women": 200, "Men": 300 },
+              "UpperLip": { "Women": 350, "Men": 450 },
+              "Chin": { "Women": 350, "Men": 450 },
+              "Neck": { "Women": 200, "Men": 250 },
+              "Nape": { "Women": 300, "Men": 350 },
+              "Shoulders": { "Women": 400, "Men": 700 },
+              "Underarms": { "Women": 550, "Men": 650 },
+              "FullArms": { "Women": 700, "Men": 800 },
+              "HalfArms": { "Women": 400, "Men": 500 },
+              "Chest": { "Women": 300, "Men": 800 },
+              "HandsFingers": { "Women": 300, "Men": 400 }
+            } : {};
 
       if (service === "Waxing") {
         const gender = genderSel.value;
@@ -192,7 +210,7 @@ function updateSummary() {
   sName.textContent = nameInput.value || "—";
   sPhone.textContent = phoneInput.value || "—";
   sNote.textContent = noteInput.value || "—";
-    emailInput.textContent = emailInput.value || "—";
+  emailInput.textContent = emailInput.value || "—";
 
 
   const discount = vocherInput.value.trim() ? total * 0.05 : 0;
@@ -207,7 +225,7 @@ function submitBooking() {
     { el: nameInput, label: "Name" },
     { el: phoneInput, label: "Phone" },
     { el: dateInput, label: "Date" },
-        { el: emailInput, label: "Email" },
+    { el: emailInput, label: "Email" },
     { el: timeFrom, label: "Time" },
   ];
 
