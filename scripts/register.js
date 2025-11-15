@@ -13,7 +13,7 @@ function showSuccessPopup(msg = "Registration Successful!") {
 // === ฟังก์ชันส่งอีเมล ===
 function sendRegisterEmail(formData) {
   const ownerParams = {
-    toemail: "rapeepattiamklee@gmail.com",
+    toemail: "siamspasleepsalon@gmail.com",
     fromemail: formData.email,
     reply_to: formData.email,
     title: `New Registration: ${formData.firstname} ${formData.lastname}`,
@@ -37,8 +37,8 @@ Line: ${formData.line || "-"}
 
   const customerParams = {
     toemail: formData.email,
-    fromemail: "rapeepattiamklee@gmail.com",
-    reply_to: "rapeepattiamklee@gmail.com",
+    fromemail: "siamspasleepsalon@gmail.com",
+    reply_to: "siamspasleepsalon@gmail.com",
     title: "Your Registration Confirmation",
     message: `
 Hi ${formData.firstname},
