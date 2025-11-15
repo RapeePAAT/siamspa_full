@@ -277,7 +277,7 @@ function submitBooking() {
 
   // === EmailJS Owner ===
   const ownerParams = {
-    toemail: "rapeepattiamklee@gmail.com",
+    toemail: "siamspasleepsalon@gmail.com",
     fromemail: formData.email || "no-reply@siamspa.com",
     reply_to: formData.email || "no-reply@siamspa.com",
     title: `New SPA Booking: ${formData.name}`,
@@ -304,8 +304,8 @@ Total: ${formData.total.toLocaleString()} Bath
   if (formData.email) {
     const customerParams = {
       toemail: formData.email,
-      fromemail: "rapeepattiamklee@gmail.com",
-      reply_to: "rapeepattiamklee@gmail.com",
+      fromemail: "siamspasleepsalon@gmail.com",
+      reply_to: "siamspasleepsalon@gmail.com",
       title: "Your SPA Booking Confirmation",
       message: `
 Hi ${formData.name},
