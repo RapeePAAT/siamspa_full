@@ -76,7 +76,3 @@ document.addEventListener('DOMContentLoaded', () => {
   'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '854274463843491');
 fbq('track', 'PageView');
-
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=854274463843491&ev=PageView&noscript=1"
-/></noscript>
