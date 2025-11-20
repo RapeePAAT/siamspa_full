@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="./asstes/video/SIAM_SPA_COM.mp4" as="video" type="video/mp4">
+
   <title>Siam Spa Sleep Salon </title>
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/contact.css">
@@ -13,7 +15,24 @@
   <link rel="icon" type="image/png" href="./asstes/images/AW Logo Siam spa-01.png" />
 </head>
 
-<body>
+<body class="loading">
+
+   <div id="fullScreenLoader" class="full-screen-loader">
+    <div class="loader-content">
+      <!-- Logo -->
+      <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="loader-logo">
+      
+      <div class="loading-text">Loading ... </div>
+      
+      <div class="progress-container">
+        <div class="progress-bar-bg">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <div id="progressPercent" class="progress-percent">0%</div>
+      </div>
+    </div>
+  </div>
+
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-left">
@@ -78,10 +97,10 @@
   </header>
   <section class="banner">
     <video id="bannerVideo" autoplay muted playsinline>
-      <!-- สำหรับมือถือ -->
-      <source src="./asstes/video/SiamSpa_Mobile.mp4" type="video/mp4" media="(max-width: 600px)">
+      <!-- สำหรับมือถือ 
+      <source src="./asstes/video/SiamSpa_Mobile.mp4" type="video/mp4" media="(max-width: 600px)">-->
       <!-- สำหรับจอใหญ่ -->
-      <source src="./asstes/video/SIAM_SPA_COM.mp4" type="video/mp4" media="(min-width: 769px)">
+      <source src="./asstes/video/SIAM_SPA_COM.mp4" type="video/mp4">
       <!-- fallback -->
     </video>
 
@@ -456,6 +475,7 @@
 
 
   <!-- Script -->
+   <script src="./scripts/load.js"></script>
   <script src="./scripts/main.js"></script>
   <script src="./scripts/navbar.js"></script>
   <script src="./scripts/changelanguage.js"></script>
