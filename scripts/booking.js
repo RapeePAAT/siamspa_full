@@ -75,9 +75,9 @@ function generateServiceFields(count) {
       <div class="service-pair">
         <select class="input-field service-select" required>
           <option value="">-- Choose a service --</option>
-          <option value="Head Spa">Head Spa</option>
+          <option value="Thai Head Spa">Thai Head Spa</option>
           <option value="Shirodhara">Shirodhara</option>
-          <option value="Relax">Relax</option>
+          <option value="Relax Head Spa">Relax Head Spa</option>
           <option value="Treatment">Treatment</option>
           <option value="Waxing">Waxing</option>
         </select>
@@ -117,9 +117,9 @@ function generateServiceFields(count) {
       }
 
       // === Dummy durations (replace with serviceMap) ===
-      const durations = service === "Head Spa" ? { "60 Min": 1900, "90 Min": 2900 } :
-        service === "Relax" ? { "60 Min": 1400, "90 Min": 2200 } :
-          service === "Treatment" ? { "PRO FRESH 60 Min": 3000 } :
+      const durations = service === "Thai Head Spa" ? { "60 Min": 1900, "90 Min": 2900 , "120 Min": 3900 } :
+        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200 , "120 Min": 3500 , "Signator 150 Min": 3000 , "Premiun 180 Min": 3000    } :
+          service === "Treatment" ? { "PRO FRESH 60 Min": 3000 , "PRO FIRM 90 Min": 3500 , "REWAKENING 90 Min" : 3500 } :
             service === "Waxing" ? {
               "Eyebrows": { "Women": 300, "Men": 450 },
               "Nose": { "Women": 200, "Men": 300 },
@@ -138,7 +138,8 @@ function generateServiceFields(count) {
               "HalfArms": { "Women": 400, "Men": 500 },
               "Chest": { "Women": 300, "Men": 800 },
               "HandsFingers": { "Women": 300, "Men": 400 }
-            } : {};
+            } : service === "Shirodhara" ? { "60 Min": 2200, "90 Min": 3200 , "120 Min": 4200 }  :            
+            {};
 
       if (service === "Waxing") {
         const gender = genderSel.value;
