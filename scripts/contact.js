@@ -7,7 +7,7 @@ const contactName = document.getElementById("name");
 const contactEmail = document.getElementById("email");
 const contactSubject = document.getElementById("subject");
 const contactMessage = document.getElementById("message");
-
+const  userMail = "siamspafor.booking@gmail.com" ;
 // === Popup Success ===
 
 
@@ -48,7 +48,7 @@ contactForm.addEventListener("submit", function(e){
 
   // === Prepare Data for Owner ===
   const ownerParams = {
-  toemail: "siamspasleepsalon@gmail.com",  // เจ้าของเว็บ
+  toemail: userMail,  // เจ้าของเว็บ
   fromemail: contactEmail.value.trim() || "no-reply@siamspa.com",
   reply_to: contactEmail.value.trim() || "no-reply@siamspa.com",
   title: `New Contact Message from ${contactName.value.trim() || "Anonymous"}`,
@@ -74,8 +74,8 @@ Sent via Siam Spa Contact Page
   if(contactEmail.value.trim()){
     const customerParams = {
       toemail: contactEmail.value.trim(),
-      fromemail: "siamspasleepsalon@gmail.com",
-      reply_to: "siamspasleepsalon@gmail.com",
+      fromemail: userMail,
+      reply_to: userMail,
       title: "Your Contact Form Submission",
       message: `
 Hi ${contactName.value.trim()},

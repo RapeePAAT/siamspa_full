@@ -1,5 +1,6 @@
 // === EmailJS init ===
 emailjs.init("pOtYxH7L3Hx-Q1smg");
+const  userMail = "siamspafor.booking@gmail.com" ;
 
 // === ฟังก์ชัน Popup ===
 function showSuccessPopup(msg = "Registration Successful!") {
@@ -13,7 +14,7 @@ function showSuccessPopup(msg = "Registration Successful!") {
 // === ฟังก์ชันส่งอีเมล ===
 function sendRegisterEmail(formData) {
   const ownerParams = {
-    toemail: "siamspasleepsalon@gmail.com",
+    toemail: userMail,
     fromemail: formData.email,
     reply_to: formData.email,
     title: `New Registration: ${formData.firstname} ${formData.lastname}`,
@@ -37,8 +38,8 @@ Line: ${formData.line || "-"}
 
   const customerParams = {
     toemail: formData.email,
-    fromemail: "siamspasleepsalon@gmail.com",
-    reply_to: "siamspasleepsalon@gmail.com",
+    fromemail: userMail,
+    reply_to: userMail,
     title: "Your Registration Confirmation",
     message: `
 Hi ${formData.firstname},

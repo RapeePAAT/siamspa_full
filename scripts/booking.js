@@ -9,7 +9,6 @@ const sName = document.getElementById("s-name");
 const sPhone = document.getElementById("s-phone");
 const sNote = document.getElementById("s-note");
 const sTotal = document.getElementById("s-total");
-const sVocher = document.getElementById("s-voucher");
 
 const dateInput = document.getElementById("dateInput");
 const timeFrom = document.getElementById("timeFrom");
@@ -17,12 +16,11 @@ const timeTo = document.getElementById("timeTo");
 const nameInput = document.getElementById("name");
 const phoneInput = document.getElementById("phone");
 const noteInput = document.getElementById("note");
-const vocherInput = document.getElementById("voucher");
 const guestsSelect = document.getElementById("guests");
 const emailInput = document.getElementById("email");
 
 const container = document.getElementById("serviceContainer");
-
+const  userMail = "siamspafor.booking@gmail.com" ;
 // === Popup functions ===
 function showSuccessPopup(msg = "Booking Successful!") {
   const popup = document.getElementById("successPopup");
@@ -214,10 +212,9 @@ function updateSummary() {
   emailInput.textContent = emailInput.value || "—";
 
 
-  const discount = vocherInput.value.trim() ? total * 0.05 : 0;
-  sVocher.textContent = vocherInput.value.trim() ? "5% Discount Applied" : "—";
+ 
 
-  sTotal.textContent = total - discount > 0 ? `${(total - discount).toLocaleString()} Bath` : "—";
+  sTotal.textContent = total  > 0 ? `${(total).toLocaleString()} Bath` : "—";
 }
 
 // === Submit Booking ===
@@ -271,14 +268,13 @@ function submitBooking() {
     date: dateInput.value,
     time: `${timeFrom.value} → ${timeTo.value}`,
     services,
-    voucher: vocherInput.value.trim(),
     note: noteInput.value.trim(),
     total: totalPrice
   };
 
   // === EmailJS Owner ===
   const ownerParams = {
-    toemail: "siamspasleepsalon@gmail.com",
+    toemail: userMail,
     fromemail: formData.email || "no-reply@siamspa.com",
     reply_to: formData.email || "no-reply@siamspa.com",
     title: `New SPA Booking: ${formData.name}`,
@@ -291,7 +287,6 @@ Email: ${formData.email || "-"}
 Date: ${formData.date}
 Time: ${formData.time}
 Services: ${formData.services.join(", ")}
-Voucher: ${formData.voucher || "-"}
 Notes: ${formData.note || "-"}
 Total: ${formData.total.toLocaleString()} Bath
     `.trim()
@@ -305,8 +300,8 @@ Total: ${formData.total.toLocaleString()} Bath
   if (formData.email) {
     const customerParams = {
       toemail: formData.email,
-      fromemail: "siamspasleepsalon@gmail.com",
-      reply_to: "siamspasleepsalon@gmail.com",
+      fromemail: userMail,
+      reply_to: userMail,
       title: "Your SPA Booking Confirmation",
       message: `
 Hi ${formData.name},
@@ -318,7 +313,6 @@ Date: ${formData.date}
 Time: ${formData.time}
 Services: ${formData.services.join(", ")}
 
-${formData.voucher ? "Your voucher code: " + formData.voucher : "Your voucher will be sent shortly."}
 
 Total: ${formData.total.toLocaleString()} Bath
 
@@ -345,7 +339,7 @@ document.querySelector(".btn-confirm").addEventListener("click", e => {
 });
 
 // === Live Updates ===
-[dateInput, nameInput, phoneInput, noteInput, vocherInput].forEach(el => el.addEventListener("input", updateSummary));
+[dateInput, nameInput, phoneInput, noteInput].forEach(el => el.addEventListener("input", updateSummary));
 guestsSelect.addEventListener("change", e => { generateServiceFields(parseInt(e.target.value)); updateSummary(); });
 
 // === Init ===
