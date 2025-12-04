@@ -45,7 +45,7 @@ function format12Hour(hour) {
   return `${display.toString().padStart(2, "0")}:00 ${suffix}`;
 }
 
-for (let h = 10; h < 20; h++) {
+for (let h = 12; h < 18; h++) {
   const opt = document.createElement("option");
   opt.value = `${h.toString().padStart(2, "0")}:00`;
   opt.textContent = format12Hour(h);
@@ -204,8 +204,13 @@ function updateSummary() {
 
   if (sServiceList.children.length === 0) sServiceList.innerHTML = "<li>—</li>";
 
+const fromHour = timeFrom.value
+  ? format12Hour(parseInt(timeFrom.value.split(":")[0]))
+  : "—";
+
+
   sDate.textContent = dateInput.value || "—";
-  sTime.textContent = timeFrom.value ? `${timeFrom.value} → ${timeTo.value}` : "—";
+  sTime.textContent = timeFrom.value ? `${fromHour} → ${timeTo.value}` : "—";
   sName.textContent = nameInput.value || "—";
   sPhone.textContent = phoneInput.value || "—";
   sNote.textContent = noteInput.value || "—";
