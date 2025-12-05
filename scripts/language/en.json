@@ -325,7 +325,8 @@
             "cta": {
                 "title": "Ready to Relax?",
                 "text": "Treat yourself to the peaceful experience you deserve. Book your Thai Head Spa session today and let your stress melt away.",
-                "button": "Contact Us"
+                "button": "Contact Us",
+                "booking": "Booking Now"
             }
         }
     },
@@ -439,6 +440,11 @@
                 ],
                 "button": "Book Now"
             }
+        },
+        "cta": {
+            "title": "Ready to take care of your skin?",
+            "text": "Choose the treatment that's right for you and book your appointment today to experience professional relaxation from SIAM SPA.",
+            "button": "Book Now"
         }
     },
     "WaxingPage": {

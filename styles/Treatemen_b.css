@@ -1,0 +1,117 @@
+
+        .box {
+            width: 80%;
+            max-width: 1400px;
+            min-height: 30vh;
+            background: #c4b5a0;
+            margin: 20px auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5vw 3vw;
+            background: #c4b5a0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .header-left h1 {
+            font-size: clamp(24px, 3vw);
+            font-weight: lighter;
+            letter-spacing: 0.2em;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .header-left p {
+            font-size: clamp(14px, 1.5vw, 28px);
+            color: #8b2626;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .header-right {
+            background: #5a1515;
+            padding: clamp(10px, 1.5vw, 20px) clamp(20px, 3vw, 40px);
+            text-align: right;
+        }
+
+        .header-right h2 {
+            font-size: clamp(18px, 2.5vw, 38px);
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            color: #c4b5a0;
+            margin: 0 0 5px 0;
+        }
+
+        .header-right .price {
+            font-size: clamp(28px, 3vw, 52px);
+            font-weight: 300;
+            color: #c4b5a0;
+            letter-spacing: 0.1em;
+        }
+
+        .content {
+            background: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .left-column {
+            padding: clamp(15px, 2vw, 35px);
+            background: white;
+        }
+
+        .right-column {
+            padding: clamp(15px, 2vw, 35px);
+            background: white;
+        }
+
+        .left-column p {
+            margin: 3px 0;
+            line-height: 1.6;
+            color: #666;
+            font-size: clamp(12px, 1vw, 16px);
+        }
+
+        .highlight-title {
+            font-weight: bold;
+            color: #8b2626;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: clamp(14px, 1.3vw, 18px);
+        }
+
+        .step-title {
+            font-weight: bold;
+            color: #8b2626;
+            margin-bottom: 14px;
+            font-size: clamp(12px, 1vw, 16px);
+        }
+
+        table th {
+            background: #f2e9dc;
+        }
+
+        table td, table th {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        table tr:last-child td {
+            border-bottom: none;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr 1fr;
+                font-size: 0.8em;
+            }
+
+            .left-column, .right-column {
+                padding: clamp(15px, 2vw, 25px);
+            }
+        }
