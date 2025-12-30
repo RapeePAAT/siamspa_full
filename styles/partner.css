@@ -8,10 +8,13 @@ body {
 
 .about-section {
   width: 100%;
-  background-color: #fff; /* พื้นหลังสีขาว */
-  padding: 100px 20px; /* เว้นระยะรอบๆ */
+  background-color: #fff;
+  /* พื้นหลังสีขาว */
+  padding: 100px 20px;
+  /* เว้นระยะรอบๆ */
   text-align: center;
-  color: #4b1f0d; /* น้ำตาลเข้มแบบโลโก้ */
+  color: #4b1f0d;
+  /* น้ำตาลเข้มแบบโลโก้ */
   background-color: rgb(238, 228, 216);
 }
 
@@ -66,6 +69,7 @@ body {
     font-size: 0.85rem;
   }
 }
+
 /* === Partner Section === */
 .partner-section {
   padding: 80px 10%;
@@ -142,7 +146,7 @@ body {
 
 /* === Details Section === */
 .details-section {
-  padding: 10px 10% 100px 10% ;
+  padding: 10px 10% 100px 10%;
   background-color: #f8f6f3;
   display: flex;
   flex-direction: column;
@@ -191,10 +195,20 @@ body {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #5a4638;
+  margin-top: 40px;
+}
+
+.detail-content ul {
+  margin-top: 20px;
+}
+
+.detail-content ul li {
+  margin-bottom: 10px;
 }
 
 /* === Responsive === */
 @media (max-width: 992px) {
+
   .detail-row,
   .detail-row.reverse {
     flex-direction: column;
@@ -213,7 +227,8 @@ body {
 
 /* === Final CTA Section === */
 .partner-cta {
-  background-color: #590000; /* 🔧 ใส่ภาพพื้นหลังจริง */
+  background-color: #590000;
+  /* 🔧 ใส่ภาพพื้นหลังจริง */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
