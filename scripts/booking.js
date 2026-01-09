@@ -116,8 +116,8 @@ function generateServiceFields(count) {
 
       // === Dummy durations (replace with serviceMap) ===
       const durations = service === "Thai Head Spa" ? { "60 Min": 1900, "90 Min": 2900, "120 Min": 3900 } :
-        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200, "120 Min": 3500, "Signator 150 Min": 4000, "Premiun 180 Min": 4700 } :
-          service === "Treatment" ? { "PRO FRESH 60 Min": 3000, "PRO FIRM 90 Min": 3500, "REWAKENING 90 Min": 3500 } :
+        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200, "120 Min": 3500, "Signature 150 Min": 4000, "Premium 180 Min": 4700 } :
+          service === "Treatment" ? { "Pro Fresh 60 Min": 3000, "Pro Firm 90 Min": 3500, "Rewakening 90 Min": 3500 } :
             service === "Waxing" ? {
               "Eyebrows": { "Women": 300, "Men": 450 },
               "Nose": { "Women": 200, "Men": 300 },
