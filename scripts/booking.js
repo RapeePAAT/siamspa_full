@@ -20,7 +20,7 @@ const guestsSelect = document.getElementById("guests");
 const emailInput = document.getElementById("email");
 
 const container = document.getElementById("serviceContainer");
-const  userMail = "siamspafor.booking@gmail.com" ;
+const userMail = "siamspafor.booking@gmail.com";
 // === Popup functions ===
 function showSuccessPopup(msg = "Booking Successful!") {
   const popup = document.getElementById("successPopup");
@@ -115,9 +115,9 @@ function generateServiceFields(count) {
       }
 
       // === Dummy durations (replace with serviceMap) ===
-      const durations = service === "Thai Head Spa" ? { "60 Min": 1900, "90 Min": 2900 , "120 Min": 3900 } :
-        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200 , "120 Min": 3500 , "Signator 150 Min": 3000 , "Premiun 180 Min": 3000    } :
-          service === "Treatment" ? { "PRO FRESH 60 Min": 3000 , "PRO FIRM 90 Min": 3500 , "REWAKENING 90 Min" : 3500 } :
+      const durations = service === "Thai Head Spa" ? { "60 Min": 1900, "90 Min": 2900, "120 Min": 3900 } :
+        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200, "120 Min": 3500, "Signator 150 Min": 4000, "Premiun 180 Min": 4700 } :
+          service === "Treatment" ? { "PRO FRESH 60 Min": 3000, "PRO FIRM 90 Min": 3500, "REWAKENING 90 Min": 3500 } :
             service === "Waxing" ? {
               "Eyebrows": { "Women": 300, "Men": 450 },
               "Nose": { "Women": 200, "Men": 300 },
@@ -136,8 +136,8 @@ function generateServiceFields(count) {
               "HalfArms": { "Women": 400, "Men": 500 },
               "Chest": { "Women": 300, "Men": 800 },
               "HandsFingers": { "Women": 300, "Men": 400 }
-            } : service === "Shirodhara" ? { "60 Min": 2200, "90 Min": 3200 , "120 Min": 4200 }  :            
-            {};
+            } : service === "Shirodhara" ? { "60 Min": 2200, "90 Min": 3200, "120 Min": 4200 } :
+              {};
 
       if (service === "Waxing") {
         const gender = genderSel.value;
@@ -204,9 +204,9 @@ function updateSummary() {
 
   if (sServiceList.children.length === 0) sServiceList.innerHTML = "<li>—</li>";
 
-const fromHour = timeFrom.value
-  ? format12Hour(parseInt(timeFrom.value.split(":")[0]))
-  : "—";
+  const fromHour = timeFrom.value
+    ? format12Hour(parseInt(timeFrom.value.split(":")[0]))
+    : "—";
 
 
   sDate.textContent = dateInput.value || "—";
@@ -217,9 +217,9 @@ const fromHour = timeFrom.value
   emailInput.textContent = emailInput.value || "—";
 
 
- 
 
-  sTotal.textContent = total  > 0 ? `${(total).toLocaleString()} Bath` : "—";
+
+  sTotal.textContent = total > 0 ? `${(total).toLocaleString()} Bath` : "—";
 }
 
 // === Submit Booking ===
