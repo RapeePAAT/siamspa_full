@@ -35,7 +35,7 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- Loading Screen -->
+  <!-- Loading Screen 
   <div id="fullScreenLoader">
     <img src="./asstes/images/AW Logo Siam spa-01.png" alt="Siam Spa">
     <div class="loader-bar-container">
@@ -43,6 +43,7 @@
     </div>
     <span id="progressPercent">0%</span>
   </div>
+  -->
 
   <!-- Navbar -->
   <header class="navbar">
@@ -161,7 +162,7 @@
         </p>
         <div class="about-buttons">
           <a href="https://lin.ee/s58F0xx" class="btn primary" data-key="about.btnLine">แอดไลน์จองคิว</a>
-          <a href="about.html" class="btn secondary">เกี่ยวกับเรา</a>
+          <a href="about.html" class="btn secondary" data-key="about.btnAbout">เกี่ยวกับเรา</a>
         </div>
       </div>
     </div>
@@ -278,9 +279,9 @@
       </div>
 
       <h2 class="promo-title">Relax Head Spa Program</h2>
-      <p class="promo-sub">สำหรับ 2 ท่าน</p>
+      <p class="promo-sub" data-key="promo.sub">สำหรับ 2 ท่าน</p>
 
-      <p class="promo-tagline">
+      <p class="promo-tagline" data-key="promo.tagline">
         เมื่อใช้บริการพร้อมกัน 2 ท่าน รับ<strong>ส่วนลดพิเศษทันที</strong>
       </p>
 
@@ -289,52 +290,52 @@
 
         <!-- 60 min -->
         <div class="promo-card">
-          <div class="card-duration">60 <span>Minute</span></div>
+          <div class="card-duration" data-key="promo.card1.duration">60 <span>Minute</span></div>
           <div class="card-price-new">฿2,200</div>
-          <div class="card-price-old">ราคาปกติ ฿2,800 / ท่าน</div>
-          <div class="savings-pill">ประหยัด ฿600</div>
+          <div class="card-price-old" data-key="promo.card1.priceOld">ราคาปกติ ฿2,800 / ท่าน</div>
+          <div class="savings-pill" data-key="promo.card1.savings">ประหยัด ฿600</div>
           <div class="divider-line"></div>
           <ul class="card-features">
             <li>Head Scalp Massage</li>
             <li>Relaxation Treatment</li>
             <li>Aromatherapy Oil</li>
           </ul>
-          <a href="booking.html?promo=relax2&m=60" class="book-btn solid">จองออนไลน์</a>
+          <a href="booking.html?promo=relax2&m=60" class="book-btn solid" data-key="promo.card1.book">จองออนไลน์</a>
         </div>
 
         <!-- 90 min -->
         <div class="promo-card featured">
-          <div class="popular-badge">แนะนำ</div>
-          <div class="card-duration">90 <span>Minute</span></div>
+          <div class="popular-badge" data-key="promo.card2.popular">แนะนำ</div>
+          <div class="card-duration" data-key="promo.card2.duration">90 <span>Minute</span></div>
           <div class="card-price-new">฿4,200</div>
-          <div class="card-price-old">ราคาปกติ ฿5,000 / ท่าน</div>
-          <div class="savings-pill">ประหยัด ฿800</div>
+          <div class="card-price-old" data-key="promo.card2.priceOld">ราคาปกติ ฿5,000 / ท่าน</div>
+          <div class="savings-pill" data-key="promo.card2.savings">ประหยัด ฿800</div>
           <div class="divider-line"></div>
           <ul class="card-features">
             <li>Head Scalp Massage</li>
             <li>Premium Treatment</li>
             <li>Aromatherapy Oil</li>
           </ul>
-          <a href="booking.html?promo=relax2&m=90" class="book-btn solid">จองออนไลน์</a>
+          <a href="booking.html?promo=relax2&m=90" class="book-btn solid" data-key="promo.card2.book">จองออนไลน์</a>
         </div>
 
       </div><!-- /cards-grid -->
 
       <!-- Conditions -->
       <div class="promo-note">
-        <p class="note-title">เงื่อนไขการรับสิทธิ์</p>
+        <p class="note-title" data-key="promo.noteTitle">เงื่อนไขการรับสิทธิ์</p>
         <div class="note-items">
           <div class="note-item">
             <div class="note-dot"></div>
-            <span>จองผ่านเว็บไซต์เท่านั้น</span>
+            <span data-key="promo.noteItem1">จองผ่านเว็บไซต์เท่านั้น</span>
           </div>
           <div class="note-item">
             <div class="note-dot"></div>
-            <span>ชำระมัดจำ ฿500 เพื่อยืนยันการจอง</span>
+            <span data-key="promo.noteItem2">ชำระมัดจำ ฿500 เพื่อยืนยันการจอง</span>
           </div>
           <div class="note-item">
             <div class="note-dot"></div>
-            <span>ใช้บริการพร้อมกัน 2 ท่านในคราวเดียว</span>
+            <span data-key="promo.noteItem3">ใช้บริการพร้อมกัน 2 ท่านในคราวเดียว</span>
           </div>
         </div>
       </div>
@@ -565,17 +566,26 @@
   <!-- Floating Contact Widget -->
   <div class="float-contact">
     <button class="float-toggle" aria-label="Contact us">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+      </svg>
     </button>
     <div class="float-items">
       <a href="tel:0886491919" class="float-item tel" data-label="โทร 088-649-1919" aria-label="Call">
-        <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24">
+          <path
+            d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+        </svg>
       </a>
       <a href="https://lin.ee/s58F0xx" target="_blank" class="float-item line" data-label="Line" aria-label="Line">
-        <img src="./asstes/icon/line-brands-solid-full.svg" alt="Line" style="filter:brightness(0) invert(1);width:26px;height:26px;">
+        <img src="./asstes/icon/line-brands-solid-full.svg" alt="Line"
+          style="filter:brightness(0) invert(1);width:26px;height:26px;">
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank" class="float-item facebook" data-label="Facebook" aria-label="Facebook">
-        <img src="./asstes/icon/facebook-icon.svg" alt="Facebook" style="filter:brightness(0) invert(1);width:26px;height:26px;">
+      <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank" class="float-item facebook"
+        data-label="Facebook" aria-label="Facebook">
+        <img src="./asstes/icon/facebook-icon.svg" alt="Facebook"
+          style="filter:brightness(0) invert(1);width:26px;height:26px;">
       </a>
     </div>
   </div>

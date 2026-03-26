@@ -19,7 +19,30 @@
         "text1": "At Siam Spa, we believe that true relaxation is not something done superficially. We focus on precision, personalized understanding, and balance for your body and mind.",
         "text2": "Because your head deserves targeted care, ensuring every moment is a time of calm and true rejuvenation.",
         "btnLine": "Add Line for Booking",
-        "btnCall": "Call Us"
+        "btnCall": "Call Us",
+        "btnAbout": "About Us"
+    },
+    "promo": {
+        "title": "Relax Head Spa Program",
+        "sub": "For 2 Persons",
+        "tagline": "When using the service together for 2 persons, get a special discount immediately",
+        "card1": {
+            "duration": "60 Minute",
+            "priceOld": "Regular Price ฿2,800 / Person",
+            "savings": "Save ฿600",
+            "book": "Book Online"
+        },
+        "card2": {
+            "popular": "Recommended",
+            "duration": "90 Minute",
+            "priceOld": "Regular Price ฿5,000 / Person",
+            "savings": "Save ฿800",
+            "book": "Book Online"
+        },
+        "noteTitle": "Terms and Conditions",
+        "noteItem1": "Bookings must be made through the website only",
+        "noteItem2": "A deposit of ฿500 is required to confirm the booking",
+        "noteItem3": "Can be used by 2 persons at the same time"
     },
     "services": {
         "headerTitle": "OUR SERVICES",

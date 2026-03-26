@@ -1,4 +1,4 @@
-  const loader = document.getElementById('fullScreenLoader');
+  /*const loader = document.getElementById('fullScreenLoader');
     const progressBar = document.getElementById('progressBar');
     const progressPercent = document.getElementById('progressPercent');
     let progress = 0;
@@ -49,4 +49,4 @@
           document.body.classList.add('loaded');
         }, 500);
       }, remainingTime);
-    });
+    });*/

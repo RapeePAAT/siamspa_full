@@ -73,6 +73,7 @@ body {
   font-family: 'got-light', 'ath-regular', sans-serif;
   color: var(--brown-text);
   background: #fff;
+  overflow-x: hidden;
 }
 
 /* ── Hidden helper ── */
