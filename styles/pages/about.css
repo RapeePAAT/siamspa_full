@@ -2,24 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
+
 }
+
 body {
-  padding-top: 120px; /* ปรับให้เท่ากับความสูงของ Navbar */
+  padding-top: 50px;
+  /* ปรับให้เท่ากับความสูงของ Navbar */
 }
 
 .hero-section {
   position: relative;
   width: 100%;
-  height: 60vh; /* ✅ ความสูง 60% ของหน้าจอ */
-  overflow: hidden; /* ซ่อนส่วนเกินของภาพ */
+  height: 60vh;
+  /* ✅ ความสูง 60% ของหน้าจอ */
+  overflow: hidden;
+  /* ซ่อนส่วนเกินของภาพ */
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ✅ ให้ภาพครอบพอดีกับกล่องโดยไม่บีบ */
-  object-position: center; /* จัดให้อยู่ตรงกลาง */
+  object-fit: cover;
+  /* ✅ ให้ภาพครอบพอดีกับกล่องโดยไม่บีบ */
+  object-position: center;
+  /* จัดให้อยู่ตรงกลาง */
   display: block;
 }
 
@@ -44,6 +50,7 @@ body {
   font-size: 2.5rem;
   font-weight: 600;
 }
+
 .hero-overlay p {
   font-size: 1.1rem;
   font-weight: 300;
@@ -82,10 +89,13 @@ body {
 
 .about-section {
   width: 100%;
-  background-color: #fff; /* พื้นหลังสีขาว */
-  padding: 50px 20px; /* เว้นระยะรอบๆ */
+  background-color: #fff;
+  /* พื้นหลังสีขาว */
+  padding: 50px 20px;
+  /* เว้นระยะรอบๆ */
   text-align: center;
-  color: #4b1f0d; /* น้ำตาลเข้มแบบโลโก้ */
+  color: #4b1f0d;
+  /* น้ำตาลเข้มแบบโลโก้ */
 }
 
 .about-content {
@@ -154,9 +164,12 @@ body {
 }
 
 .service-image-wrapper img {
-  width: 85%;               /* ✅ ลดขนาดลงจากเต็มจอ */
-  max-width: 350px;         /* ✅ จำกัดความกว้างสูงสุด */
-  border-radius: 20px;      /* ✅ มุมโค้งหรู */
+  width: 85%;
+  /* ✅ ลดขนาดลงจากเต็มจอ */
+  max-width: 350px;
+  /* ✅ จำกัดความกว้างสูงสุด */
+  border-radius: 20px;
+  /* ✅ มุมโค้งหรู */
   object-fit: cover;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -171,7 +184,8 @@ body {
 
 .service-title {
   font-size: 1.9rem;
-  color: #b89068;          /* ✅ โทนทองอบอุ่น */
+  color: #b89068;
+  /* ✅ โทนทองอบอุ่น */
   margin-bottom: 10px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -269,7 +283,7 @@ body {
   width: 100%;
   max-width: 350px;
   border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   object-fit: cover;
 }
 
@@ -368,6 +382,7 @@ body {
   background-color: #6b0000;
   border-color: #6b0000;
 }
+
 .btn-contact.red:hover {
   background-color: transparent;
   border-color: #fff;
@@ -379,12 +394,15 @@ body {
   .why-choose-us {
     padding: 50px 15px;
   }
+
   .why-choose-us h2 {
     font-size: 2rem;
   }
+
   .why-choose-us .tagline {
     font-size: 1.1rem;
   }
+
   .why-choose-us .details {
     font-size: 1rem;
   }
@@ -395,16 +413,20 @@ body {
   .why-logo {
     width: 140px;
   }
+
   .why-choose-us h2 {
     font-size: 1.7rem;
   }
+
   .why-choose-us .tagline {
     font-size: 1rem;
   }
+
   .why-choose-us .details {
     font-size: 0.95rem;
     line-height: 1.6;
   }
+
   .btn-contact {
     padding: 10px 28px;
     font-size: 0.9rem;
@@ -428,13 +450,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;           /* ระยะห่างระหว่างรูป */
+  gap: 20px;
+  /* ระยะห่างระหว่างรูป */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .gallery-container img {
-  flex: 1 1 calc(25% - 20px); /* 4 รูปต่อแถว */
+  flex: 1 1 calc(25% - 20px);
+  /* 4 รูปต่อแถว */
   max-width: calc(25% - 20px);
   height: auto;
   border-radius: 10px;
@@ -449,14 +473,16 @@ body {
 /* Responsive สำหรับจอเล็ก */
 @media (max-width: 992px) {
   .gallery-container img {
-    flex: 1 1 calc(33.333% - 20px); /* 3 รูปต่อแถว */
+    flex: 1 1 calc(33.333% - 20px);
+    /* 3 รูปต่อแถว */
     max-width: calc(33.333% - 20px);
   }
 }
 
 @media (max-width: 600px) {
   .gallery-container img {
-    flex: 1 1 calc(50% - 20px); /* 2 รูปต่อแถว */
+    flex: 1 1 calc(50% - 20px);
+    /* 2 รูปต่อแถว */
     max-width: calc(50% - 20px);
   }
 }

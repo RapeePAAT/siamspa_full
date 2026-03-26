@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>WAXING - Siam Spa Sleep Salon </title>
+  <link rel="stylesheet" href="styles/navbar-solid.css">
   <link rel="stylesheet" href="styles/footer.css">
   <link rel="stylesheet" href="styles/services/realaxspa.css">
-  <link rel="stylesheet" href="styles/pages/navbar_new.css">
   <link rel="stylesheet" href="styles/services/waxing.css">
-
   <link rel="stylesheet" href="styles/fontstyle.css">
+  <link rel="stylesheet" href="styles/animations.css">
   <link rel="icon" type="image/png" href="asstes/images/AW Logo Siam spa-01.png" />
+  <link rel="stylesheet" href="./styles/floating-contact.css">
 
 </head>
 
@@ -78,13 +79,18 @@
     </div>
   </header>
 
+
+
   <section class="about-section">
     <div class="about-content">
-      <h5 class="about-subtitle" data-key="WaxingPage.about.subtitle"></h5>
-      <h2 class="about-title" data-key="WaxingPage.about.title"></h2>
-      <p class="about-text" data-key="WaxingPage.about.text"></p>
+      <h5 class="about-subtitle" data-key="WaxingPage.about.subtitle">WAXING</h5>
+      <h2 class="about-title" data-key="WaxingPage.about.title">SIAM SPA</h2>
+      <p class="about-text" data-key="WaxingPage.about.text">บริการแว็กซ์ระดับพรีเมียมด้วยผลิตภัณฑ์ Perron Rigot
+        จากฝรั่งเศส อ่อนโยนต่อผิว สะอาด และปลอดภัย</p>
     </div>
   </section>
+
+
 
 
   <section class="waxing-hero">
@@ -220,7 +226,7 @@
   </section>
 
 
-    <section class="booking-cta-section">
+  <section class="booking-cta-section">
     <div class="booking-cta-content">
       <h2 data-key="WaxingPage.cta.title">Ready to Relax?</h2>
       <p data-key="WaxingPage.cta.text">
@@ -307,8 +313,39 @@
   </footer>
 
 
+  <!-- Floating Contact Widget -->
+  <div class="float-contact">
+    <button class="float-toggle" aria-label="Contact us">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
+      </svg>
+    </button>
+    <div class="float-items">
+      <a href="tel:0886491919" class="float-item tel" data-label="โทร 088-649-1919" aria-label="Call">
+        <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24">
+          <path
+            d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z" />
+        </svg>
+      </a>
+      <a href="https://lin.ee/s58F0xx" target="_blank" class="float-item line" data-label="Line" aria-label="Line">
+        <img src="./asstes/icon/line-brands-solid-full.svg" alt="Line"
+          style="filter:brightness(0) invert(1);width:26px;height:26px;">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank" class="float-item facebook"
+        data-label="Facebook" aria-label="Facebook">
+        <img src="./asstes/icon/facebook-icon.svg" alt="Facebook"
+          style="filter:brightness(0) invert(1);width:26px;height:26px;">
+      </a>
+    </div>
+  </div>
 
-  <script src="scripts/navbar_new.js"></script>
+
+  <script src="./scripts/floating-contact.js"></script>
+
+
+
+  <script src="scripts/navbar.js"></script>
   <script src="scripts/changelanguage.js"></script>
 
 </body>

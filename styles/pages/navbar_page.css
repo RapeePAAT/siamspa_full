@@ -15,7 +15,7 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 body {
-  padding-top: 120px; /* ปรับให้เท่ากับความสูงของ Navbar */
+  padding-top: 100px; /* ปรับให้เท่ากับความสูงของ Navbar */
 }
 
 .logo {
@@ -99,6 +99,10 @@ body {
 
 /* === Responsive === */
 @media screen and (max-width: 768px) {
+  .nav-left {
+    display: none;
+  }
+
   .nav-links {
     flex-direction: column;
     position: absolute;

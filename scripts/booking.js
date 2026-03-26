@@ -1,6 +1,19 @@
 // === EmailJS init ===
 emailjs.init("pOtYxH7L3Hx-Q1smg");
 
+// === URL PARAM ===
+const params = new URLSearchParams(window.location.search);
+const promo = params.get("promo"); // relax2
+const m = params.get("m");         // 60 / 90
+
+// === PROMO MAP ===
+const promoMap = {
+  relax2: {
+    "60": 2200,
+    "90": 4200
+  }
+};
+
 // === Elements ===
 const sServiceList = document.getElementById("s-service-list");
 const sDate = document.getElementById("s-date");
@@ -18,9 +31,37 @@ const phoneInput = document.getElementById("phone");
 const noteInput = document.getElementById("note");
 const guestsSelect = document.getElementById("guests");
 const emailInput = document.getElementById("email");
-
 const container = document.getElementById("serviceContainer");
+
 const userMail = "siamspafor.booking@gmail.com";
+
+// === Service Price Map ===
+const serviceMap = {
+  "Thai Head Spa": { "60 Min": 1900, "90 Min": 2900, "120 Min": 3900 },
+  "Relax Head Spa": { "60 Min": 1400, "90 Min": 2500, "120 Min": 3500, "Signature 150 Min": 4500, "Premium 180 Min": 5500 },
+  "Shirodhara": { "60 Min": 2200, "90 Min": 3200, "120 Min": 4200 },
+  "Treatment": { "Pro Fresh 60 Min": 3000, "Pro Firm 90 Min": 3500, "Rewakening 90 Min": 3500 },
+  "Waxing": {
+    "Eyebrows": { Women: 300, Men: 450 },
+    "Nose": { Women: 200, Men: 300 },
+    "Nostrils": { Women: 200, Men: 300 },
+    "OuterEars": { Women: 200, Men: 300 },
+    "Cheeks": { Women: 200, Men: 300 },
+    "Forehead": { Women: 350, Men: 450 },
+    "Jawline": { Women: 200, Men: 300 },
+    "UpperLip": { Women: 350, Men: 450 },
+    "Chin": { Women: 350, Men: 450 },
+    "Neck": { Women: 200, Men: 250 },
+    "Nape": { Women: 300, Men: 350 },
+    "Shoulders": { Women: 400, Men: 700 },
+    "Underarms": { Women: 550, Men: 650 },
+    "FullArms": { Women: 700, Men: 800 },
+    "HalfArms": { Women: 400, Men: 500 },
+    "Chest": { Women: 300, Men: 800 },
+    "HandsFingers": { Women: 300, Men: 400 }
+  }
+};
+
 // === Popup functions ===
 function showSuccessPopup(msg = "Booking Successful!") {
   const popup = document.getElementById("successPopup");
@@ -52,7 +93,6 @@ for (let h = 12; h < 18; h++) {
   timeFrom.appendChild(opt);
 }
 
-// === Auto fill end time +2hr ===
 timeFrom.addEventListener("change", () => {
   if (!timeFrom.value) return;
   let hour = parseInt(timeFrom.value.split(":")[0]);
@@ -61,9 +101,33 @@ timeFrom.addEventListener("change", () => {
   updateSummary();
 });
 
+// === Populate Duration Options ===
+function populateDurations(durSel, service, gender) {
+  durSel.innerHTML = `<option value="">-- Select duration --</option>`;
+  const durations = serviceMap[service];
+  if (!durations) return;
+
+  if (service === "Waxing") {
+    Object.entries(durations).forEach(([name, priceObj]) => {
+      const opt = document.createElement("option");
+      opt.value = priceObj[gender];
+      opt.textContent = `${name} — ${gender} (${priceObj[gender]} Bath)`;
+      durSel.appendChild(opt);
+    });
+  } else {
+    Object.entries(durations).forEach(([name, price]) => {
+      const opt = document.createElement("option");
+      opt.value = price;
+      opt.textContent = `${name} — ${price} Bath`;
+      durSel.appendChild(opt);
+    });
+  }
+}
+
 // === Generate Service Fields ===
 function generateServiceFields(count) {
   container.innerHTML = "";
+
   for (let i = 1; i <= count; i++) {
     const div = document.createElement("div");
     div.classList.add("form-group", "service-row");
@@ -79,147 +143,141 @@ function generateServiceFields(count) {
           <option value="Treatment">Treatment</option>
           <option value="Waxing">Waxing</option>
         </select>
+
         <select class="input-field gender-select" style="display:none;">
           <option value="Women">Women</option>
           <option value="Men">Men</option>
         </select>
+
         <select class="input-field duration-select" disabled required>
           <option value="">-- Select duration --</option>
         </select>
       </div>
     `;
+
     container.appendChild(div);
-  }
 
-  container.querySelectorAll(".service-select").forEach(sel => {
-    sel.addEventListener("change", e => {
-      const service = e.target.value;
-      const row = e.target.closest(".service-row");
-      const durSel = row.querySelector(".duration-select");
-      const genderSel = row.querySelector(".gender-select");
+    const serviceSel = div.querySelector(".service-select");
+    const genderSel = div.querySelector(".gender-select");
+    const durSel = div.querySelector(".duration-select");
 
-      durSel.innerHTML = `<option value="">-- Select duration --</option>`;
+    // Service change
+    serviceSel.addEventListener("change", () => {
+      const service = serviceSel.value;
+      durSel.disabled = true;
 
       if (!service) {
-        durSel.disabled = true;
+        durSel.innerHTML = `<option value="">-- Select duration --</option>`;
         genderSel.style.display = "none";
         updateSummary();
         return;
       }
 
-      // === Waxing require gender ===
       if (service === "Waxing") {
         genderSel.style.display = "inline-block";
+        populateDurations(durSel, service, genderSel.value);
       } else {
         genderSel.style.display = "none";
-      }
-
-      // === Dummy durations (replace with serviceMap) ===
-      const durations = service === "Thai Head Spa" ? { "60 Min": 1900, "90 Min": 2900, "120 Min": 3900 } :
-        service === "Relax Head Spa" ? { "60 Min": 1200, "90 Min": 2200, "120 Min": 3500, "Signature 150 Min": 4000, "Premium 180 Min": 4700 } :
-          service === "Treatment" ? { "Pro Fresh 60 Min": 3000, "Pro Firm 90 Min": 3500, "Rewakening 90 Min": 3500 } :
-            service === "Waxing" ? {
-              "Eyebrows": { "Women": 300, "Men": 450 },
-              "Nose": { "Women": 200, "Men": 300 },
-              "Nostrils": { "Women": 200, "Men": 300 },
-              "OuterEars": { "Women": 200, "Men": 300 },
-              "Cheeks": { "Women": 200, "Men": 300 },
-              "Forehead": { "Women": 350, "Men": 450 },
-              "Jawline": { "Women": 200, "Men": 300 },
-              "UpperLip": { "Women": 350, "Men": 450 },
-              "Chin": { "Women": 350, "Men": 450 },
-              "Neck": { "Women": 200, "Men": 250 },
-              "Nape": { "Women": 300, "Men": 350 },
-              "Shoulders": { "Women": 400, "Men": 700 },
-              "Underarms": { "Women": 550, "Men": 650 },
-              "FullArms": { "Women": 700, "Men": 800 },
-              "HalfArms": { "Women": 400, "Men": 500 },
-              "Chest": { "Women": 300, "Men": 800 },
-              "HandsFingers": { "Women": 300, "Men": 400 }
-            } : service === "Shirodhara" ? { "60 Min": 2200, "90 Min": 3200, "120 Min": 4200 } :
-              {};
-
-      if (service === "Waxing") {
-        const gender = genderSel.value;
-        Object.entries(durations).forEach(([name, priceObj]) => {
-          const opt = document.createElement("option");
-          opt.value = priceObj[gender];
-          opt.textContent = `${name} — ${gender} (${priceObj[gender]} Bath)`;
-          durSel.appendChild(opt);
-        });
-
-        genderSel.addEventListener("change", () => {
-          durSel.innerHTML = `<option value="">-- Select duration --</option>`;
-          const gender = genderSel.value;
-          Object.entries(durations).forEach(([name, priceObj]) => {
-            const opt = document.createElement("option");
-            opt.value = priceObj[gender];
-            opt.textContent = `${name} — ${gender} (${priceObj[gender]} Bath)`;
-            durSel.appendChild(opt);
-          });
-          updateSummary();
-        });
-      } else {
-        Object.entries(durations).forEach(([name, price]) => {
-          const opt = document.createElement("option");
-          opt.value = price;
-          opt.textContent = `${name} — ${price} Bath`;
-          durSel.appendChild(opt);
-        });
+        populateDurations(durSel, service, null);
       }
 
       durSel.disabled = false;
       updateSummary();
     });
-  });
 
-  container.querySelectorAll(".duration-select").forEach(sel => {
-    sel.addEventListener("change", () => {
-      sel.classList.remove("invalid");
+    // Gender change (Waxing only)
+    genderSel.addEventListener("change", () => {
+      const service = serviceSel.value;
+      if (service === "Waxing") {
+        populateDurations(durSel, service, genderSel.value);
+        updateSummary();
+      }
+    });
+
+    // Duration change
+    durSel.addEventListener("change", () => {
+      durSel.classList.remove("invalid");
       updateSummary();
     });
-  });
+  }
 }
 
 // === Update Summary ===
 function updateSummary() {
   const rows = container.querySelectorAll(".service-row");
   let total = 0;
+  let originalTotal = 0;
   sServiceList.innerHTML = "";
+
+  // สำหรับดักจับโปร
+  let relaxCount = 0;
+  let relaxDurations = [];
 
   rows.forEach(row => {
     const service = row.querySelector(".service-select").value;
     const durSel = row.querySelector(".duration-select");
     const selectedOption = durSel.selectedOptions[0];
-    let durationText = selectedOption?.textContent || "";
-    let price = parseFloat(durSel.value) || 0;
+    const durationText = selectedOption?.textContent || "";
+    const price = parseFloat(durSel.value) || 0;
 
-    if (service && durationText) {
+    if (service && durationText && price > 0) {
       const li = document.createElement("li");
-      li.textContent = `${service} (${durationText})`;
+      li.textContent = `${service} (${durationText.split(" — ")[0]})`; // Clean up text for UI
       sServiceList.appendChild(li);
       total += price;
+      originalTotal += price; // เก็บราคาตั้งต้นก่อน
+
+      if (service === "Relax Head Spa") {
+        relaxCount++;
+        if (durationText.includes("60 Min")) relaxDurations.push("60");
+        if (durationText.includes("90 Min")) relaxDurations.push("90");
+      }
     }
   });
 
   if (sServiceList.children.length === 0) sServiceList.innerHTML = "<li>—</li>";
 
+  // เช็คเงื่อนไขโปร: 2 คน, Relax Head Spa และเวลาเดียวกันทั้งคู่
+  const promoBadge = document.getElementById("promo-badge");
+  const sDiscount = document.getElementById("s-discount");
+  let isPromoApplied = false;
+
+  if (relaxCount === 2 && guestsSelect.value === "2") {
+    if (relaxDurations.length === 2 && relaxDurations[0] === relaxDurations[1]) {
+      const dur = relaxDurations[0];
+      if (promoMap.relax2[dur]) {
+        // ดึงราคาโปรโมชั่น
+        total = promoMap.relax2[dur]; 
+        isPromoApplied = true;
+      }
+    }
+  }
+
+  // Update DOM Promo
+  if (promoBadge && sDiscount) {
+    if (isPromoApplied) {
+      promoBadge.style.display = "inline-block";
+      sDiscount.style.display = "block";
+      sDiscount.textContent = `${originalTotal.toLocaleString()} Bath`;
+    } else {
+      promoBadge.style.display = "none";
+      sDiscount.style.display = "none";
+    }
+  }
+
   const fromHour = timeFrom.value
     ? format12Hour(parseInt(timeFrom.value.split(":")[0]))
     : "—";
-
 
   sDate.textContent = dateInput.value || "—";
   sTime.textContent = timeFrom.value ? `${fromHour} → ${timeTo.value}` : "—";
   sName.textContent = nameInput.value || "—";
   sPhone.textContent = phoneInput.value || "—";
   sNote.textContent = noteInput.value || "—";
-  emailInput.textContent = emailInput.value || "—";
-
-
-
-
-  sTotal.textContent = total > 0 ? `${(total).toLocaleString()} Bath` : "—";
+  sTotal.textContent = total > 0 ? `${total.toLocaleString()} Bath` : "—";
+  
+  // แนบค่า total ที่แท้จริงไปยัง DOM เพื่อให้ submitBooking โกยไปใช้
+  sTotal.dataset.actualTotal = total;
 }
 
 // === Submit Booking ===
@@ -232,7 +290,6 @@ function submitBooking() {
     { el: timeFrom, label: "Time" },
   ];
 
-  // Check Service / Duration per guest
   container.querySelectorAll(".service-row").forEach((row, idx) => {
     const serviceSel = row.querySelector(".service-select");
     const durSel = row.querySelector(".duration-select");
@@ -240,11 +297,10 @@ function submitBooking() {
     if (!durSel.value) requiredFields.push({ el: durSel, label: `Duration Guest ${idx + 1}` });
   });
 
-  // Highlight missing fields
   const missingFields = [];
   requiredFields.forEach(f => {
     if (!f.el.value.trim()) {
-      f.el.classList.add("invalid"); // Add red border / background
+      f.el.classList.add("invalid");
       missingFields.push(f.label);
     } else {
       f.el.classList.remove("invalid");
@@ -256,7 +312,6 @@ function submitBooking() {
     return;
   }
 
-  // Prepare Data
   const rows = container.querySelectorAll(".service-row");
   const services = Array.from(rows).map(row => {
     const s = row.querySelector(".service-select").value;
@@ -264,12 +319,12 @@ function submitBooking() {
     return `${s} (${d})`;
   });
 
-  const totalPrice = parseFloat(sTotal.textContent.replace(/[^0-9]/g, "")) || 0;
+  const totalPrice = parseFloat(sTotal.dataset.actualTotal) || 0;
 
   const formData = {
     name: nameInput.value.trim(),
     phone: phoneInput.value.trim(),
-    email: document.getElementById("email").value.trim(),
+    email: emailInput.value.trim(),
     date: dateInput.value,
     time: `${timeFrom.value} → ${timeTo.value}`,
     services,
@@ -277,7 +332,7 @@ function submitBooking() {
     total: totalPrice
   };
 
-  // === EmailJS Owner ===
+  // EmailJS — Owner
   const ownerParams = {
     toemail: userMail,
     fromemail: formData.email || "no-reply@siamspa.com",
@@ -286,22 +341,22 @@ function submitBooking() {
     message: `
 New booking received:
 
-Name: ${formData.name}
-Phone: ${formData.phone}
-Email: ${formData.email || "-"}
-Date: ${formData.date}
-Time: ${formData.time}
+Name:     ${formData.name}
+Phone:    ${formData.phone}
+Email:    ${formData.email || "-"}
+Date:     ${formData.date}
+Time:     ${formData.time}
 Services: ${formData.services.join(", ")}
-Notes: ${formData.note || "-"}
-Total: ${formData.total.toLocaleString()} Bath
+Notes:    ${formData.note || "-"}
+Total:    ${formData.total.toLocaleString()} Bath
     `.trim()
   };
 
-  emailjs.send('service_ek0fi1s', 'template_6lbhvox', ownerParams)
+  emailjs.send("service_ek0fi1s", "template_6lbhvox", ownerParams)
     .then(() => console.log("Owner email sent"))
-    .catch(err => console.error(err));
+    .catch(err => console.error("Owner email error:", err));
 
-  // === EmailJS Customer ===
+  // EmailJS — Customer
   if (formData.email) {
     const customerParams = {
       toemail: formData.email,
@@ -314,39 +369,85 @@ Hi ${formData.name},
 Thank you for booking with Siam Spa Sleep & Salon.
 
 Your booking details:
-Date: ${formData.date}
-Time: ${formData.time}
+Date:     ${formData.date}
+Time:     ${formData.time}
 Services: ${formData.services.join(", ")}
-
-
-Total: ${formData.total.toLocaleString()} Bath
+Total:    ${formData.total.toLocaleString()} Bath
 
 Best regards,
 Siam Spa Team
       `.trim()
     };
 
-    emailjs.send('service_ek0fi1s', 'template_6lbhvox', customerParams)
+    emailjs.send("service_ek0fi1s", "template_6lbhvox", customerParams)
       .then(() => showSuccessPopup("Booking Successful!"))
-      .catch(err => console.error(err));
+      .catch(err => console.error("Customer email error:", err));
   }
 
-  // Reset Form
+  // Reset
   document.getElementById("bookingForm").reset();
   generateServiceFields(1);
   updateSummary();
 }
 
-// === Event Listener ===
+// === Event Listeners ===
 document.querySelector(".btn-confirm").addEventListener("click", e => {
   e.preventDefault();
   submitBooking();
 });
 
-// === Live Updates ===
-[dateInput, nameInput, phoneInput, noteInput].forEach(el => el.addEventListener("input", updateSummary));
-guestsSelect.addEventListener("change", e => { generateServiceFields(parseInt(e.target.value)); updateSummary(); });
+[dateInput, nameInput, phoneInput, noteInput, emailInput].forEach(el =>
+  el.addEventListener("input", updateSummary)
+);
 
-// === Init ===
+guestsSelect.addEventListener("change", e => {
+  generateServiceFields(parseInt(e.target.value));
+  updateSummary();
+});
+
+// === INIT ===
 generateServiceFields(1);
 updateSummary();
+
+// === APPLY PROMO ===
+if (promo === "relax2" && m) {
+  guestsSelect.value = "2";
+  generateServiceFields(2);
+
+  setTimeout(() => {
+    const rows = container.querySelectorAll(".service-row");
+
+    rows.forEach(row => {
+      const serviceSel = row.querySelector(".service-select");
+      const durSel = row.querySelector(".duration-select");
+
+      serviceSel.value = "Relax Head Spa";
+      serviceSel.dispatchEvent(new Event("change"));
+
+      setTimeout(() => {
+        // หา option ที่ตรงกับ duration จาก URL param
+        const match = Array.from(durSel.options).find(opt =>
+          opt.textContent.startsWith(`${m} Min`)
+        );
+        if (match) durSel.value = match.value;
+
+        // Override ด้วยราคาโปร
+        const promoPrice = promoMap[promo]?.[m];
+        if (promoPrice !== undefined) {
+          // เพิ่ม hidden option ถ้าราคาโปรไม่มีใน list
+          if (!Array.from(durSel.options).some(o => parseFloat(o.value) === promoPrice)) {
+            const promoOpt = document.createElement("option");
+            promoOpt.value = promoPrice;
+            promoOpt.textContent = `${m} Min — ${promoPrice} Bath (Promo)`;
+            durSel.appendChild(promoOpt);
+          }
+          durSel.value = promoPrice;
+        }
+
+        durSel.dispatchEvent(new Event("change"));
+      }, 150);
+    });
+
+    updateSummary();
+  }, 250);
+}

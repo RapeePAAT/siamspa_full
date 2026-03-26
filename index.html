@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
@@ -15,44 +13,53 @@
     })(window, document, 'script', 'dataLayer', 'GTM-M2G5GPPH');</script>
   <!-- End Google Tag Manager -->
 
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Siam Spa Sleep & Salon – Premium Thai head spa, relaxation treatments, and beauty services at The Old Siam Plaza, Bangkok.">
   <link rel="preload" as="video" href="asstes/video/VDO_phone_size.mp4" />
 
-  <title>Siam Spa Sleep Salon </title>
+  <title>Siam Spa Sleep Salon</title>
   <link rel="stylesheet" href="./styles/home.css">
-  <link rel="stylesheet" href="./styles/contact.css">
   <link rel="stylesheet" href="./styles/footer.css">
   <link rel="stylesheet" href="./styles/navbar.css">
   <link rel="stylesheet" href="./styles/fontstyle.css">
+  <link rel="stylesheet" href="./styles/animations.css">
+  <link rel="stylesheet" href="./styles/floating-contact.css">
   <link rel="icon" type="image/png" href="./asstes/images/AW Logo Siam spa-01.png" />
 </head>
 
 <body>
-  
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2G5GPPH"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2G5GPPH" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
+  <!-- Loading Screen -->
+  <div id="fullScreenLoader">
+    <img src="./asstes/images/AW Logo Siam spa-01.png" alt="Siam Spa">
+    <div class="loader-bar-container">
+      <div id="progressBar"></div>
+    </div>
+    <span id="progressPercent">0%</span>
+  </div>
 
   <!-- Navbar -->
   <header class="navbar">
     <div class="nav-left">
       <div class="social-icons">
         <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank"><img
-            src="./asstes/icon/facebook-icon.svg" class="icon-white"></a>
+            src="./asstes/icon/facebook-icon.svg" class="icon-white" alt="Facebook"></a>
         <a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank"><img
-            src="./asstes/icon/instagram-icon.svg" class="icon-white"></a>
+            src="./asstes/icon/instagram-icon.svg" class="icon-white" alt="Instagram"></a>
         <a href="https://lin.ee/s58F0xx" target="_blank"><img src="./asstes/icon/line-brands-solid-full.svg"
-            class="icon-white"></a>
+            class="icon-white" alt="Line"></a>
       </div>
     </div>
 
     <div class="nav-center">
       <a href="index.html" class="logo">
-        <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo">
+        <img src="./asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Siam Spa Logo">
       </a>
       <nav class="nav-links">
         <div class="close-menu">✕</div>
@@ -75,11 +82,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a href="product.html" data-key="navbar.product">PRODUCT</a>
         <a href="contact.html" data-key="navbar.contact">CONTACT</a>
         <a href="partner.html" data-key="navbar.partner">PARTNER</a>
-        <a href="booking.html" data-key="navbar.booking">ฺBOOKING</a>
+        <a href="booking.html" data-key="navbar.booking">BOOKING</a>
         <a href="register.html" data-key="navbar.register">REGISTER</a>
 
-
-        <!-- TH/EN สำหรับมือถือ -->
         <div class="mobile-lang">
           <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
         </div>
@@ -90,8 +95,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="lang-desktop">
         <a href="#" class="lang-btn" data-lang="th">TH</a>/<a href="#" class="lang-btn" data-lang="en">EN</a>
       </div>
-
-      <!-- Hamburger -->
       <div class="hamburger">
         <span></span>
         <span></span>
@@ -99,16 +102,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
   </header>
+
+  <!-- Banner -->
   <section class="banner">
-    <video id="bannerVideo" autoplay muted playsinline>
-      <!-- สำหรับมือถือ 
-      <source src="./asstes/video/SiamSpa_Mobile.mp4" type="video/mp4" media="(max-width: 600px)">-->
-      <!-- สำหรับจอใหญ่ -->
-      <source rel="preload" src="./asstes/video/VDO_phone_size.mp4" type="video/mp4">
-      <!-- fallback -->
+    <video id="bannerVideo" autoplay muted playsinline loop>
+      <source src="./asstes/video/VDO_phone_size.mp4" type="video/mp4">
     </video>
 
-    <div id="imageSlider" class="image-slider">
+    <div id="imageSlider" class="image-slider hidden">
       <img src="./asstes/images/Capture-309.png" alt="Banner 1" loading="lazy">
       <img src="./asstes/images/Capture-031.png" alt="Banner 2" loading="lazy">
       <img src="./asstes/images/Capture-1021_new.png" alt="Banner 3" loading="lazy">
@@ -121,25 +122,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <a id="bannerBookingButton" href="booking.html">BOOKING NOW</a>
       </div>
     </div>
+
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7" />
+      </svg>
+    </div>
   </section>
 
-
-
+  <!-- About Section -->
   <section id="about" class="about">
-    <div class="about-header">
+    <div class="about-header reveal">
+      <span class="section-eyebrow">Our Story</span>
       <h2 class="header-title" data-key="about.headerTitle">WELCOME TO SIAM SPA</h2>
+      <div class="section-divider"></div>
       <p data-key="about.subtitle">มอบความผ่อนคลายและการดูแลที่ดีที่สุดให้กับคุณ</p>
     </div>
 
     <div class="about-container">
-      <div class="about-images">
-        <img src="asstes/images/Capture-1021_new.png" alt="Spa Product" class="img-back" width="400px" height="400px"
-          style="object-fit: cover;" loading="lazy" id="img-spaproduct">
-        <img src="asstes/images/Capture-1098_new.png" alt="Spa Massage" class="img-front" width="400px" height="400px"
-          style="object-fit: cover;" loading="lazy">
+      <div class="about-images reveal-left">
+        <img src="asstes/images/Capture-1021_new.png" alt="Spa Product" class="img-back" width="340" height="380"
+          style="object-fit:cover;" loading="lazy" id="img-spaproduct">
+        <img src="asstes/images/Capture-1098_new.png" alt="Spa Massage" class="img-front" width="220" height="260"
+          style="object-fit:cover;" loading="lazy">
       </div>
-
-      <div class="about-content">
+      <div class="about-content reveal-right">
+        <span class="section-eyebrow">About Us</span>
+        <h2 class="header-title" style="font-size:28px;">SIAM SPA SLEEP &amp; SALON</h2>
         <p data-key="about.text1">
           ที่ สยาม สปา เราเชื่อว่าการผ่อนคลายที่แท้จริง ไม่ใช่สิ่งที่ทำแบบทั่วไป
           เราให้ความสำคัญกับความแน่นยำ ความเข้าใจเฉพาะบุคคล และสมดุลของร่างกายและจิตใจ
@@ -150,32 +161,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </p>
         <div class="about-buttons">
           <a href="https://lin.ee/s58F0xx" class="btn primary" data-key="about.btnLine">แอดไลน์จองคิว</a>
+          <a href="about.html" class="btn secondary">เกี่ยวกับเรา</a>
         </div>
       </div>
     </div>
   </section>
 
-
-
-
+  <!-- Gallery Strip -->
   <section class="spa-gallery">
     <div class="gallery-container">
-      <img src="./asstes/images/Capture-254_new.png" alt="Spa Service 1" loading="lazy">
-      <img src="./asstes/images/Capture-138_new.png" alt="Spa Service 2" loading="lazy">
-      <img src="./asstes/images/Capture-1021_new.png" alt="Spa Service 3" loading="lazy">
-      <img src="./asstes/images/Capture-795_new.png" alt="Spa Service 4" loading="lazy">
+      <img src="./asstes/images/Capture-254_new.png" alt="Spa Service 1" loading="lazy" class="reveal delay-1">
+      <img src="./asstes/images/Capture-138_new.png" alt="Spa Service 2" loading="lazy" class="reveal delay-2">
+      <img src="./asstes/images/Capture-1021_new.png" alt="Spa Service 3" loading="lazy" class="reveal delay-3">
+      <img src="./asstes/images/Capture-795_new.png" alt="Spa Service 4" loading="lazy" class="reveal delay-4">
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services" class="services">
-    <div class="services-header">
+    <div class="services-header reveal">
+      <span class="section-eyebrow">What We Offer</span>
       <h2 data-key="services.headerTitle">OUR SERVICES</h2>
+      <div class="section-divider"></div>
       <p data-key="services.subtitle">สัมผัสความผ่อนคลายในแบบเฉพาะตัวของคุณ</p>
     </div>
 
     <div class="service-grid">
       <!-- Card 1 -->
-      <div class="service-card">
+      <div class="service-card reveal delay-1">
         <div class="service-img" style="background-image: url('asstes/images/relax_service.png');">
           <div class="service-overlay">
             <p data-key="services.card1.desc">การนวดผ่อนคลายศีรษะ ลดความเครียด และช่วยให้หลับสบาย</p>
@@ -190,7 +203,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Card 2 -->
-      <div class="service-card">
+      <div class="service-card reveal delay-2">
         <div class="service-img" style="background-image: url('asstes/images/shirodhara_service.png');">
           <div class="service-overlay">
             <p data-key="services.card2.desc">ศาสตร์การรดน้ำมันอุ่นเพื่อคลายสมาธิและเปิดสมดุลจิตใจ</p>
@@ -205,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Card 3 -->
-      <div class="service-card">
+      <div class="service-card reveal delay-3">
         <div class="service-img" style="background-image: url('asstes/images/thaiheadspa_service.png');">
           <div class="service-overlay">
             <p data-key="services.card3.desc">สัมผัสความผ่อนคลายด้วยเทคนิคเฉพาะของไทย เพื่อฟื้นฟูร่างกาย</p>
@@ -220,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Card 4 -->
-      <div class="service-card">
+      <div class="service-card reveal delay-4">
         <div class="service-img" style="background-image: url('asstes/images/treatment_service.png');">
           <div class="service-overlay">
             <p data-key="services.card4.desc">ดูแลเส้นผมและหนังศีรษะด้วยผลิตภัณฑ์บำรุงจากธรรมชาติ</p>
@@ -235,7 +248,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
       <!-- Card 5 -->
-      <div class="service-card">
+      <div class="service-card reveal delay-5">
         <div class="service-img" style="background-image: url('asstes/images/waxing_service.png');">
           <div class="service-overlay">
             <p data-key="services.card5.desc">บริการแว็กซ์ระดับพรีเมียมด้วยวัสดุอ่อนโยนต่อผิว</p>
@@ -251,101 +264,178 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- ════════════════════════════════════════
+       PROMOTION SECTION — วางต่อจาก Our Services
+       ════════════════════════════════════════ -->
+  <section class="promo-section">
+    <div class="promo-inner">
+
+      <!-- Header -->
+      <p class="promo-eyebrow">Special Promotion</p>
+
+      <div class="promo-badge-wrap">
+        <div class="promo-badge">Friend Get Friend</div>
+      </div>
+
+      <h2 class="promo-title">Relax Head Spa Program</h2>
+      <p class="promo-sub">สำหรับ 2 ท่าน</p>
+
+      <p class="promo-tagline">
+        เมื่อใช้บริการพร้อมกัน 2 ท่าน รับ<strong>ส่วนลดพิเศษทันที</strong>
+      </p>
+
+      <!-- Cards -->
+      <div class="cards-grid">
+
+        <!-- 60 min -->
+        <div class="promo-card">
+          <div class="card-duration">60 <span>Minute</span></div>
+          <div class="card-price-new">฿2,200</div>
+          <div class="card-price-old">ราคาปกติ ฿2,800 / ท่าน</div>
+          <div class="savings-pill">ประหยัด ฿600</div>
+          <div class="divider-line"></div>
+          <ul class="card-features">
+            <li>Head Scalp Massage</li>
+            <li>Relaxation Treatment</li>
+            <li>Aromatherapy Oil</li>
+          </ul>
+          <a href="booking.html?promo=relax2&m=60" class="book-btn solid">จองออนไลน์</a>
+        </div>
+
+        <!-- 90 min -->
+        <div class="promo-card featured">
+          <div class="popular-badge">แนะนำ</div>
+          <div class="card-duration">90 <span>Minute</span></div>
+          <div class="card-price-new">฿4,200</div>
+          <div class="card-price-old">ราคาปกติ ฿5,000 / ท่าน</div>
+          <div class="savings-pill">ประหยัด ฿800</div>
+          <div class="divider-line"></div>
+          <ul class="card-features">
+            <li>Head Scalp Massage</li>
+            <li>Premium Treatment</li>
+            <li>Aromatherapy Oil</li>
+          </ul>
+          <a href="booking.html?promo=relax2&m=90" class="book-btn solid">จองออนไลน์</a>
+        </div>
+
+      </div><!-- /cards-grid -->
+
+      <!-- Conditions -->
+      <div class="promo-note">
+        <p class="note-title">เงื่อนไขการรับสิทธิ์</p>
+        <div class="note-items">
+          <div class="note-item">
+            <div class="note-dot"></div>
+            <span>จองผ่านเว็บไซต์เท่านั้น</span>
+          </div>
+          <div class="note-item">
+            <div class="note-dot"></div>
+            <span>ชำระมัดจำ ฿500 เพื่อยืนยันการจอง</span>
+          </div>
+          <div class="note-item">
+            <div class="note-dot"></div>
+            <span>ใช้บริการพร้อมกัน 2 ท่านในคราวเดียว</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /promo-inner -->
+  </section>
 
 
+
+  <!-- Products Section -->
   <section class="product-section">
-    <h2 class="header-title">PRODUCT FOR SALE</h2>
+    <span class="section-eyebrow reveal" style="text-align:center;display:block;">Shop</span>
+    <h2 class="header-title reveal" style="text-align:center;">PRODUCT FOR SALE</h2>
+    <div class="section-divider reveal"></div>
     <div class="product-grid">
-
-      <!-- ✅ Product 1 -->
-      <div class="product-item">
+      <!-- Product 1 -->
+      <div class="product-item reveal delay-1">
         <div class="ribbon">HOT</div>
         <img src="asstes/images/NT Renewing Shampoo 250 ml.png" alt="Renewing Shampoo">
         <div class="product-info">
           <h3 class="product-name">RENEWING SHAMPOO</h3>
           <p class="product-desc">Davines</p>
-          <span class="product-price">1050 .-Bath</span>
+          <span class="product-price">1,050 .-Baht</span>
         </div>
       </div>
 
-      <!-- ✅ Product 2 -->
-      <div class="product-item">
-        <img src="asstes/images/NT Energizing Shampoo 250 ml.png" alt="OI Shampoo">
+      <!-- Product 2 -->
+      <div class="product-item reveal delay-2">
+        <img src="asstes/images/NT Energizing Shampoo 250 ml.png" alt="Energizing Shampoo">
         <div class="product-info">
           <h3 class="product-name">ENERGIZING SHAMPOO</h3>
           <p class="product-desc">Davines</p>
-          <span class="product-price">1050 .-Bath</span>
+          <span class="product-price">1,050 .-Baht</span>
         </div>
       </div>
 
-      <!-- ✅ Product 3 -->
-      <div class="product-item">
-        <img src="asstes/images/NT Nourishing Shampoo 250 ml.png" alt="NOUNOU Shampoo">
+      <!-- Product 3 -->
+      <div class="product-item reveal delay-3">
+        <img src="asstes/images/NT Nourishing Shampoo 250 ml.png" alt="Nourishing Shampoo">
         <div class="product-info">
           <h3 class="product-name">NOURISHING SHAMPOO</h3>
           <p class="product-desc">Davines</p>
-          <span class="product-price">1050 .-Bath</span>
+          <span class="product-price">1,050 .-Baht</span>
         </div>
       </div>
+    </div>
 
+    <!-- View More -->
+    <div class="view-more">
+      <a href="product.html" class="view-more-content reveal">
+        <img src="asstes/icon/basket-shopping-solid-full.svg" class="icon-basketballshop" alt="Shop">
+        <span data-key="product.viewmore">ดูสินค้าทั้งหมดของเรา</span>
+      </a>
     </div>
   </section>
 
-
-  <!-- ✅ View More Block -->
-  <div class="view-more">
-    <a href="product.html" class="view-more-content">
-      <img src="asstes/icon/basket-shopping-solid-full.svg" class="icon-basketballshop" alt="ดูสินค้าทั้งหมด">
-      <span class="animated-text" data-key="product.viewmore">ดูสินค้าทั้งหมดของเรา</span>
-    </a>
-  </div>
-
-
+  <!-- Partners Section -->
   <section class="our-partners">
-    <h2 class="partners-title header-title" data-key="partners.headerTitle">OUR PARTNER</h2>
-
-    <div class="partners-grid">
-      <div class="partner-top">
-        <img src="./asstes/images/de,ologica_logo.webp" alt="Dermalogica" data-key="partners.partner1">
-      </div>
-      <div>
-        <img src="./asstes/images/ellbache_logo.webp" alt="Ella Baché" data-key="partners.partner2">
-      </div>
-      <div class="partner-top">
-        <img src="./asstes/images/davines-logo.webp" alt="Davines" data-key="partners.partner3">
-      </div>
-      <div class="partner-top">
-        <img src="./asstes/images/Lediffer-logo.webp" alt="Lediffer" data-key="partners.partner4">
-      </div>
-      <div class="partner-top">
-        <img src="./asstes/images/preeon_logo.webp" alt="Perron Rigot" data-key="partners.partner5">
-      </div>
+    <div class="reveal">
+      <span class="section-eyebrow">Trusted Brands</span>
+      <h2 class="partners-title header-title" data-key="partners.headerTitle">OUR PARTNER</h2>
+      <div class="section-divider"></div>
     </div>
 
-    <blockquote class="partners-quote" data-key="partners.quote">
-      “ เพราะความงามของคุณ คือความใส่ใจของเราในทุกขั้นตอน ”
+    <div class="partners-grid reveal">
+      <img src="./asstes/images/de,ologica_logo.webp" alt="Dermalogica" loading="lazy">
+      <img src="./asstes/images/ellbache_logo.webp" alt="Ella Baché" loading="lazy">
+      <img src="./asstes/images/davines-logo.webp" alt="Davines" loading="lazy">
+      <img src="./asstes/images/Lediffer-logo.webp" alt="Lediffer" loading="lazy">
+      <img src="./asstes/images/preeon_logo.webp" alt="Perron Rigot" loading="lazy">
+    </div>
+
+    <blockquote class="partners-quote reveal" data-key="partners.quote">
+      เพราะความงามของคุณ คือความใส่ใจของเราในทุกขั้นตอน
     </blockquote>
 
-    <p class="partners-desc" data-key="partners.description">
-      ที่ Siam Spa Sleep & Salon เราให้ความสำคัญกับคุณภาพในทุกสัมผัส
+    <p class="partners-desc reveal" data-key="partners.description">
+      ที่ Siam Spa Sleep &amp; Salon เราให้ความสำคัญกับคุณภาพในทุกสัมผัส
       เริ่มตั้งแต่การเลือกใช้ผลิตภัณฑ์บำรุงผิวและเส้นผม จากแบรนด์ระดับโลก
       ที่ได้รับการยอมรับทั้งในด้านประสิทธิภาพ ความปลอดภัย และมาตรฐานระดับสากล
     </p>
 
-    <div class="partners-note" data-key="partners.note">
+    <div class="partners-note reveal" data-key="partners.note">
       เราเลือกใช้เฉพาะผลิตภัณฑ์ที่ผ่านการรับรองและไว้วางใจจากมืออาชีพทั่วโลก
     </div>
   </section>
 
+  <!-- Reviews Section -->
   <section class="review-section">
-    <h2 class="section-title header-title">CUSTOMER REVIEW</h2>
+    <div class="reveal">
+      <span class="section-eyebrow">Testimonials</span>
+      <h2 class="section-title header-title">CUSTOMER REVIEW</h2>
+      <div class="section-divider"></div>
+    </div>
 
     <div class="review-slider">
       <div class="review-track">
         <!-- Review 1 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="avatar-image"></div>
+            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="user"></div>
             <div>
               <h4>Rapeepat Tiamklee</h4>
               <div class="stars">★★★★★</div>
@@ -353,7 +443,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <hr />
           <p class="review-text">
-            ประทับใจมากๆเลยค่ะ💓 <br>
+            ประทับใจมากๆเลยค่ะ💓<br>
             ตั้งแต่เดินเข้ามาในร้านแล้วก็มีกลิ่นน้ำมันหอมประจำร้านที่ผ่อนคลายมากค่ะ
             ทุกขั้นตอนของสปารู้สึกผ่อนคลายมากค่ะ สะอาดเรียบร้อยมากค่ะ✨
           </p>
@@ -362,42 +452,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- Review 2 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="avatar-image"></div>
+            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="user"></div>
             <div>
               <h4>Natasha Smith</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
           <hr />
-          <p class="review-text">
-            พนักงานน่ารักมากค่ะ ❤️ ให้บริการดีสุด ๆ กลับมาอีกแน่นอน!
-          </p>
+          <p class="review-text">พนักงานน่ารักมากค่ะ ❤️ ให้บริการดีสุด ๆ กลับมาอีกแน่นอน!</p>
         </div>
 
         <!-- Review 3 -->
         <div class="review-card">
           <div class="review-header">
-            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="avatar-image"></div>
+            <div class="avatar"><img src="./asstes/icon/user-solid-full.svg" alt="user"></div>
             <div>
               <h4>Michael Lee</h4>
               <div class="stars">★★★★★</div>
             </div>
           </div>
           <hr />
-          <p class="review-text">
-            บรรยากาศดีมาก เหมาะกับการพักผ่อนที่สุด! 🌿
-          </p>
+          <p class="review-text">บรรยากาศดีมาก เหมาะกับการพักผ่อนที่สุด! 🌿</p>
         </div>
       </div>
     </div>
 
     <a href="https://www.google.com/search?sca_esv=81b9b8c5170cc920&sxsrf=AE3TifM05fmcHfKuSjUM-LFmeguBn6AEMQ:1761666175359&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E5WYlzIO1i1bjcafeEjM6vYa9PNXSmwqv_sijSMo3uk4D0PzGqD6L9T_ncD60o510N2jUe__mrGllVVZ0EoJjzrnopESyNTGVFJX2mXW7rro76idiXQLbpcaJbtid9eQxZTD9nc%3D&q=Siam+Spa+Sleep+%26+Salon+%E0%B8%84%E0%B8%A7%E0%B8%B2%E0%B8%A1%E0%B9%80%E0%B8%AB%E0%B9%87%E0%B8%99&sa=X&ved=2ahUKEwjsleH0nceQAxVjZvUHHayfOFoQ0bkNegQIMhAD&biw=1536&bih=730&dpr=1.25#lrd=0x30e299ae321f0009:0x8cb48139a97a9896,1,,,,"
-      target="_blank" class="more-btn">More Review</a>
+      target="_blank" class="more-btn reveal">More Reviews</a>
   </section>
 
-
+  <!-- Contact CTA -->
   <section id="contact-invite" class="contact-invite-section">
-    <div class="contact-invite-content">
+    <div class="contact-invite-content reveal">
       <h5 class="contact-subtitle" data-key="contactInvite.subtitle"></h5>
       <h2 class="contact-title" data-key="contactInvite.title"></h2>
       <p class="contact-text" data-key="contactInvite.text"></p>
@@ -408,54 +494,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="footer-section">
     <div class="footer-container">
-
-      <!-- Column 1: Logo + Address + Opening Hours -->
+      <!-- Column 1 -->
       <div class="footer-column">
         <img src="asstes/images/AW-Logo-Siam-spa-white-01.webp" alt="Logo" class="footer-logo">
-        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร
-          กรุงเทพมหานคร 10200</p>
-        <p>Monday-Sunday 10:00 AM - 8:00 PM</p>
+        <p data-key="contact.address">ดิโอลด์สยามพลาซ่า ชั้น 3 ห้าง 12 ถ. ตรีเพชร บูรพาภิรมย์ เขตพระนคร กรุงเทพมหานคร
+          10200</p>
+        <p>Monday–Sunday 10:00 AM – 8:00 PM</p>
       </div>
 
-      <!-- Column 2: Menu -->
+      <!-- Column 2 -->
       <div class="footer-column">
         <h3>Menu</h3>
         <ul>
-          <li><a href="Home.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="product.html">Products</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
 
-      <!-- Column 3: Partner / Service -->
+      <!-- Column 3 -->
       <div class="footer-column">
         <h3>Partner</h3>
         <ul>
-          <li><a href="https://dermalogica.co.th/?srsltid=AfmBOoo0HibrD2Fed---Q1qbuDT303B16hJ8IBxtn7qRIN4X5tnhareS"
-              target="_blank">Dermalogica</a></li>
+          <li><a href="https://dermalogica.co.th/" target="_blank">Dermalogica</a></li>
           <li><a href="https://en.ellabache.com/" target="_blank">Ella Baché</a></li>
           <li><a href="https://world.davines.com/" target="_blank">Davines</a></li>
           <li><a href="https://www.ledifferthailand.com/th" target="_blank">Lediffer</a></li>
           <li><a href="https://www.perron-rigot.org/" target="_blank">Perron Rigot</a></li>
         </ul>
-
       </div>
 
+      <!-- Column 4 -->
       <div class="footer-column">
         <h3>Service</h3>
         <ul>
           <li><a href="realaxspa.html">Relaxed Head</a></li>
           <li><a href="shirodhara.html">Shirodhara</a></li>
           <li><a href="headspa.html">Thai Head Spa</a></li>
-          <li><a href="treatment.html">TreatMent</a></li>
+          <li><a href="treatment.html">Treatment</a></li>
           <li><a href="waxing.html">Waxing</a></li>
         </ul>
       </div>
 
-      <!-- Column 4: Contact Us -->
+      <!-- Column 5 -->
       <div class="footer-column">
         <h3>Contact Us</h3>
         <ul>
@@ -465,32 +550,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li>
             <p>088 649 1919</p>
           </li>
-          <li style="cursor: pointer;"><a href="https://www.facebook.com/profile.php?id=61575704435000"
-              alt="facebook-footer" target="_blank">facebook</a></li>
-          <li style="cursor: pointer;"><a href="https://www.instagram.com/siam_spasleepsalon/" alt="intragram-footer"
-              target="_blank">Instragram</a></li>
-          <li style="cursor: pointer;"><a href="https://lin.ee/s58F0xx" alt="line-footer" target="_blank">Line</a></li>
-
+          <li><a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/siam_spasleepsalon/" target="_blank">Instagram</a></li>
+          <li><a href="https://lin.ee/s58F0xx" target="_blank">Line</a></li>
         </ul>
-
       </div>
-
     </div>
 
     <div class="footer-bottom">
-      <p>© 2025 SiamSpa. All Rights Reserved.</p>
+      <p>© 2025 Siam Spa Sleep &amp; Salon. All Rights Reserved.</p>
     </div>
   </footer>
 
+  <!-- Floating Contact Widget -->
+  <div class="float-contact">
+    <button class="float-toggle" aria-label="Contact us">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 2H4C2.9 2 2 2.9 2 4v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/></svg>
+    </button>
+    <div class="float-items">
+      <a href="tel:0886491919" class="float-item tel" data-label="โทร 088-649-1919" aria-label="Call">
+        <svg viewBox="0 0 24 24" fill="#fff" width="24" height="24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      </a>
+      <a href="https://lin.ee/s58F0xx" target="_blank" class="float-item line" data-label="Line" aria-label="Line">
+        <img src="./asstes/icon/line-brands-solid-full.svg" alt="Line" style="filter:brightness(0) invert(1);width:26px;height:26px;">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61575704435000" target="_blank" class="float-item facebook" data-label="Facebook" aria-label="Facebook">
+        <img src="./asstes/icon/facebook-icon.svg" alt="Facebook" style="filter:brightness(0) invert(1);width:26px;height:26px;">
+      </a>
+    </div>
+  </div>
 
-
-
-
-  <!-- Script -->
+  <!-- Scripts -->
   <script src="./scripts/load.js"></script>
   <script src="./scripts/main.js"></script>
   <script src="./scripts/navbar.js"></script>
   <script src="./scripts/changelanguage.js"></script>
+  <script src="./scripts/floating-contact.js"></script>
   <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=854274463843491&ev=PageView&noscript=1" /></noscript>
 

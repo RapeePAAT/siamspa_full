@@ -56,6 +56,10 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .nav-left {
+    display: none;
+  }
+
   .nav-links {
     position: fixed;
     top: 0;
