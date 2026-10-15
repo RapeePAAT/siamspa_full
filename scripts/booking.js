@@ -392,6 +392,7 @@ Your booking details:
 Date:     ${formData.date}
 Time:     ${formData.time}
 Services: ${formData.services.join(", ")}
+Notes:    ${formData.note || "-"}
 Total:    ${formData.total.toLocaleString()} Bath
 
 Best regards,
