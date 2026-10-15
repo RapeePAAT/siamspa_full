@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const track = document.querySelector('.review-track');
   if (track) {
     const cards = Array.from(track.children);
-    const speed = 0.28;
+    const speed = 0.55;
 
     // Clone for seamless loop
     cards.forEach(card => {
@@ -47,9 +47,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let pos = 0;
     let paused = false;
 
-    // Pause on hover
+    // Pause on hover & touch
     track.addEventListener('mouseenter', () => paused = true);
     track.addEventListener('mouseleave', () => paused = false);
+    track.addEventListener('touchstart', () => paused = true, { passive: true });
+    track.addEventListener('touchend', () => paused = false, { passive: true });
 
     function animate() {
       if (!paused) {

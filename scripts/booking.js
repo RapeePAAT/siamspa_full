@@ -63,20 +63,25 @@ const serviceMap = {
 };
 
 // === Popup functions ===
+let successTimer = null;
+let failTimer = null;
+
 function showSuccessPopup(msg = "Booking Successful!") {
   const popup = document.getElementById("successPopup");
   if (!popup) return;
-  popup.textContent = msg;
+  popup.innerHTML = `<span style="font-size:18px;line-height:1;">✓</span> <span>${msg}</span>`;
   popup.classList.add("show");
-  setTimeout(() => popup.classList.remove("show"), 3000);
+  if (successTimer) clearTimeout(successTimer);
+  successTimer = setTimeout(() => popup.classList.remove("show"), 4000);
 }
 
 function showFailPopup(msg = "Please fill required fields!") {
   const popup = document.getElementById("failPopup");
   if (!popup) return;
-  popup.textContent = msg;
+  popup.innerHTML = `<span style="font-size:18px;line-height:1;">⚠️</span> <span>${msg}</span>`;
   popup.classList.add("show");
-  setTimeout(() => popup.classList.remove("show"), 3000);
+  if (failTimer) clearTimeout(failTimer);
+  failTimer = setTimeout(() => popup.classList.remove("show"), 4000);
 }
 
 // === Generate Time Options ===
@@ -282,33 +287,42 @@ function updateSummary() {
 
 // === Submit Booking ===
 function submitBooking() {
+  const btn = document.querySelector(".btn-confirm");
+  if (btn && btn.disabled) return;
+
   const requiredFields = [
-    { el: nameInput, label: "Name" },
-    { el: phoneInput, label: "Phone" },
-    { el: dateInput, label: "Date" },
-    { el: emailInput, label: "Email" },
-    { el: timeFrom, label: "Time" },
+    { el: nameInput, label: "ชื่อ (Name)" },
+    { el: phoneInput, label: "เบอร์โทร (Phone)" },
+    { el: dateInput, label: "วันที่ (Date)" },
+    { el: emailInput, label: "อีเมล (Email)" },
+    { el: timeFrom, label: "เวลา (Time)" },
   ];
 
   container.querySelectorAll(".service-row").forEach((row, idx) => {
     const serviceSel = row.querySelector(".service-select");
     const durSel = row.querySelector(".duration-select");
-    if (!serviceSel.value) requiredFields.push({ el: serviceSel, label: `Service Guest ${idx + 1}` });
-    if (!durSel.value) requiredFields.push({ el: durSel, label: `Duration Guest ${idx + 1}` });
+    if (!serviceSel.value) requiredFields.push({ el: serviceSel, label: `บริการ ท่านที่ ${idx + 1}` });
+    if (!durSel.value) requiredFields.push({ el: durSel, label: `ระยะเวลา ท่านที่ ${idx + 1}` });
   });
 
   const missingFields = [];
+  let firstInvalid = null;
   requiredFields.forEach(f => {
     if (!f.el.value.trim()) {
       f.el.classList.add("invalid");
       missingFields.push(f.label);
+      if (!firstInvalid) firstInvalid = f.el;
     } else {
       f.el.classList.remove("invalid");
     }
   });
 
   if (missingFields.length > 0) {
-    showFailPopup("ระบุ: " + missingFields.join(", "));
+    showFailPopup("กรุณาระบุข้อมูล: " + missingFields.join(", "));
+    if (firstInvalid) {
+      firstInvalid.focus();
+      firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
     return;
   }
 
@@ -332,6 +346,12 @@ function submitBooking() {
     total: totalPrice
   };
 
+  // Button Loading State
+  const originalBtnText = btn.textContent;
+  btn.disabled = true;
+  btn.classList.add("is-loading");
+  btn.textContent = "กำลังส่งข้อมูลการจอง... (Sending...)";
+
   // EmailJS — Owner
   const ownerParams = {
     toemail: userMail,
@@ -352,9 +372,9 @@ Total:    ${formData.total.toLocaleString()} Bath
     `.trim()
   };
 
-  emailjs.send("service_ek0fi1s", "template_6lbhvox", ownerParams)
-    .then(() => console.log("Owner email sent"))
-    .catch(err => console.error("Owner email error:", err));
+  const emailPromises = [
+    emailjs.send("service_ek0fi1s", "template_6lbhvox", ownerParams)
+  ];
 
   // EmailJS — Customer
   if (formData.email) {
@@ -379,15 +399,26 @@ Siam Spa Team
       `.trim()
     };
 
-    emailjs.send("service_ek0fi1s", "template_6lbhvox", customerParams)
-      .then(() => showSuccessPopup("Booking Successful!"))
-      .catch(err => console.error("Customer email error:", err));
+    emailPromises.push(emailjs.send("service_ek0fi1s", "template_6lbhvox", customerParams));
   }
 
-  // Reset
-  document.getElementById("bookingForm").reset();
-  generateServiceFields(1);
-  updateSummary();
+  Promise.all(emailPromises)
+    .then(() => {
+      showSuccessPopup("จองสำเร็จเรียบร้อย! เจ้าหน้าที่จะติดต่อกลับยืนยันคิวครับ");
+      // Reset form only when email was successfully sent
+      document.getElementById("bookingForm").reset();
+      generateServiceFields(1);
+      updateSummary();
+    })
+    .catch(err => {
+      console.error("Booking error:", err);
+      showFailPopup("ไม่สามารถส่งข้อมูลได้ กรุณาลองใหม่อีกครั้ง หรือโทร 088-649-1919");
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.classList.remove("is-loading");
+      btn.textContent = originalBtnText;
+    });
 }
 
 // === Event Listeners ===
